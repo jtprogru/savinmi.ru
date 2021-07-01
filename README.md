@@ -34,6 +34,3 @@ For basic deploy used personal GitHub Actions – [jtprogru/ftp-deployment-actio
 - `FTP_SERVER` – FTP-server;
 - `FTP_USERNAME` – login for FTP access to FTP-server;
 - `FTP_PASSWORD` – password for FTP access to FTP-server;
-## Copyright and License
-
-Copyright 2013-2021 Start Bootstrap LLC. Code released under the [MIT](https://github.com/StartBootstrap/startbootstrap-resume/blob/master/LICENSE) license.
