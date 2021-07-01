@@ -1,0 +1,279 @@
+doctype html
+html(lang='en')
+
+    head
+
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+        meta(name='description', content='CV')
+        meta(name='author', content='Michael Savin')
+        script(src="https://code.iconify.design/2/2.0.2/iconify.min.js")
+
+        title Resume - Savin Michael
+
+        link(rel='icon', type='image/x-icon', href='assets/img/favicon.ico')
+
+        // Font Awesome icons (free version)
+        script(src='https://use.fontawesome.com/releases/v5.15.3/js/all.js', crossorigin='anonymous')
+
+        // Google fonts
+        link(href='https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700', rel='stylesheet', type='text/css')
+        link(href='https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i', rel='stylesheet', type='text/css')
+
+        // Core theme CSS (includes Bootstrap)
+        link(href='css/styles.css', rel='stylesheet')
+
+    body#page-top
+
+        // Navigation
+        nav#sideNav.navbar.navbar-expand-lg.navbar-dark.bg-primary.fixed-top
+            a.navbar-brand.js-scroll-trigger(href='#page-top')
+                span.d-block.d-lg-none Michael Savin
+                span.d-none.d-lg-block
+                    img.img-fluid.img-profile.rounded-circle.mx-auto.mb-2(src='assets/img/profile.jpg', alt='...')
+            button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+                span.navbar-toggler-icon
+            #navbarResponsive.collapse.navbar-collapse
+                ul.navbar-nav
+                    li.nav-item
+                        a.nav-link.js-scroll-trigger(href='#about') About
+                    li.nav-item
+                        a.nav-link.js-scroll-trigger(href='#experience') Experience
+                    li.nav-item
+                        a.nav-link.js-scroll-trigger(href='#education') Education
+                    li.nav-item
+                        a.nav-link.js-scroll-trigger(href='#skills') Skills
+                    li.nav-item
+                        a.nav-link.js-scroll-trigger(href='#interests') Interests
+                    li.nav-item
+                        a.nav-link.js-scroll-trigger(href='#awards') Awards
+
+        // Page Content
+        .container-fluid.p-0
+
+            // About
+            section#about.resume-section
+                .resume-section-content
+                    h1.mb-0
+                        | Michael
+                        span.text-primary Savin
+                    .subheading.mb-5
+                        | Moscow · Russian Federation · +7 (906) 027-2719 ·
+                        a(href='mailto:mail@jtprog.ru') mail@jtprog.ru
+                    p.lead.mb-5
+                        | I have a rich and diverse experience as an Infrastructure Engineer, SRE and a Linux administrator.
+                    .social-icons
+                        a.social-icon(href='https://github.com/jtprogru')
+                            i.fab.fa-github
+                        a.social-icon(href='https://twitter.com/jtprogru')
+                            i.fab.fa-twitter
+                        a.social-icon(href='https://t.me/sysopschannel')
+                            i.fab.fa-telegram
+                        a.social-icon(href='https://www.linkedin.com/in/jtprogru')
+                            i.fab.fa-linkedin-in
+                        a.social-icon(href='https://jtprog.ru')
+                            i.fas.fa-link
+
+            hr.m-0
+
+            // Experience
+            section#experience.resume-section
+               .resume-section-content
+                    h2.mb-5 Experience
+
+                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
+                        .flex-grow-1
+                            h3.mb-0 Senior SRE
+                            .subheading.mb-3 Mail.ru Group
+                            p
+                                | I helped the project "Search Mail.ru" to avoid mistakes in writing new modules for Salt-stack and prepared the platform for a large-scale update of Salt-stack to the latest version.
+                        .flex-shrink-0
+                            span.text-primary March 2021 - Present
+
+                    .d-flex.flex-column.flex-md-row.justify-content-between
+                        .flex-grow-1
+                            h3.mb-0 DevOps
+                            .subheading.mb-3 "Secret Startup" (NDA)
+                            p
+                                | I switched the infrastructure from bare-metal to DigitalOcean Managed Kubernetes and cloud solutions from Gitlab and Atlassian. Implemented IaC using Terraform and Ansible.
+                        .flex-shrink-0
+                            span.text-primary January 2021 - June 2021
+
+                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
+                        .flex-grow-1
+                            h3.mb-0 Lead System Administrator
+                            .subheading.mb-3 ADV / web-engineering co.
+                            p
+                                | Application of DevOps practices. Implementation of the practice of documenting processes/changes/configurations, as well as updating project documentation. Implementation of the IaC methodology. I implemented a template repository with the described infrastructure for a typical e-comm project of the company (Ansible + Gitlab-CI).
+                        .flex-shrink-0
+                            span.text-primary October 2019 - February 2021
+
+                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
+                        .flex-grow-1
+                            h3.mb-0 Senior Technical Support Engineer for Linux Systems
+                            .subheading.mb-3 SevenPro LLC / RegionCom LLC
+                            p
+                                | Support for the infrastructures of state and commercial companies. Troubleshooting CentOS 6.2/6.4. Working with hardware load balancers, as well as with CheckPoint firewalls. I implemented MITM at the infrastructure level of one large project. I wrote automation for automatic opening/closing of applications in Jira based on triggers in Zabbix.
+                        .flex-shrink-0
+                            span.text-primary June 2018 - October 2019
+
+                    .d-flex.flex-column.flex-md-row.justify-content-between
+                        .flex-grow-1
+                            h3.mb-0 System Administrator
+                            .subheading.mb-3 WebControl LLC
+                            p
+                                | Implemented "G Suite Enterprise". Improved the Zabbix monitoring system. The entire production is hosted in Hetzner (more than 50 bare-metal servers). Maintenance and monitoring of file storage based on GlusterFS. I also worked with a DRBD-based storage. Implemented the documentation in the Wiki (Gitlab). I have configured the storage of server configurations in Gitlab. Minimal maintenance of MySQL/PostgreSQL/MS SQL/Redis. Search for infrastructure bottlenecks and constant modernization.
+                        .flex-shrink-0
+                            span.text-primary January 2018 - June 2018
+
+                    .d-flex.flex-column.flex-md-row.justify-content-between
+                        .flex-grow-1
+                            h3.mb-0 System Administrator
+                            .subheading.mb-3 CJSC "ALLIANCE-TRAVEL"
+                            p
+                                | Improved data backup using Bacula. Expanded the VMware ESXi virtualization cluster. I put Active Directory (Windows Server 2003-2012) in order. Maintenance of servers based on CentOS 5/6/7 (list of services: proxy, reverse proxy, internal and external web services, backup server). Databases are MySQL, PostgreSQL, Oracle DB, MSSQL.
+                        .flex-shrink-0
+                            span.text-primary August 2017 - January 2018
+
+                    .d-flex.flex-column.flex-md-row.justify-content-between
+                        .flex-grow-1
+                            h3.mb-0 System Administrator
+                            .subheading.mb-3 LLC "I-group"
+                            p
+                                | I have fully designed the company's office IT infrastructure. Provided a full package of documentation: regulations, job descriptions, user and administrative documentation.
+                        .flex-shrink-0
+                            span.text-primary April 2017 - June 2017
+
+                    .d-flex.flex-column.flex-md-row.justify-content-between
+                        .flex-grow-1
+                            h3.mb-0 Junior System Administrator / System Administrator / Head of the IT Department
+                            .subheading.mb-3 Argosy Analytics LLC
+                            p
+                                | I worked my way up from an assistant system administrator to the head of the information technology department. I have implemented a mail server based on Ubuntu Server, Postfix and iRedMail. I also deployed several file storages based on Ubuntu Server and Windows Server 2012. I transferred a lot of internal services to Linux servers, thereby helping the company to reduce the costs of the IT department.
+                        .flex-shrink-0
+                            span.text-primary May 2014 - March 2017
+
+            hr.m-0
+
+            // Education
+            section#education.resume-section
+                .resume-section-content
+                    h2.mb-5 Education
+
+                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
+                        .flex-grow-1
+                            h3.mb-0 Saratov State Technical University named after Gagarina Yu.A.
+                            .subheading.mb-3 Software Engineer
+                            div Applied Information Technologies – Information Systems and Technologies
+                            p GPA: --
+                        .flex-shrink-0
+                            span.text-primary August 2007 - May 2008
+
+                    .d-flex.flex-column.flex-md-row.justify-content-between
+                        .flex-grow-1
+                            h3.mb-0 Moscow Financial and Industrial University "Synergy"
+                            .subheading.mb-3 Technology Magnet Program
+                            div New Business Technologies – Security system Management
+                            p GPA: --
+                        .flex-shrink-0
+                            span.text-primary July 2012 - October 2013
+
+            hr.m-0
+
+            // Skills
+            section#skills.resume-section
+                .resume-section-content
+                    h2.mb-5 Skills
+                    .subheading.mb-3 Programming Languages & Tools
+                    ul.list-inline.dev-icons
+                        li.list-inline-item
+                            i.fab.fa-linux
+                        li.list-inline-item
+                            i.fab.fa-python
+                        li.list-inline-item
+                            i.fab.fa-git
+                        li.list-inline-item
+                            i.fab.fa-github
+                        li.list-inline-item
+                            i.fab.fa-gitlab
+                    .subheading.mb-3 Workflow
+                    ul.fa-ul.mb-0
+                        li
+                            span.fa-li
+                                i.fas.fa-check
+                            | JIRA Task & DevOps
+                        li
+                            span.fa-li
+                                i.fas.fa-check
+                            | Documentation is must have
+                        li
+                            span.fa-li
+                                i.fas.fa-check
+                            | Cross Functional Teams
+                        li
+                            span.fa-li
+                                i.fas.fa-check
+                            | Agile Development & Scrum
+
+            hr.m-0
+
+            // Interests
+            section#interests.resume-section
+                .resume-section-content
+                    h2.mb-5 Interests
+                    p
+                        | There is a lot to tell about me. Both professional and life experience is quite rich and diverse. In my work, I focus on documentation and automation. He is demanding of himself and others. I can work alone and in a team. I am constantly developing in the field of IT, learning new things by solving complex problems.
+                    p
+                        | When I have to stay at home, I follow a number of science fiction and fantasy films, I am engaged in raising my son and spend a lot of free time studying the latest technological achievements in the world of techonology.
+                    p.mb-0
+                        | When inspiration visits me or there are really interesting cases about which I can tell something, I write to my blog.
+
+            hr.m-0
+
+            // Awards
+            section#awards.resume-section
+                .resume-section-content
+                    h2.mb-5 Awards & Certifications
+                    ul.fa-ul.mb-0
+                        li
+                            span.fa-li
+                                i.fas.fa-trophy.text-warning
+                            | OS Linux
+                        li
+                            span.fa-li
+                                i.fas.fa-trophy.text-warning
+                            | The basics of local networks
+                        li
+                            span.fa-li
+                                i.fas.fa-trophy.text-warning
+                            | Analysis and Risk Management in Information Systems Based on Microsoft OS
+                        li
+                            span.fa-li
+                                i.fas.fa-trophy.text-warning
+                            | JavaScript Core Skills
+                        li
+                            span.fa-li
+                                i.fas.fa-trophy.text-warning
+                            | Information Technology in the Management (Certified)
+                        li
+                            span.fa-li
+                                i.fas.fa-trophy.text-warning
+                            | Introduction to R
+                        li
+                            span.fa-li
+                                i.fas.fa-trophy.text-warning
+                            | Information Security
+                        li
+                            span.fa-li
+                                i.fas.fa-trophy.text-warning
+                            | Network Security
+                        li
+                            span.fa-li
+                                i.fas.fa-trophy.text-warning
+                            | Express course on Kubernetes administration "Slurm-2"
+
+        // Bootstrap core JS
+        script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js')
+
+        // Core theme JS
+        script(src='js/scripts.js')
