@@ -40,6 +40,8 @@
         "bootstrap-icons": "^1.5.0"
     },
     "devDependencies": {
+        "@iconify-icons/cib": "^1.1.0",
+        "@iconify/react": "^1.1.4",
         "autoprefixer": "10.2.6",
         "browser-sync": "2.27.3",
         "chokidar": "3.5.2",
