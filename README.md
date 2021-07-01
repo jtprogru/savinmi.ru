@@ -1,16 +1,12 @@
 # [savinmi.ru](https://savinmi.ru)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/jtprogru/savinmi.ru/CI?label=CI)
+![GitHub](https://img.shields.io/github/license/jtprogru/savinmi.ru)
 
 My personal CV builded with:
 
 - [Resume](https://startbootstrap.com/theme/resume/)
 - [Bootstrap](https://getbootstrap.com/)
 - [Freehostia](https://www.freehostia.com/free-cloud-hosting/)
-## Status
-
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/jtprogru/savinmi.ru/master/LICENSE)
-[![npm version](https://img.shields.io/npm/v/startbootstrap-resume.svg)](https://www.npmjs.com/package/startbootstrap-resume)
-[![dependencies Status](https://david-dm.org/StartBootstrap/startbootstrap-resume/status.svg)](https://david-dm.org/StartBootstrap/startbootstrap-resume)
-[![devDependencies Status](https://david-dm.org/StartBootstrap/startbootstrap-resume/dev-status.svg)](https://david-dm.org/StartBootstrap/startbootstrap-resume?type=dev)
 
 ### Basic Usage
 
@@ -31,7 +27,13 @@ Clone the source files of the theme and navigate into the theme's root directory
 - `npm run start:debug` runs the project in debug mode
 - `npm start` or `npm run start` runs the project, launches a live preview in your default browser, and watches for changes made to files in `src`
 
-You must have npm installed in order to use this build environment.
+You must have `npm` installed in order to use this build environment.
+
+## Deploy
+For basic deploy used personal GitHub Actions – [jtprogru/ftp-deployment-action](https://github.com/jtprogru/ftp-deployment-action). Add this secrets to repository secrets:
+- `FTP_SERVER` – FTP-server;
+- `FTP_USERNAME` – login for FTP access to FTP-server;
+- `FTP_PASSWORD` – password for FTP access to FTP-server;
 ## Copyright and License
 
 Copyright 2013-2021 Start Bootstrap LLC. Code released under the [MIT](https://github.com/StartBootstrap/startbootstrap-resume/blob/master/LICENSE) license.
