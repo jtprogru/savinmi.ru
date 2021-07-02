@@ -7,7 +7,7 @@ html(lang='en')
         meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
         meta(name='description', content='CV')
         meta(name='author', content='Michael Savin')
-        script(src="https://code.iconify.design/1/1.0.7/iconify.min.js")
+        script(src="https://code.iconify.design/1/1.0.7/iconify.min.js", crossorigin='anonymous')
 
         title Resume - Savin Michael
 
@@ -47,6 +47,8 @@ html(lang='en')
                         a.nav-link.js-scroll-trigger(href='#interests') Interests
                     li.nav-item
                         a.nav-link.js-scroll-trigger(href='#awards') Awards
+                    li.nav-item
+                        a.nav-link.js-scroll-trigger(href='#podcast') VoiceOps
 
         // Page Content
         .container-fluid.p-0
@@ -58,21 +60,25 @@ html(lang='en')
                         | Michael
                         span.text-primary Savin
                     .subheading.mb-5
-                        | Moscow · Russia · +7 (906) 027-2719 ·
-                        a(href='mailto:mail@jtprog.ru') mail@jtprog.ru
+                        | Moscow · Russia · +7 (906) 027-2719 · TG:
+                        a(href='https://t.me/jtprogru') @jtprogru
                     p.lead.mb-5
-                        | I have a rich and diverse experience as an Infrastructure Engineer, SRE and a Linux administrator. I was born and grew up in a small village. Now my work helps a millions of people around the world.
+                        | I have a rich and diverse experience as an Infrastructure Engineer, SRE and a Linux administrator. I was born and grew up in a small village. Now my work helps a millions of people around the world. I launched my podcast <a href="#podcast">"VoiceOps"</a> to learn new things!
                     .social-icons
                         a.social-icon(href='https://github.com/jtprogru')
                             i.fab.fa-github
                         a.social-icon(href='https://twitter.com/jtprogru')
                             i.fab.fa-twitter
-                        a.social-icon(href='https://t.me/sysopschannel')
+                        a.social-icon(href='https://t.me/jtprogru')
                             i.fab.fa-telegram
                         a.social-icon(href='https://www.linkedin.com/in/jtprogru')
                             i.fab.fa-linkedin-in
                         a.social-icon(href='https://jtprog.ru')
-                            i.fas.fa-link
+                            i.fas.fa-blog
+                        a.social-icon(href='#podcast')
+                            i.fas.fa-podcast
+                        a.social-icon(href='mailto:mail@jtprog.ru')
+                            i(data-icon="entypo:email", data-inline="false").iconify
 
             hr.m-0
 
@@ -298,6 +304,38 @@ html(lang='en')
                             span.fa-li
                                 i.fas.fa-trophy.text
                             | Express course on Kubernetes administration "Slurm-2"
+
+            hr.m-0
+
+            // VoiceOps
+            section#podcast.resume-section
+                .resume-section-content
+                    h1.mb-0
+                        | Voice
+                        span.text-primary Ops
+                    .subheading.mb-5
+                        | In general, about IT, mainly about Operations and Development.
+                    p.lead.mb-5
+                        | You can follow the releases on any convenient podcast platform.
+                    p.mb-5
+                        | The podcast is broadcast in Russian. If you have any suggestions on topics, then you should contact me in <a href="https://t.me/jtprogru">Telegram</a>.
+                    .social-icons.d-flex.flex-row
+                        a.social-icon(href='https://open.spotify.com/show/6iqSDnmbtZxSS9uFlblZeE')
+                            i(data-icon="cib:spotify", data-inline="false").iconify
+                        a.social-icon(href="https://www.google.com/podcasts?feed=aHR0cHM6Ly9hbmNob3IuZm0vcy8yNjE5NWFmYy9wb2RjYXN0L3Jzcw==")
+                            i(data-icon="cib:google-podcasts", data-inline="false").iconify
+                        a.social-icon(href='https://podcasts.apple.com/ru/podcast/voiceops/id1574365995')
+                            i(data-icon="cib:apple-podcasts", data-inline="false").iconify
+                        a.social-icon(href='https://music.yandex.ru/album/16576028')
+                            i(data-icon="cib:yandex", data-inline="false").iconify
+                        a.social-icon(href='https://pca.st/uvblbc0x')
+                            i(data-icon="simple-icons:pocketcasts", data-inline="false").iconify
+                        a.social-icon(href='https://www.breaker.audio/voiceops')
+                            i(data-icon="simple-icons:breaker", data-inline="false").iconify
+                        a.social-icon(href='https://t.me/voiceopschannel')
+                            i(data-icon="cib:telegram", data-inline="false").iconify
+
+            hr.m-0
 
         // Bootstrap core JS
         script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js')
