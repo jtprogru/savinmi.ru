@@ -38,5 +38,6 @@ For basic deploy used personal GitHub Actions – [jtprogru/ftp-deployment-actio
 ## Author
 
 This repo has been created by:
-- @jtprogru
-- @gaskob
+- [@jtprogru](https://github.com/jtprogru)
+- [@gaskob](https://github.com/gaskob)
+
