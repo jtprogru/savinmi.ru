@@ -34,3 +34,9 @@ For basic deploy used personal GitHub Actions – [jtprogru/ftp-deployment-actio
 - `FTP_SERVER` – FTP-server;
 - `FTP_USERNAME` – login for FTP access to FTP-server;
 - `FTP_PASSWORD` – password for FTP access to FTP-server;
+
+## Author
+
+This repo has been created by:
+- @jtprogru
+- @gaskob
