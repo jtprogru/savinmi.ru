@@ -26,3 +26,31 @@ jobs:
           local_dir: "./dist"
           remote_dir: "./savinmi.ru"
           delete: "false"
+
+      - name: Telegram Notify OK
+        if: ${{ success() }}
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_USER_ID }}
+          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          format: markdown
+          disable_web_page_preview: true
+          message: |
+            **Deploy status**: ✅
+            **Project**: `${{github.repository}}`
+            **Runs on**: https://github.com/${{github.repository}}/tree/${{github.sha}}
+            **Branch**: `${{github.ref}}`
+
+      - name: Telegram Notify NOK
+        if: ${{ failure() }}
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_USER_ID }}
+          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          format: markdown
+          disable_web_page_preview: true
+          message: |
+            **Deploy status**: ❌
+            **Project**: `${{github.repository}}`
+            **Runs on**: https://github.com/${{github.repository}}/tree/${{github.sha}}
+            **Branch**: `${{github.ref}}`
