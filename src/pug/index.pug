@@ -47,6 +47,8 @@ html(lang='en')
                         a.nav-link.js-scroll-trigger(href='#interests') Interests
                     li.nav-item
                         a.nav-link.js-scroll-trigger(href='#awards') Awards
+                    li.nav-item
+                        a.nav-link.js-scroll-trigger(href='#podcast') VoiceOps
 
         // Page Content
         .container-fluid.p-0
@@ -61,7 +63,7 @@ html(lang='en')
                         | Moscow · Russia · +7 (906) 027-2719 ·
                         a(href='mailto:mail@jtprog.ru') mail@jtprog.ru
                     p.lead.mb-5
-                        | I have a rich and diverse experience as an Infrastructure Engineer, SRE and a Linux administrator. I was born and grew up in a small village. Now my work helps a millions of people around the world.
+                        | I have a rich and diverse experience as an Infrastructure Engineer, SRE and a Linux administrator. I was born and grew up in a small village. Now my work helps a millions of people around the world. I launched my podcast <a href="https://anchor.fm/jtprogru">"VoiceOps"</a> to learn new things!
                     .social-icons
                         a.social-icon(href='https://github.com/jtprogru')
                             i.fab.fa-github
@@ -72,7 +74,9 @@ html(lang='en')
                         a.social-icon(href='https://www.linkedin.com/in/jtprogru')
                             i.fab.fa-linkedin-in
                         a.social-icon(href='https://jtprog.ru')
-                            i.fas.fa-link
+                            i.fas.fa-blog
+                        a.social-icon(href='https://music.yandex.ru/album/16576028')
+                            i.fas.fa-podcast
 
             hr.m-0
 
@@ -298,6 +302,32 @@ html(lang='en')
                             span.fa-li
                                 i.fas.fa-trophy.text
                             | Express course on Kubernetes administration "Slurm-2"
+
+            hr.m-0
+
+            // VoiceOps
+            section#podcast.resume-section
+                .resume-section-content
+                    h1.mb-0
+                        | Voice
+                        span.text-primary Ops
+                    .subheading.mb-5
+                        | In general, about IT, mainly about Operations and Development.
+                    p.lead.mb-5
+                        | You can follow the releases on any convenient podcast platform.
+                    .social-icons
+                        a.social-icon(href='https://open.spotify.com/show/6iqSDnmbtZxSS9uFlblZeE')
+                            i.fab.fa-spotify
+                        a.social-icon(href="https://www.google.com/podcasts?feed=aHR0cHM6Ly9hbmNob3IuZm0vcy8yNjE5NWFmYy9wb2RjYXN0L3Jzcw==")
+                            i.iconify.cib#google-podcasts
+                        a.social-icon(href='https://t.me/voiceopschannel')
+                            i.fab.fa-telegram
+                        a.social-icon(href='https://music.yandex.ru/album/16576028')
+                            i.fab.fa-yandex
+                    //- <span class="iconify" data-icon="cib:google-podcasts" data-inline="false"></span>
+                    //- <span class="iconify" data-icon="cib:apple-podcasts" data-inline="false"></span>
+
+            hr.m-0
 
         // Bootstrap core JS
         script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js')
