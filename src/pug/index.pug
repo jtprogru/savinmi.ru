@@ -9,7 +9,7 @@ html(lang='en')
         meta(name='author', content='Michael Savin')
         script(src="https://code.iconify.design/1/1.0.7/iconify.min.js", crossorigin='anonymous')
 
-        title Resume - Savin Michael
+        title Резюме - Савин Михаил
 
         link(rel='icon', type='image/x-icon', href='assets/img/favicon.ico')
 
@@ -17,8 +17,7 @@ html(lang='en')
         script(src='https://use.fontawesome.com/releases/v5.15.3/js/all.js', crossorigin='anonymous')
 
         // Google fonts
-        link(href='https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700&display=swap', rel='stylesheet', type='text/css')
-        //- link(href='https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i', rel='stylesheet', type='text/css')
+        link(href='https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;600&family=Yanone+Kaffeesatz:wght@300;600&display=swap', rel='stylesheet', type='text/css')
 
         // Core theme CSS (includes Bootstrap)
         link(href='css/styles.css', rel='stylesheet')
@@ -28,7 +27,7 @@ html(lang='en')
         // Navigation
         nav#sideNav.navbar.navbar-expand-lg.navbar-dark.bg-primary.fixed-top
             a.navbar-brand.js-scroll-trigger(href='#page-top')
-                span.d-block.d-lg-none Michael Savin
+                span.d-block.d-lg-none Михаил Савин
                 span.d-none.d-lg-block
                     img.img-fluid.img-profile.rounded-circle.mx-auto.mb-2(src='assets/img/profile.jpg', alt='...')
             button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
@@ -36,17 +35,17 @@ html(lang='en')
             #navbarResponsive.collapse.navbar-collapse
                 ul.navbar-nav
                     li.nav-item
-                        a.nav-link.js-scroll-trigger(href='#about') About
+                        a.nav-link.js-scroll-trigger(href='#about') Обо мне
                     li.nav-item
-                        a.nav-link.js-scroll-trigger(href='#experience') Experience
+                        a.nav-link.js-scroll-trigger(href='#skills') Навыки
                     li.nav-item
-                        a.nav-link.js-scroll-trigger(href='#education') Education
+                        a.nav-link.js-scroll-trigger(href='#experience') Опыт работы
                     li.nav-item
-                        a.nav-link.js-scroll-trigger(href='#skills') Skills
+                        a.nav-link.js-scroll-trigger(href='#education') Образование
                     li.nav-item
-                        a.nav-link.js-scroll-trigger(href='#interests') Interests
+                        a.nav-link.js-scroll-trigger(href='#interests') Интересы
                     li.nav-item
-                        a.nav-link.js-scroll-trigger(href='#awards') Awards
+                        a.nav-link.js-scroll-trigger(href='#awards') Сертификаты
                     li.nav-item
                         a.nav-link.js-scroll-trigger(href='#podcast') VoiceOps
 
@@ -57,22 +56,28 @@ html(lang='en')
             section#about.resume-section
                 .resume-section-content
                     h1.mb-0
-                        | Michael
-                        span.text-primary Savin
-                    .subheading.mb-5
-                        | Moscow · Russia · World Wide Web
+                        | Михаил
+                        span.text-primary Савин
+                    .subheading.mb-2
+                        | Москва · Россия · World Wide Web
                     p.lead.mb-5
-                        | I have a rich and diverse experience as an Infrastructure Engineer, SRE and a Linux administrator. I was born and grew up in a small village. Now my work helps a millions of people around the world. I launched my podcast <a href="#podcast">"VoiceOps"</a> to learn new things!
+                        | У меня довольно богатый и разносторонний опыт в роли <b>Infrastructure Engineer</b>, <b>SRE</b> и <b>Linux administrator</b>.
+                        | Я родился и вырос в маленькой деревне, а сейчас моя работа помогает миллионам пользователей.
+                        | Я запустил свой подкаст <a href="#podcast">"VoiceOps"</a>, чтобы учиться новому у тех, кто знает больше меня!
+                    p.lead.mb-5
+                        | Вы можете обратиться ко мне с предложением о работе или за консультацией по каким-либо вопросам входящим в мои компетенции.
+                    p.lead.mb-5
+                        | Для связи пишите в <a href='https://t.me/jtprogru', target="_blank"><b>Telegram</b></a>.
                     .social-icons
-                        a.social-icon(href='https://github.com/jtprogru').mb-2
-                            i.fab.fa-github
-                        a.social-icon(href='https://twitter.com/jtprogru').mb-2
-                            i.fab.fa-twitter
-                        a.social-icon(href='https://t.me/jtprogru').mb-2
+                        a.social-icon(href='https://t.me/jtprogru', target="_blank").mb-2
                             i.fab.fa-telegram
-                        a.social-icon(href='https://www.linkedin.com/in/jtprogru').mb-2
+                        a.social-icon(href='https://github.com/jtprogru', target="_blank").mb-2
+                            i.fab.fa-github
+                        a.social-icon(href='https://twitter.com/jtprogru', target="_blank").mb-2
+                            i.fab.fa-twitter
+                        a.social-icon(href='https://www.linkedin.com/in/jtprogru', target="_blank").mb-2
                             i.fab.fa-linkedin-in
-                        a.social-icon(href='https://jtprog.ru').mb-2
+                        a.social-icon(href='https://jtprog.ru', target="_blank").mb-2
                             i.fas.fa-blog
                         a.social-icon(href='#podcast').mb-2
                             i.fas.fa-podcast
@@ -83,124 +88,23 @@ html(lang='en')
 
             hr.m-0
 
-            // Experience
-            section#experience.resume-section
-               .resume-section-content
-                    h2.mb-5 Experience
-
-                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
-                        .flex-grow-1
-                            h3.mb-0 Senior SRE
-                            .subheading.mb-3 "Mail.ru Group"
-                            p.lead
-                                | I helped the project "Search Mail.ru" to avoid mistakes in writing new modules for SaltStack and prepared the platform for a large-scale update of SaltStack to the latest version.
-                            p
-                                | SaltStack, Nagios, Grafana, Linux, Git, Gitlab-CI, Python, IaC
-                        .flex-shrink-0
-                            span.text-primary March 2021 - Present
-
-                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
-                        .flex-grow-1
-                            h3.mb-0 DevOps
-                            .subheading.mb-3 "Secret Startup" (NDA)
-                            p.lead
-                                | I switched the infrastructure from bare-metal to DigitalOcean Managed Kubernetes and cloud solutions from Gitlab and Atlassian. Implemented IaC using Terraform and Ansible.
-                            p
-                                | Ansible, Prometheus, Grafana, Linux, Git, Gitlab-CI, Python, Kubernetes, IaC
-                        .flex-shrink-0
-                            span.text-primary January 2021 - June 2021
-
-                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
-                        .flex-grow-1
-                            h3.mb-0 Lead System Administrator
-                            .subheading.mb-3 "ADV / web-engineering co." LLC
-                            p.lead
-                                | Application of DevOps practices. Implementation of the practice of documenting processes/changes/configurations, as well as updating project documentation. Implementation of the IaC methodology. I implemented a template repository with the described infrastructure for a typical e-comm project of the company (Ansible + Gitlab-CI).
-                            p
-                                | Ansible, Terraform, Zabbix, Prometheus, Grafana, Linux, Git, Gitlab-CI, Python, PHP, IaC
-                        .flex-shrink-0
-                            span.text-primary October 2019 - February 2021
-
-                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
-                        .flex-grow-1
-                            h3.mb-0 Senior Technical Support Engineer for Linux Systems
-                            .subheading.mb-3 "SevenPro" LLC / "RegionCom" LLC
-                            p.lead
-                                | Support for the infrastructures of state and commercial companies. Troubleshooting CentOS 6.2/6.4. Working with hardware load balancers, as well as with CheckPoint firewalls. I implemented MITM at the infrastructure level of one large project. I wrote automation for automatic opening/closing of applications in Jira based on triggers in Zabbix.
-                            p
-                                | Zabbix, Grafana, Linux, Git, Gitlab, Python,
-                        .flex-shrink-0
-                            span.text-primary June 2018 - October 2019
-
-                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
-                        .flex-grow-1
-                            h3.mb-0 System Administrator
-                            .subheading.mb-3 "WebControl" LLC
-                            p.lead
-                                | Implemented "G Suite Enterprise". Improved the Zabbix monitoring system. The entire production is hosted in Hetzner (more than 50 bare-metal servers). Maintenance and monitoring of file storage based on GlusterFS. I also worked with a DRBD-based storage. Implemented the documentation in the Wiki (Gitlab). I have configured the storage of server configurations in Gitlab. Minimal maintenance of MySQL/PostgreSQL/MS SQL/Redis. Search for infrastructure bottlenecks and constant modernization.
-                        .flex-shrink-0
-                            span.text-primary January 2018 - June 2018
-
-                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
-                        .flex-grow-1
-                            h3.mb-0 System Administrator
-                            .subheading.mb-3 "ALLIANCE-TRAVEL" CJSC
-                            p.lead
-                                | Improved data backup using Bacula. Expanded the VMware ESXi virtualization cluster. I put Active Directory (Windows Server 2003-2012) in order. Maintenance of servers based on CentOS 5/6/7 (list of services: proxy, reverse proxy, internal and external web services, backup server). Databases are MySQL, PostgreSQL, Oracle DB, MSSQL.
-                        .flex-shrink-0
-                            span.text-primary August 2017 - January 2018
-
-                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
-                        .flex-grow-1
-                            h3.mb-0 System Administrator
-                            .subheading.mb-3 LLC "I-group"
-                            p.lead
-                                | I have fully designed the company's office IT infrastructure. Provided a full package of documentation: regulations, job descriptions, user and administrative documentation.
-                        .flex-shrink-0
-                            span.text-primary April 2017 - June 2017
-
-                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
-                        .flex-grow-1
-                            h3.mb-0 Junior System Administrator / System Administrator / Head of the IT Department
-                            .subheading.mb-3 "Argosy Analytics" LLC
-                            p.lead
-                                | I worked my way up from an assistant system administrator to the head of the information technology department. I have implemented a mail server based on Ubuntu Server, Postfix and iRedMail. I also deployed several file storages based on Ubuntu Server and Windows Server 2012. I transferred a lot of internal services to Linux servers, thereby helping the company to reduce the costs of the IT department.
-                        .flex-shrink-0
-                            span.text-primary May 2014 - March 2017
-
-            hr.m-0
-
-            // Education
-            section#education.resume-section
-                .resume-section-content
-                    h2.mb-5 Education
-
-                    .d-flex.flex-column.flex-md-row.justify-content-between
-                        .flex-grow-1
-                            h3.mb-0 Moscow Financial and Industrial University "Synergy"
-                            .subheading.mb-3 Technology Magnet Program
-                            div New Business Technologies – Security system Management
-                            p GPA: --
-                        .flex-shrink-0
-                            span.text-primary July 2012 - October 2013
-
-                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
-                        .flex-grow-1
-                            h3.mb-0 Saratov State Technical University named after Gagarina Yu.A.
-                            .subheading.mb-3 Software Engineer
-                            div Applied Information Technologies – Information Systems and Technologies
-                            p GPA: --
-                        .flex-shrink-0
-                            span.text-primary August 2007 - May 2008
-
-            hr.m-0
-
             // Skills
             section#skills.resume-section
                 .resume-section-content
-                    h2.mb-5 Skills
-                    .subheading.mb-3 Programming Languages & Tools & Practice
-                    ul.fa-ul.mb-0
+                    h2.mb-5 Навыки
+                    .subheading.mb-3
+                        | Языки программирования & Тулзы & Практики
+                    p.lead.mb-5
+                        | Здесь собраны все технологии с которыми я работал и которые я могу уверенно использовать в своей работе.
+                    ul.fa-ul.mb-5
+                        li
+                            span.fa-li
+                                i.fas.fa-check
+                            | OS:
+                            | <span class="iconify" data-icon="cib:ubuntu" data-inline="false"></span> Ubuntu,
+                            | <span class="iconify" data-icon="cib:debian" data-inline="false"></span> Debian,
+                            | <span class="iconify" data-icon="cib:centos" data-inline="false"></span> CentOS,
+                            | <span class="iconify" data-icon="cib:redhat" data-inline="false"></span> RHEL
                         li
                             span.fa-li
                                 i.fas.fa-check
@@ -244,12 +148,6 @@ html(lang='en')
                         li
                             span.fa-li
                                 i.fas.fa-check
-                            | Orchestrator:
-                            | <span class="iconify" data-icon="bx:bxl-kubernetes" data-inline="false"></span> Kubernetes,
-                            | <span class="iconify" data-icon="cib:swarm" data-inline="false"></span> Swarm
-                        li
-                            span.fa-li
-                                i.fas.fa-check
                             | Programming:
                             | <span class="iconify" data-icon="bx:bxl-python" data-inline="false"></span> Python,
                             | <span class="iconify" data-icon="mdi:bash" data-inline="false"></span> Bash,
@@ -258,63 +156,197 @@ html(lang='en')
                             span.fa-li
                                 i.fas.fa-check
                             | Practice: DevOps/DevSecOps, DocOps, IaC, ChatOps
+                    //- фыввы
+                    .subheading.mb-3 Знание языков
+                    ul.fa-ul.mb-0
+                        li
+                            span.fa-li
+                                i.fas.fa-check
+                            | Русский — Родной
+                        li
+                            span.fa-li
+                                i.fas.fa-check
+                            | Английский — A2
+            hr.m-0
+
+            // Experience
+            section#experience.resume-section
+               .resume-section-content
+                    h2.mb-5 Опыт работы
+
+                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
+                        .flex-grow-1
+                            h3.mb-0 Старший инженер доступности
+                            .subheading.mb-3
+                                a(href='http://corp.mail.ru', target="_blank").mb-2 "Mail.Ru Group"
+                            p.lead
+                                | Работаю над проектом "Поиск Mail.ru". Уменьшил общее количество ошибок, допускаемых при работе с репозиторием SatStack'а путем добавления различного рода проверок для SaltStack. Глобально используется очень много внутренних самописных продуктов.
+                                | Инфраструктура на bare-metal. Занимаюсь поддержкой большого количества высоконагруженных сервисов написаных на различных языках.
+                            p
+                                | SaltStack, Nagios, Grafana, Linux, Git, Gitlab-CI, Python
+                        .flex-shrink-0
+                            span.text-primary Март 2021 - Настоящее время
+
+                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
+                        .flex-grow-1
+                            h3.mb-0 Инженер DevOps
+                            .subheading.mb-3 "Secret Startup" (NDA)
+                            p.lead
+                                | Проектирование, сопровождение контуров dev и prod.
+                                | Помощь команде разработки в организации CI/CD.
+                                | Спроектировал и запустил инфраструктуру проекта <a href="https://sammybeauty.ru", target="_blank">"SammyBeauty"</a>. Площадка выдержала в первый час запуска порядка 75k уникальных пользователей и в районе 220rps.
+                                | Реализовал внутренний проект "Big-Green-Button": шаблонный репозиторий с ansible-плейбуками для разворачивания с нуля проектов схожих с вышеупомянутым.
+                            p
+                                | Ansible, Prometheus, Grafana, Linux, Git, Gitlab-CI, Python
+                        .flex-shrink-0
+                            span.text-primary Январь 2021 - Июль 2021
+
+                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
+                        .flex-grow-1
+                            h3.mb-0 Ведущий системный администратор
+                            .subheading.mb-3
+                                a(href="http://adv.ru", target="_blank") ООО "АДВ"
+                            p.lead
+                                | Поддержание работоспособности как внутренней инфраструктуры, так и инфраструктур клиентов. Проектирование, внедрение и сопровождение stage/production сред для компаний-клиентов. Общее количество серверов на поддержке – порядка трёх сотен. Применение практик DevOps. Внедрение практик документирования процессов/изменений/конфигураций, а так же актуализация документации по проектам. Внедрение методологии IaC. Реализовал шаблонный репозиторий с описанной инфраструктурой для типового e-comm проекта компании (Ansible + Gitlab-CI).
+                            p
+                                | Ansible, Terraform, Zabbix, Prometheus, Grafana, Linux, Git, Gitlab-CI, Python, PHP, IaC
+                        .flex-shrink-0
+                            span.text-primary Октябрь 2019 - Февраль 2021
+
+                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
+                        .flex-grow-1
+                            h3.mb-0 Старший инженер поддержки Linux-систем
+                            .subheading.mb-3
+                                a(href='http://7pro.ru', target="_blank").mb-2  ООО "СевенПро" / ООО "РегионКом"
+                            p.lead
+                                | Поддержка инфраструктур государственных и коммерческих компаний. Общее количество серверов на поддержке – более двух тысяч серверов. Траблшутинг CentOS 6.2/6.4. Работа с аппаратными балансировщиками нагрузки, а так же с МСЭ CheckPoint. Внедрил MITM на уровне инфраструктуры одного крупного проекта. Написал автоматизацию для автоматического заведения/закрытия заявок в Jira на основе триггеров в <a href="https://github.com/jtprogru/zbx2jira">Zabbix</a>.
+                            p
+                                | Zabbix, Grafana, Linux, Git, Gitlab, Python,
+                        .flex-shrink-0
+                            span.text-primary Июнь 2018 - Октябрь 2019
+
+                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
+                        .flex-grow-1
+                            h3.mb-0 Системный администратор
+                            .subheading.mb-3
+                                a(href='http://webkontrol.com', target="_blank").mb-2 ООО "ВебКонтроль"
+                            p.lead
+                                | Поддержание работоспособности инфраструктуры компании. Прямое взаимодействие с командой разработчиков. Внедрение почтового сервиса Gmail по подписке G Suite Enterprise. Настройка системы мониторинга на базе Zabbix 3.4. Обслуживание 62 серверов из которых 54 расположены в Hetzner (весь production плюс тестовые стенды). Обслуживание и мониторинг файлового хранилища на базе GlusterFS (общий объём на 6 серверов составляет 30 ТБ). Конфигурирование/обслуживание/мониторинг двух хостов использующих DRBD. Ведение документации в Wiki (Gitlab). Хранение конфигураций серверов в Gitlab. Минимальное обслуживание СУБД MySQL/PostgreSQL/MS SQL/Redis. Поиск узких мест в инфраструктуре и постоянная модернизация.
+                        .flex-shrink-0
+                            span.text-primary Январь 2018 - Июнь 2018
+
+                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
+                        .flex-grow-1
+                            h3.mb-0 Системный администратор
+                            .subheading.mb-3
+                                a(href='https://www.moireis.ru/', target="_blank").mb-2 ЗАО "АЛЬЯНС-ТРЕВЭЛ"
+                            p.lead
+                                | Парк – более 100 машин. Основная деятельность – поддержание работоспособности инфраструктуры компании. Резервное копирование данных (Bacula). Обслуживание кластера виртуализации VMWare ESXi. Обслуживание серверов Active Directory (Windows Server 2003-2012). Обслуживание серверов на базе CentOS 5/6/7 (примерный список сервисов: прокси, реверспрокси, внутренние и внешние веб-сервисы, сервер резервного копирования). Базы данный MySQL, PostgreSQL, Oracle, MSSQL. Обслуживание активного сетевого оборудования Cisco/Mikrotik.
+                        .flex-shrink-0
+                            span.text-primary Август 2017 - Январь 2018
+
+                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
+                        .flex-grow-1
+                            h3.mb-0 Системный администратор
+                            .subheading.mb-3
+                                a(href='http://webkontrol.com', target="_blank").mb-2 ООО "И-групп"
+                            p.lead
+                                | Проектная работа. Полностью спроектировал всю офисную инфраструктуру компании. Предоставил полный комплект документации: регламенты, должностные инструкции, пользовательские и администраторские мануалы.
+                        .flex-shrink-0
+                            span.text-primary Апрель 2017 - Июнь 2017
+
+                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
+                        .flex-grow-1
+                            h3.mb-0 Помощник Системного администратора / Системный администратор / Руководитель отдела ИТ
+                            .subheading.mb-3
+                                a(href='http://www.argosy-tech.ru/', target="_blank").mb-2 ООО "Аргоси Аналитика"
+                            p.lead
+                                | Прошел путь от помощника системного администратора в центральном офисе г.Москва, до руководителя отдела информационных технологий. Парк — более 400 машин. Основная деятельность — поддержание работоспособности рабочих мест сотрудников. Резервное копирование данных. Развертывание серверов виртуализации (VMWare). Развертывание почтовых серверов (Ubuntu Server 14.04+Postfix+iRedMail). Создание файловых хранилищ (Ubuntu Server 14.04; Windows Server 2012). Обслуживание серверов Active Directory (Windows Server 2003-2012).
+                        .flex-shrink-0
+                            span.text-primary Май 2014 - Март 2017
+
+            hr.m-0
+
+            // Education
+            section#education.resume-section
+                .resume-section-content
+                    h2.mb-5 Образование
+
+                    .d-flex.flex-column.flex-md-row.justify-content-between
+                        .flex-grow-1
+                            h3.mb-0 МФПУ "Синергия"
+                            .subheading.mb-3 Руководитель службы безопасности
+                            div.mb-4 Новые Технологии Бизнеса – Менеджмент систем безопасности
+                        .flex-shrink-0
+                            span.text-primary Июль 2012 - Октябрь 2013
+
+                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
+                        .flex-grow-1
+                            h3.mb-0 СГТУ им Гагарина Ю.А.
+                            .subheading.mb-3 Инженер-программист
+                            div.mb-4 Прикладная Инфрматика и Технологии – Информационные системы и технологии
+                        .flex-shrink-0
+                            span.text-primary Август 2007 - Май 2008
 
             hr.m-0
 
             // Interests
             section#interests.resume-section
                 .resume-section-content
-                    h2.mb-5 Interests
+                    h2.mb-5 Интересы
                     p
-                        | There is a lot to tell about me. Both professional and life experience is quite rich and diverse. In my work, I focus on documentation and automation. He is demanding of himself and others. I can work alone and in a team. I am constantly developing in the field of IT, learning new things by solving complex problems.
-                    p
-                        | When I have to stay at home, I follow a number of science fiction and fantasy films, I am engaged in raising my son and spend a lot of free time studying the latest technological achievements in the world of techonology.
-                    p.mb-0
-                        | When inspiration visits me or there are really interesting cases about which I can tell something, I write to my blog.
+                        | Я постоянно развиваюсь в своей профессиональной области. Учусь новому на примере решения сложных задач.
+                        | Так же я занимаюсь воспитанием сына и веду некоторую активность в Интернете.
+                        | Веду свой блог <a href="https://jtprog.ru", target="_blank">"SysOps"</a> в качестве записной книжки. Стараюсь записывать туда всё, что может быть интересно не только мне в формате сжатых "инструкций к действию".
+                        | Так же веду канал в Telegram <a href="https://t.me/sysopschannel", target="_blank">"SysOps"</a>, в котором публикую помимо ссылок на свои статьи еще и какие-то минизаметки по hard&soft-скиллам.
 
             hr.m-0
 
             // Awards
             section#awards.resume-section
                 .resume-section-content
-                    h2.mb-5 Awards & Certifications
+                    h2.mb-5 Сетрификаты
                     ul.fa-ul.mb-0
                         li
                             span.fa-li
                                 i.fas.fa-trophy.text
-                            | OS Linux
+                            a(href="http://www.intuit.ru/verifydiplomas/100880600", target="_blank") Операционная система Linux
                         li
                             span.fa-li
                                 i.fas.fa-trophy.text
-                            | The basics of local networks
+                            a(href="http://www.intuit.ru/verifydiplomas/00215146", target="_blank") Основы локальных сетей
                         li
                             span.fa-li
                                 i.fas.fa-trophy.text
-                            | Analysis and Risk Management in Information Systems Based on Microsoft OS
+                            a(href="http://www.intuit.ru/verifydiplomas/100880577", target="_blank") Анализ и управление рисками в ИС на базе ОС Microsoft Windows
                         li
                             span.fa-li
                                 i.fas.fa-trophy.text
-                            | JavaScript Core Skills
+                            a(href="http://www.intuit.ru/verifydiplomas/00178706", target="_blank") Основы JavaScript
                         li
                             span.fa-li
                                 i.fas.fa-trophy.text
-                            | Information Technology in the Management (Certified)
+                            a(href="http://www.intuit.ru/verifydiplomas/00181746", target="_blank") Основы CSS
                         li
                             span.fa-li
                                 i.fas.fa-trophy.text
-                            | Introduction to R
+                            a(href="http://www.intuit.ru/verifydiplomas/100880561", target="_blank") Информационные технологии в управлении (Сертификация)
                         li
                             span.fa-li
                                 i.fas.fa-trophy.text
-                            | Information Security
+                            a(href="https://www.datacamp.com/courses/free-introduction-to-r", target="_blank") Introduction to R
                         li
                             span.fa-li
                                 i.fas.fa-trophy.text
-                            | Network Security
+                            a(href="https://www.intuit.ru/verifydiplomas/101068636", target="_blank") Информационная безопасность
                         li
                             span.fa-li
                                 i.fas.fa-trophy.text
-                            | Express course on Kubernetes administration "Slurm-2"
+                            a(href="https://www.intuit.ru/verifydiplomas/100907833", target="_blank") Безопасность сетей
+                        li
+                            span.fa-li
+                                i.fas.fa-trophy.text
+                            a(href="https://slurm.io/kubernetes-baza", target="_blank") "Slurm-2": Интенсив по администрированию Kubernetes
 
             hr.m-0
 
@@ -322,29 +354,29 @@ html(lang='en')
             section#podcast.resume-section
                 .resume-section-content
                     h1.mb-0
-                        | Voice
-                        span.text-primary Ops
+                        | "Voice
+                        span.text-primary Ops"
                     .subheading.mb-5
-                        | In general, about IT, mainly about Operations and Development.
+                        | В основном про IT. В большей степени про Dev и Ops.
                     p.lead.mb-5
-                        | You can follow the releases on any convenient podcast platform.
+                        | Подкаст доступен на большинстве ключевых платформ.
                     p.mb-5
-                        | The podcast is broadcast in Russian. If you have any suggestions on topics, then you should contact me in <a href="https://t.me/jtprogru">Telegram</a>.
+                        | Подкаст ведется на русском языке. По вопросам сотрудничесва или любым другим вопросам, связанным с подкастом, пишите мне в Telegram.
 
                     .social-icons.d-flex.flex-row.justify-content.flex-wrap
-                        a.social-icon(href='https://open.spotify.com/show/6iqSDnmbtZxSS9uFlblZeE').mb-3
+                        a.social-icon(href='https://open.spotify.com/show/6iqSDnmbtZxSS9uFlblZeE', target="_blank").mb-3
                             i(data-icon="cib:spotify", data-inline="false").iconify
-                        a.social-icon(href="https://www.google.com/podcasts?feed=aHR0cHM6Ly9hbmNob3IuZm0vcy8yNjE5NWFmYy9wb2RjYXN0L3Jzcw==").mb-3
+                        a.social-icon(href="https://www.google.com/podcasts?feed=aHR0cHM6Ly9hbmNob3IuZm0vcy8yNjE5NWFmYy9wb2RjYXN0L3Jzcw==", target="_blank").mb-3
                             i(data-icon="cib:google-podcasts", data-inline="false").iconify
-                        a.social-icon(href='https://podcasts.apple.com/ru/podcast/voiceops/id1574365995').mb-3
+                        a.social-icon(href='https://podcasts.apple.com/ru/podcast/voiceops/id1574365995', target="_blank").mb-3
                             i(data-icon="cib:apple-podcasts", data-inline="false").iconify
-                        a.social-icon(href='https://music.yandex.ru/album/16576028').mb-3
+                        a.social-icon(href='https://music.yandex.ru/album/16576028', target="_blank").mb-3
                             i(data-icon="cib:yandex", data-inline="false").iconify
-                        a.social-icon(href='https://pca.st/uvblbc0x').mb-3
+                        a.social-icon(href='https://pca.st/uvblbc0x', target="_blank").mb-3
                             i(data-icon="simple-icons:pocketcasts", data-inline="false").iconify
-                        a.social-icon(href='https://www.breaker.audio/voiceops').mb-3
+                        a.social-icon(href='https://www.breaker.audio/voiceops', target="_blank").mb-3
                             i(data-icon="simple-icons:breaker", data-inline="false").iconify
-                        a.social-icon(href='https://t.me/voiceopschannel').mb-3
+                        a.social-icon(href='https://t.me/voiceopschannel', target="_blank").mb-3
                             i(data-icon="cib:telegram", data-inline="false").iconify
 
             hr.m-0
