@@ -10,6 +10,7 @@
         "build:scss": "node scripts/build-scss.js",
         "clean": "node scripts/clean.js",
         "start": "npm run build && node scripts/start.js",
+        "pdf": "node scripts/pdf.js",
         "start:debug": "npm run build && node scripts/start-debug.js"
     },
     "description": "Resume is a simple, yet elegant resume and CV theme for Bootstrap 4.",
@@ -37,7 +38,8 @@
     },
     "dependencies": {
         "bootstrap": "5.0.2",
-        "bootstrap-icons": "^1.5.0"
+        "bootstrap-icons": "^1.5.0",
+        "pug-pdf": "^0.1.1"
     },
     "devDependencies": {
         "@iconify-icons/cib": "^1.1.0",
