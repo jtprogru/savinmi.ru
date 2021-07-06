@@ -15,16 +15,17 @@ html(lang='en')
 
         // Font Awesome icons (free version)
         script(src='https://use.fontawesome.com/releases/v5.15.3/js/all.js', crossorigin='anonymous')
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js", crossorigin='anonymous')
+        //- - function printer() { console.log("HELLO!") })
+
 
         // Google fonts
         link(href='https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;600&family=Yanone+Kaffeesatz:wght@300;600&display=swap', rel='stylesheet', type='text/css')
 
         // Core theme CSS (includes Bootstrap)
         link(href='css/styles.css', rel='stylesheet')
-        script(src='js/pdf.js')
 
     body#page-top
-
         // Navigation
         nav#sideNav.navbar.navbar-expand-lg.navbar-dark.bg-primary.fixed-top
             a.navbar-brand.js-scroll-trigger(href='#page-top')
@@ -75,7 +76,7 @@ html(lang='en')
                     p.lead.mb-5
                         | Вы можете обратиться ко мне с предложением о работе или за консультацией по каким-либо вопросам, относящимся к моим <a href="#interests">интересам</a> или моему <a href="#experience">опыту</a>.
                     p.lead.mb-5
-                        | Для связи пишите в <a href='https://t.me/jtprogru', target="_blank"><b>Telegram</b></a>.
+                        | Для связи пишите в Telegram: <a href='https://t.me/jtprogru', target="_blank"><b>@jtprogru</b></a>.
                     .social-icons
                         a.social-icon(href='https://t.me/jtprogru', target="_blank").mb-2
                             i.fab.fa-telegram
@@ -93,7 +94,7 @@ html(lang='en')
                             i(data-icon="entypo:email", data-inline="false").iconify
                         a.social-icon(href='tel:+79060272719').mb-2
                             i(data-icon="entypo:phone", data-inline="false").iconify
-                        a.social-icon(href='', onclick="printer();").mb-2#printer
+                        a.social-icon(href='#', onclick="printer();").mb-2#printer
                             i(data-icon="carbon:generate-pdf", data-inline="false").iconify
 
             hr.m-0
@@ -439,3 +440,4 @@ html(lang='en')
         // Core theme JS
         script(src='js/scripts.js')
         script(src='js/twitter.js')
+        script(src='js/printer.js')
