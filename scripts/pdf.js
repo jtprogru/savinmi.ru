@@ -3,8 +3,8 @@ const pugpdf = require('pug-pdf'),
 
 fs.createReadStream('src/pug/index.pug')
   .pipe(pugpdf({
-    cssPath: 'src/scss/style.scss',
+    cssPath: 'dist/css/style.css',
     paperOrientation: 'landscape',
     paperBorder: '1cm'
   }))
-  .pipe(fs.createWriteStream('dist/cv.pdf'));
+  .pipe(fs.createWriteStream('dist/CV_SavinMI.pdf'));
