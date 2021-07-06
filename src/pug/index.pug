@@ -5,8 +5,8 @@ html(lang='en')
 
         meta(charset='utf-8')
         meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
-        meta(name='description', content='CV')
-        meta(name='author', content='Michael Savin')
+        meta(name='description', content='Резюме')
+        meta(name='author', content='Савин (jtprogru) Михаил')
         script(src="https://code.iconify.design/1/1.0.7/iconify.min.js", crossorigin='anonymous')
 
         title Резюме - Савин Михаил
@@ -15,9 +15,6 @@ html(lang='en')
 
         // Font Awesome icons (free version)
         script(src='https://use.fontawesome.com/releases/v5.15.3/js/all.js', crossorigin='anonymous')
-        script(src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js", crossorigin='anonymous')
-        //- - function printer() { console.log("HELLO!") })
-
 
         // Google fonts
         link(href='https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;600&family=Yanone+Kaffeesatz:wght@300;600&display=swap', rel='stylesheet', type='text/css')
@@ -63,16 +60,19 @@ html(lang='en')
                     .subheading.mb-2
                         | Москва · Россия · World Wide Web
                     p.lead.mb-5
-                        | У меня довольно богатый и разносторонний опыт в роли <b>Infrastructure Engineer</b>, <b>SRE</b> и <b>Linux administrator</b>.
+                        | У меня довольно богатый и разносторонний опыт в роли <b>Infrastructure Engineer</b>,
+                        | <b>SRE</b> и <b>Linux administrator</b>.
                         | Я родился и вырос в маленькой деревне, а сейчас моя работа помогает миллионам пользователей.
-                        | Я запустил свой подкаст
+                        | Недавно запустил свой подкаст
                         a(href="#podcast") "VoiceOps"
                         | чтобы учиться новому у тех, кто знает больше меня!
                     p.lead.mb-5
-                        | В работе я ищу интересные задачи в направлении RnD:
-                        | разобраться в непонятном баге, привнести "классную штуку" в команду.
-                        | Стараюсь автоматизировать всё, что того требует.
-                        | Хочу production-опыт с GitHub и GitHub Actions.
+                        | В работе ищу интересные задачи в направлении RnD:
+                        | разобраться в непонятном баге, привнести "классную штуку" в команду которую раньше не использовали
+                        | или написать какой-то "упрощатор жизни".
+                        | Стараюсь автоматизировать всё, что того требует, а в качестве средства автоматизции
+                        | стараюсь использовать Ansible.
+                        | Хочу получить production-опыт с GitHub и GitHub Actions.
                     p.lead.mb-5
                         | Вы можете обратиться ко мне с предложением о работе или за консультацией по каким-либо вопросам, относящимся к моим <a href="#interests">интересам</a> или моему <a href="#experience">опыту</a>.
                     p.lead.mb-5
@@ -94,8 +94,8 @@ html(lang='en')
                             i(data-icon="entypo:email", data-inline="false").iconify
                         a.social-icon(href='tel:+79060272719').mb-2
                             i(data-icon="entypo:phone", data-inline="false").iconify
-                        a.social-icon(href='#', onclick="printer();").mb-2#printer
-                            i(data-icon="carbon:generate-pdf", data-inline="false").iconify
+                        //- a.social-icon(href='#').mb-2
+                        //-     i(data-icon="carbon:generate-pdf", data-inline="false").iconify
 
             hr.m-0
 
@@ -440,4 +440,3 @@ html(lang='en')
         // Core theme JS
         script(src='js/scripts.js')
         script(src='js/twitter.js')
-        script(src='js/printer.js')
