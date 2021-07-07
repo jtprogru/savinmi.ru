@@ -53,7 +53,7 @@ html(lang='en')
 
             // About
             section#about.resume-section
-                .resume-section-content
+                .resume-section-content.pdf-break-after
                     h1.mb-0
                         | Михаил
                         span.text-primary Савин
@@ -102,7 +102,7 @@ html(lang='en')
             // Skills
             section#skills.resume-section
                 .resume-section-content
-                    h2.mb-5 Навыки
+                    h2.mb-3 Навыки
                     .subheading.mb-3
                         | Языки программирования & Тулзы & Практики
                     p.lead.mb-5
@@ -183,7 +183,7 @@ html(lang='en')
             // Experience
             section#experience.resume-section
                .resume-section-content
-                    h2.mb-5 Опыт работы
+                    h2.mb-3 Опыт работы
 
                     .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
                         .flex-grow-1
@@ -201,7 +201,7 @@ html(lang='en')
                         .flex-shrink-0
                             span.text-primary Март 2021 - Настоящее время
 
-                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
+                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5.pdf-break-after
                         .flex-grow-1
                             h3.mb-0 Инженер DevOps
                             .subheading.mb-3 "Secret Startup" (NDA)
@@ -229,7 +229,7 @@ html(lang='en')
                                 | документации по проектам. Внедрение методологии IaC. Реализовал шаблонный репозиторий с описанием
                                 | инфраструктуры для типового e-comm проекта компании на Ansible и "кнопочками" запуска
                                 | автоматизции через GitLab CI. Спроектировал и запустил инфраструктуру проекта
-                                | <a href="https://sammybeauty.ru", target="_blank">"SammyBeauty"</a>. Площадка выдержала в первый
+                                | <a href="http://sammybeauty.ru", target="_blank">"SammyBeauty"</a>. Площадка выдержала в первый
                                 | час запуска порядка 75k уникальных пользователей и в районе 220rps.
                                 | Реализовал внутренний проект "Big-Green-Button": шаблонный репозиторий
                                 | с ansible-плейбуками для разворачивания с нуля проектов схожих с вышеупомянутым.
@@ -255,7 +255,7 @@ html(lang='en')
                         .flex-shrink-0
                             span.text-primary Июнь 2018 - Октябрь 2019
 
-                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
+                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5.pdf-break-after
                         .flex-grow-1
                             h3.mb-0 Системный администратор
                             .subheading.mb-3
@@ -316,12 +316,12 @@ html(lang='en')
                         .flex-shrink-0
                             span.text-primary Май 2014 - Март 2017
 
-            hr.m-0.pdf-break-after
+            hr.m-0
 
             // Education
-            section#education.resume-section
+            section#education.resume-section.pdf-break-before
                 .resume-section-content
-                    h2.mb-5 Образование
+                    h2.mb-3 Образование
 
                     .d-flex.flex-column.flex-md-row.justify-content-between
                         .flex-grow-1
@@ -339,12 +339,12 @@ html(lang='en')
                         .flex-shrink-0
                             span.text-primary Август 2007 - Май 2008
 
-            hr.m-0.pdf-break-after
+            hr.m-0
 
             // Interests
-            section#interests.resume-section
+            section#interests.resume-section.pdf-break-before
                 .resume-section-content
-                    h2.mb-5 Интересы
+                    h2.mb-3 Интересы
                     p
                         | Я постоянно развиваюсь в своей профессиональной области. Учусь новому на примере решения сложных задач.
                         | Так же я занимаюсь воспитанием сына и веду некоторую активность в Интернете.
@@ -353,12 +353,12 @@ html(lang='en')
                         | Иногда пишу всякие поделки на Python, стараюсь применять аннотацию типов.
                         | Для Python-проектов стараюсь реализовать автоматизацию на базе GitHub Actions.
 
-            hr.m-0.pdf-break-after
+            hr.m-0
 
             // Awards
-            section#awards.resume-section
+            section#awards.resume-section.pdf-break-before
                 .resume-section-content
-                    h2.mb-5 Сертификаты
+                    h2.mb-3 Сертификаты
                     ul.fa-ul.mb-0
                         li
                             span.fa-li
@@ -401,10 +401,10 @@ html(lang='en')
                                 i.fas.fa-trophy.text
                             a(href="https://slurm.io/kubernetes-baza", target="_blank") "Slurm-2": Интенсив по администрированию Kubernetes
 
-            hr.m-0.pdf-break-after
+            hr.m-0
 
             // VoiceOps
-            section#podcast.resume-section
+            section#podcast.resume-section.pdf-break-before
                 .resume-section-content
                     h1.mb-0
                         | "Voice
@@ -439,6 +439,7 @@ html(lang='en')
 
         // Core theme JS
         script(src='js/html2pdf.bundle.min.js')
+        script(src='js/html2canvas.min.js')
         script(src='js/printer.js')
         script(src='js/scripts.js')
         script(src='js/twitter.js')
