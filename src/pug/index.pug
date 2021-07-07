@@ -49,7 +49,7 @@ html(lang='en')
                         a.nav-link.js-scroll-trigger(href='#podcast') VoiceOps
 
         // Page Content
-        .container-fluid.p-0
+        .container-fluid.p-0#content
 
             // About
             section#about.resume-section
@@ -79,22 +79,22 @@ html(lang='en')
                         | Для связи пишите в Telegram: <a href='https://t.me/jtprogru', target="_blank"><b>@jtprogru</b></a>.
                     .social-icons
                         a.social-icon(href='https://t.me/jtprogru', target="_blank").mb-2
-                            i.fab.fa-telegram
+                            i(data-icon="cib:telegram", data-inline="false").iconify
                         a.social-icon(href='https://github.com/jtprogru', target="_blank").mb-2
-                            i.fab.fa-github
+                            i(data-icon="cib:github", data-inline="false").iconify
                         a.social-icon(href='https://twitter.com/jtprogru', target="_blank").mb-2
-                            i.fab.fa-twitter
+                            i(data-icon="cib:twitter", data-inline="false").iconify
                         a.social-icon(href='https://www.linkedin.com/in/jtprogru', target="_blank").mb-2
-                            i.fab.fa-linkedin-in
+                            i(data-icon="cib:linkedin", data-inline="false").iconify
                         a.social-icon(href='https://jtprog.ru', target="_blank").mb-2
-                            i.fas.fa-blog
+                            i(data-icon="fa-solid:blog", data-inline="false").iconify
                         a.social-icon(href='#podcast').mb-2
-                            i.fas.fa-podcast
+                            i(data-icon="fa-solid:podcast", data-inline="false").iconify
                         a.social-icon(href='mailto:mail@jtprog.ru').mb-2
                             i(data-icon="entypo:email", data-inline="false").iconify
                         a.social-icon(href='tel:+79060272719').mb-2
                             i(data-icon="entypo:phone", data-inline="false").iconify
-                        a.social-icon(href='CV_SavinMI.pdf', target="_blank").mb-2
+                        a.social-icon(onclick="printer();", target="_blank").mb-2
                             i(data-icon="carbon:generate-pdf", data-inline="false").iconify
 
             hr.m-0
@@ -128,7 +128,7 @@ html(lang='en')
                             | Version control:
                             | <span class="iconify" data-icon="cib:gitlab" data-inline="false"></span> GitLab,
                             | <span class="iconify" data-icon="akar-icons:github-fill" data-inline="false"></span> GitHub,
-                            | <span class="iconify" data-icon="fa:bitbucket" data-inline="false"></span> Bitrbucket
+                            | <span class="iconify" data-icon="fa:bitbucket" data-inline="false"></span> Bitbucket
                         li
                             span.fa-li
                                 i.fas.fa-check
@@ -216,7 +216,7 @@ html(lang='en')
                         .flex-shrink-0
                             span.text-primary Январь 2021 - Июль 2021
 
-                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
+                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5.pdf-break-after
                         .flex-grow-1
                             h3.mb-0 Ведущий системный администратор
                             .subheading.mb-3
@@ -289,7 +289,7 @@ html(lang='en')
                         .flex-shrink-0
                             span.text-primary Август 2017 - Январь 2018
 
-                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
+                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5.pdf-break-after
                         .flex-grow-1
                             h3.mb-0 Системный администратор
                             .subheading.mb-3
@@ -316,7 +316,7 @@ html(lang='en')
                         .flex-shrink-0
                             span.text-primary Май 2014 - Март 2017
 
-            hr.m-0
+            hr.m-0.pdf-break-after
 
             // Education
             section#education.resume-section
@@ -339,7 +339,7 @@ html(lang='en')
                         .flex-shrink-0
                             span.text-primary Август 2007 - Май 2008
 
-            hr.m-0
+            hr.m-0.pdf-break-after
 
             // Interests
             section#interests.resume-section
@@ -353,12 +353,12 @@ html(lang='en')
                         | Иногда пишу всякие поделки на Python, стараюсь применять аннотацию типов.
                         | Для Python-проектов стараюсь реализовать автоматизацию на базе GitHub Actions.
 
-            hr.m-0
+            hr.m-0.pdf-break-after
 
             // Awards
             section#awards.resume-section
                 .resume-section-content
-                    h2.mb-5 Сетрификаты
+                    h2.mb-5 Сертификаты
                     ul.fa-ul.mb-0
                         li
                             span.fa-li
@@ -401,7 +401,7 @@ html(lang='en')
                                 i.fas.fa-trophy.text
                             a(href="https://slurm.io/kubernetes-baza", target="_blank") "Slurm-2": Интенсив по администрированию Kubernetes
 
-            hr.m-0
+            hr.m-0.pdf-break-after
 
             // VoiceOps
             section#podcast.resume-section
@@ -438,5 +438,7 @@ html(lang='en')
         script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js')
 
         // Core theme JS
+        script(src='js/html2pdf.bundle.min.js')
+        script(src='js/printer.js')
         script(src='js/scripts.js')
         script(src='js/twitter.js')
