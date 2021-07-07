@@ -1,15 +1,15 @@
-// 
+//
 // Sections
-// 
+//
 
 section.resume-section {
     display: flex;
     align-items: center;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-    max-width: 75rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+    max-width: 90rem;
 
     .resume-section-content {
         width: 100%;
@@ -26,7 +26,7 @@ section.resume-section {
     section.resume-section {
         padding-left: 3rem;
         padding-right: 3rem;
-        padding-top: 5rem;
-        padding-bottom: 5rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
     }
 }
