@@ -16,7 +16,7 @@ jobs:
         run: npm install
       - name: Build
         run: |
-          npm run clean && npm run build && npm run pdf
+          npm run clean && npm run build
       - name: Upload from public_html via FTP
         uses: jtprogru/ftp-deployment-action@latest
         with:

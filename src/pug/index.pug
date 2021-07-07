@@ -49,11 +49,11 @@ html(lang='en')
                         a.nav-link.js-scroll-trigger(href='#podcast') VoiceOps
 
         // Page Content
-        .container-fluid.p-0
+        .container-fluid.p-0#content
 
             // About
             section#about.resume-section
-                .resume-section-content
+                .resume-section-content.pdf-break-after
                     h1.mb-0
                         | Михаил
                         span.text-primary Савин
@@ -79,22 +79,22 @@ html(lang='en')
                         | Для связи пишите в Telegram: <a href='https://t.me/jtprogru', target="_blank"><b>@jtprogru</b></a>.
                     .social-icons
                         a.social-icon(href='https://t.me/jtprogru', target="_blank").mb-2
-                            i.fab.fa-telegram
+                            i(data-icon="cib:telegram", data-inline="false").iconify
                         a.social-icon(href='https://github.com/jtprogru', target="_blank").mb-2
-                            i.fab.fa-github
+                            i(data-icon="cib:github", data-inline="false").iconify
                         a.social-icon(href='https://twitter.com/jtprogru', target="_blank").mb-2
-                            i.fab.fa-twitter
+                            i(data-icon="cib:twitter", data-inline="false").iconify
                         a.social-icon(href='https://www.linkedin.com/in/jtprogru', target="_blank").mb-2
-                            i.fab.fa-linkedin-in
+                            i(data-icon="cib:linkedin", data-inline="false").iconify
                         a.social-icon(href='https://jtprog.ru', target="_blank").mb-2
-                            i.fas.fa-blog
+                            i(data-icon="fa-solid:blog", data-inline="false").iconify
                         a.social-icon(href='#podcast').mb-2
-                            i.fas.fa-podcast
+                            i(data-icon="fa-solid:podcast", data-inline="false").iconify
                         a.social-icon(href='mailto:mail@jtprog.ru').mb-2
                             i(data-icon="entypo:email", data-inline="false").iconify
                         a.social-icon(href='tel:+79060272719').mb-2
                             i(data-icon="entypo:phone", data-inline="false").iconify
-                        a.social-icon(href='CV_SavinMI.pdf', target="_blank").mb-2
+                        a.social-icon(onclick="printer();", target="_blank").mb-2
                             i(data-icon="carbon:generate-pdf", data-inline="false").iconify
 
             hr.m-0
@@ -102,7 +102,7 @@ html(lang='en')
             // Skills
             section#skills.resume-section
                 .resume-section-content
-                    h2.mb-5 Навыки
+                    h2.mb-3 Навыки
                     .subheading.mb-3
                         | Языки программирования & Тулзы & Практики
                     p.lead.mb-5
@@ -128,7 +128,7 @@ html(lang='en')
                             | Version control:
                             | <span class="iconify" data-icon="cib:gitlab" data-inline="false"></span> GitLab,
                             | <span class="iconify" data-icon="akar-icons:github-fill" data-inline="false"></span> GitHub,
-                            | <span class="iconify" data-icon="fa:bitbucket" data-inline="false"></span> Bitrbucket
+                            | <span class="iconify" data-icon="fa:bitbucket" data-inline="false"></span> Bitbucket
                         li
                             span.fa-li
                                 i.fas.fa-check
@@ -183,7 +183,7 @@ html(lang='en')
             // Experience
             section#experience.resume-section
                .resume-section-content
-                    h2.mb-5 Опыт работы
+                    h2.mb-3 Опыт работы
 
                     .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
                         .flex-grow-1
@@ -201,7 +201,7 @@ html(lang='en')
                         .flex-shrink-0
                             span.text-primary Март 2021 - Настоящее время
 
-                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
+                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5.pdf-break-after
                         .flex-grow-1
                             h3.mb-0 Инженер DevOps
                             .subheading.mb-3 "Secret Startup" (NDA)
@@ -216,7 +216,7 @@ html(lang='en')
                         .flex-shrink-0
                             span.text-primary Январь 2021 - Июль 2021
 
-                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
+                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5.pdf-break-after
                         .flex-grow-1
                             h3.mb-0 Ведущий системный администратор
                             .subheading.mb-3
@@ -229,7 +229,7 @@ html(lang='en')
                                 | документации по проектам. Внедрение методологии IaC. Реализовал шаблонный репозиторий с описанием
                                 | инфраструктуры для типового e-comm проекта компании на Ansible и "кнопочками" запуска
                                 | автоматизции через GitLab CI. Спроектировал и запустил инфраструктуру проекта
-                                | <a href="https://sammybeauty.ru", target="_blank">"SammyBeauty"</a>. Площадка выдержала в первый
+                                | <a href="http://sammybeauty.ru", target="_blank">"SammyBeauty"</a>. Площадка выдержала в первый
                                 | час запуска порядка 75k уникальных пользователей и в районе 220rps.
                                 | Реализовал внутренний проект "Big-Green-Button": шаблонный репозиторий
                                 | с ansible-плейбуками для разворачивания с нуля проектов схожих с вышеупомянутым.
@@ -255,7 +255,7 @@ html(lang='en')
                         .flex-shrink-0
                             span.text-primary Июнь 2018 - Октябрь 2019
 
-                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
+                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5.pdf-break-after
                         .flex-grow-1
                             h3.mb-0 Системный администратор
                             .subheading.mb-3
@@ -289,7 +289,7 @@ html(lang='en')
                         .flex-shrink-0
                             span.text-primary Август 2017 - Январь 2018
 
-                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
+                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5.pdf-break-after
                         .flex-grow-1
                             h3.mb-0 Системный администратор
                             .subheading.mb-3
@@ -319,9 +319,9 @@ html(lang='en')
             hr.m-0
 
             // Education
-            section#education.resume-section
+            section#education.resume-section.pdf-break-before
                 .resume-section-content
-                    h2.mb-5 Образование
+                    h2.mb-3 Образование
 
                     .d-flex.flex-column.flex-md-row.justify-content-between
                         .flex-grow-1
@@ -342,9 +342,9 @@ html(lang='en')
             hr.m-0
 
             // Interests
-            section#interests.resume-section
+            section#interests.resume-section.pdf-break-before
                 .resume-section-content
-                    h2.mb-5 Интересы
+                    h2.mb-3 Интересы
                     p
                         | Я постоянно развиваюсь в своей профессиональной области. Учусь новому на примере решения сложных задач.
                         | Так же я занимаюсь воспитанием сына и веду некоторую активность в Интернете.
@@ -356,9 +356,9 @@ html(lang='en')
             hr.m-0
 
             // Awards
-            section#awards.resume-section
+            section#awards.resume-section.pdf-break-before
                 .resume-section-content
-                    h2.mb-5 Сетрификаты
+                    h2.mb-3 Сертификаты
                     ul.fa-ul.mb-0
                         li
                             span.fa-li
@@ -404,7 +404,7 @@ html(lang='en')
             hr.m-0
 
             // VoiceOps
-            section#podcast.resume-section
+            section#podcast.resume-section.pdf-break-before
                 .resume-section-content
                     h1.mb-0
                         | "Voice
@@ -438,5 +438,8 @@ html(lang='en')
         script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js')
 
         // Core theme JS
+        script(src='js/html2pdf.bundle.min.js')
+        script(src='js/html2canvas.min.js')
+        script(src='js/printer.js')
         script(src='js/scripts.js')
         script(src='js/twitter.js')
