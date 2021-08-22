@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      # Here is the deployment action
+
       - uses: actions/setup-node@v2
         with:
             node-version: '16'
@@ -17,15 +17,6 @@ jobs:
       - name: Build
         run: |
           npm run clean && npm run build
-      - name: Upload from public_html via FTP
-        uses: jtprogru/ftp-deployment-action@latest
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          user: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local_dir: "./dist"
-          remote_dir: "./savinmi.ru"
-          delete: "false"
 
       - name: Telegram Notify OK
         if: ${{ success() }}
