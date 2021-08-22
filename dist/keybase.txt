@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/jtprog
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://savinmi.ru
+  * I am jtprog (https://keybase.io/jtprog) on keybase.
+  * I have a public key ASAhOEQaNFXSm0skAE2-TTok-ZrRESMygLfeYRlOWHc3Xgo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120ec788a3295b2cf915ddefda192ba90b1ed14633ae6d1e5e9478b9fa6d847ca9c0a",
+      "host": "keybase.io",
+      "kid": "01202138441a3455d29b4b24004dbe4d3a24f99ad111233280b7de61194e5877375e0a",
+      "uid": "e2a55bd47f7f4d889f792423d4bd8019",
+      "username": "jtprog"
+    },
+    "merkle_root": {
+      "ctime": 1629503751,
+      "hash": "8b33862b35fe19576be13a9fe58b131effb832bd6a75c9cea28672f32c7193cdf37fef15ebb8a1fa6310ee2629ee7440690dfd436f658cdcc2447470286720a9",
+      "hash_meta": "a391ee8228414012eac919a036aab4deb0a56661e2a548f1c7d6519152b19bed",
+      "seqno": 20606461
+    },
+    "service": {
+      "entropy": "EaUDKX/cDBrdxGMGxLCHmpAS",
+      "hostname": "savinmi.ru",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.7.0"
+  },
+  "ctime": 1629503801,
+  "expire_in": 504576000,
+  "prev": "b04187ec8dc0aad884ba6e8695b101e366ae6f53475fe64c32dde67deba0e884",
+  "seqno": 37,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgIThEGjRV0ptLJABNvk06JPma0REjMoC33mEZTlh3N14Kp3BheWxvYWTESpcCJcQgsEGH7I3AqtiEum6GlbEB42aub1NHX+ZMMt3mfeug6ITEIOGmBQj/5VNIdr2g+AJWuhEJx0cnzUD90vqGc8Zjv7iNAgHCo3NpZ8RAcRcEaxcQ+rm8eBeXSuffxejtzV+JmBCLMrhzAWEMB5WObnYStMC1SEcyCl+fVm8Xqs1zLwedpV4qmYnsda9sC6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIOkCvHfbHPhoFvqC6Nz2RvG+tV+Pr5m16UTB+F/p/+B+o3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/jtprog
+
+==================================================================
