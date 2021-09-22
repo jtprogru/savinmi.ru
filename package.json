@@ -42,14 +42,14 @@
     },
     "devDependencies": {
         "@iconify-icons/cib": "1.1.0",
-        "autoprefixer": "10.3.4",
+        "autoprefixer": "10.3.5",
         "browser-sync": "2.27.5",
         "chokidar": "3.5.2",
         "concurrently": "6.2.1",
-        "postcss": "8.3.6",
+        "postcss": "8.3.7",
         "prettier": "2.4.1",
         "pug": "3.0.2",
-        "sass": "1.42.0",
+        "sass": "1.42.1",
         "shelljs": "0.8.4",
         "upath": "2.0.1"
     }
