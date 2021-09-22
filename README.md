@@ -1,4 +1,5 @@
 # [savinmi.ru](https://savinmi.ru)
+[![Website](https://img.shields.io/website?label=My%20CV&url=https%3A%2F%2Fsavinmi.ru)](https://savinmi.ru)
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/jtprogru/savinmi.ru/CI?label=CI)
 ![GitHub](https://img.shields.io/github/license/jtprogru/savinmi.ru)
 
