@@ -4,9 +4,6 @@ SHELL := /bin/bash
 
 SYS_NPM=$(shell which npm)
 SYS_NODE=$(shell which node)
-NODE_MODULES=node_modules
-
-# "start:debug": "npm run build && node scripts/start-debug.js"
 
 .PHONY: install-deps
 ## Install all dependencies
