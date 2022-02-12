@@ -45,6 +45,7 @@
         "@iconify-icons/cib": "1.1.1",
         "autoprefixer": "10.4.2",
         "browser-sync": "2.27.7",
+        "engine.io": ">=4.0.0",
         "chokidar": "3.5.3",
         "concurrently": "7.0.0",
         "postcss": "8.4.6",
