@@ -49,10 +49,20 @@ start-debug:
 	make build
 	$(SYS_NODE) scripts/start-debug.js
 
+.PHONY: pdf
+## Render PDF
+pdf:
+	$(SYS_NODE) scripts/render-pdf.js
+
 .PHONY: clean
 ## Clean all artifacts
 clean:
 	$(SYS_NODE) scripts/clean.js
+
+.PHONY: del-mod
+## Delete node_modules and dist dirs
+del-mod:
+	rm -rf node_modules/ dist/
 
 .PHONY: help
 ## Show this help message
