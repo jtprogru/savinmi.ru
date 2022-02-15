@@ -42,7 +42,7 @@
         "bootstrap-icons": "1.8.1"
     },
     "devDependencies": {
-        "@iconify-icons/cib": "1.2.0",
+        "@iconify-icons/cib": "1.2.1",
         "autoprefixer": "10.4.2",
         "browser-sync": "2.27.7",
         "engine.io": "6.1.2",
