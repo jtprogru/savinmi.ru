@@ -10,6 +10,7 @@
         "build:scripts": "node scripts/build-scripts.js",
         "build:scss": "node scripts/build-scss.js",
         "clean": "node scripts/clean.js",
+        "pdf": "node scripts/render-pdf.js",
         "start": "npm run build && node scripts/start.js",
         "start:debug": "npm run build && node scripts/start-debug.js"
     },
@@ -41,9 +42,10 @@
         "bootstrap-icons": "1.8.1"
     },
     "devDependencies": {
-        "@iconify-icons/cib": "1.1.1",
+        "@iconify-icons/cib": "1.2.1",
         "autoprefixer": "10.4.2",
         "browser-sync": "2.27.7",
+        "engine.io": "6.1.2",
         "chokidar": "3.5.3",
         "concurrently": "7.0.0",
         "postcss": "8.4.6",

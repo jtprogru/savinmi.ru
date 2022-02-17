@@ -1,4 +1,6 @@
-# [savinmi.ru](https://savinmi.ru)
+# Repo for my CV
+
+[![CodeQL](https://github.com/jtprogru/savinmi.ru/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/jtprogru/savinmi.ru/actions/workflows/codeql-analysis.yml)
 ![Vercel](http://therealsujitk-vercel-badge.vercel.app/?app=my-cv)
 [![Website](https://img.shields.io/website?label=My%20CV&url=https%3A%2F%2Fsavinmi.ru)](https://savinmi.ru)
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/jtprogru/savinmi.ru/CI?label=CI)
