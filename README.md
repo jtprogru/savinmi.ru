@@ -1,7 +1,7 @@
 # Repo for my CV
 
 [![CodeQL](https://github.com/jtprogru/savinmi.ru/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/jtprogru/savinmi.ru/actions/workflows/codeql-analysis.yml)
-![Vercel](http://therealsujitk-vercel-badge.vercel.app/?app=my-cv)
+![Vercel](https://therealsujitk-vercel-badge.vercel.app/?app=my-cv)
 [![Website](https://img.shields.io/website?label=My%20CV&url=https%3A%2F%2Fsavinmi.ru)](https://savinmi.ru)
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/jtprogru/savinmi.ru/CI?label=CI)
 ![GitHub](https://img.shields.io/github/license/jtprogru/savinmi.ru)
@@ -12,13 +12,40 @@ My personal CV builded with:
 - [Bootstrap](https://getbootstrap.com/)
 - [Vercel](https://vercel.com/)
 
-## Basic Usage
+## Develop
 
-After downloading, simply edit the HTML and CSS files included with `dist` directory. These are the only files you need to worry about, you can ignore everything else! To preview the changes you make to the code, you can open the `index.html` file in your web browser.
+```shell
+# Clone this repo
+> git clone https://github.com/jtprogru/savinmi.ru
+> cd savinmi.ru
 
-## Advanced Usage
+# Install NPM packages
+> make install-deps
 
-Clone the source files of the theme and navigate into the theme's root directory. Run `npm install` and then run `npm start` which will open up a preview of the template in your default browser, watch for changes to core template files, and live reload the browser when changes are saved. You can view the `package.json` file to see which scripts are included.
+# Run project in DEBUG mode
+> make start-debug
+
+# Open src/pug/index.pug in any editor
+> vim src/pug/index.pug
+# And have a fun!
+
+# For more info about command run make
+> make
+Available rules:
+
+assets              Build assets
+build               Build project
+clean               Clean all artifacts
+del-mod             Delete node_modules and dist dirs
+help                Show this help message
+install-deps        Install all dependencies
+pdf                 Render PDF
+pug                 Build assets
+scripts             Build scripts
+scss                Build scss
+start               Run project in PRODUCTION mode
+start-debug         Run project in DEBUG mode
+```
 
 ### npm Scripts
 
