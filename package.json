@@ -44,7 +44,7 @@
     "devDependencies": {
         "@iconify-icons/cib": "1.2.2",
         "autoprefixer": "10.4.2",
-        "browser-sync": "2.27.7",
+        "browser-sync": "2.27.8",
         "engine.io": "6.1.3",
         "chokidar": "3.5.3",
         "concurrently": "7.0.0",
