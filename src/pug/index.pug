@@ -1,5 +1,5 @@
 doctype html
-html(lang='en')
+html(lang='ru')
 
     head
 
@@ -95,16 +95,10 @@ html(lang='en')
                             i(data-icon="carbon:blog", data-inline="false").iconify
                         a.social-icon(href='https://www.codewars.com/users/jtprogru/', target="_blank").mb-2
                             i(data-icon="cib:codewars", data-inline="false").iconify
+                        a.social-icon(href='https://leetcode.com/jtprogru/', target="_blank").mb-2
+                            i(data-icon="cib:leetcode", data-inline="false").iconify
                         a.social-icon(href='https://unsplash.com/@jtprogru', target="_blank").mb-2
                             i(data-icon="cib:unsplash", data-inline="false").iconify
-                        //- a.social-icon(href='#podcast').mb-2
-                        //-     i(data-icon="fa-solid:podcast", data-inline="false").iconify
-                        //- a.social-icon(href='mailto:mail@jtprog.ru').mb-2
-                        //-     i(data-icon="entypo:email", data-inline="false").iconify
-                        //- a.social-icon(href='tel:+79060272719').mb-2
-                        //-     i(data-icon="entypo:phone", data-inline="false").iconify
-                        a.social-icon(onclick="printer();", target="_blank").mb-2
-                            i(data-icon="carbon:generate-pdf", data-inline="false").iconify
 
             hr.m-0
 
@@ -400,7 +394,7 @@ html(lang='en')
                         | Уже давно увлекаюсь мобильной фотографией, но только недавно решился выкладывать это
                         | на общее обозрение в Telegram–канал
                         | <a href="https://t.me/michael_behind_lens", target="_blank"><b>Michael behind lens</b></a>
-                        | и в свой <a href="https://www.instagram.com/jtprogru/", target="_blank">Instagram</a>.
+                        | и на свою страничку в <a href="https://unsplash.com/@jtprogru", target="_blank">Unsplash</a>.
 
             hr.m-0
 
@@ -411,6 +405,10 @@ html(lang='en')
                     p.lead.mb-3
                         | Иногда я что-то прохожу - какой-то курс, который мне бывает интересен. Тут список тех курсов и сертификаций, которые я прошел.
                     ul.fa-ul.mb-0
+                        li
+                            span.fa-li
+                                i.fas.fa-trophy.text
+                            a(href="https://stepik.org/cert/1516950", target="_blank").lead Программирование на Golang
                         li
                             span.fa-li
                                 i.fas.fa-trophy.text
@@ -479,3 +477,4 @@ html(lang='en')
         script(src='js/printer.js')
         script(src='js/scripts.js')
         script(src='js/twitter.js')
+
