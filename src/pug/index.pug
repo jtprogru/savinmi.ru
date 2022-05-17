@@ -1,5 +1,5 @@
 doctype html
-html(lang='en')
+html(lang='ru')
 
     head
 
@@ -71,7 +71,7 @@ html(lang='en')
                         | В работе ищу интересные задачи в направлении RnD:
                         | разобраться в непонятном баге, привнести "классную штуку" в команду которую раньше не использовали
                         | или написать какой-то "упрощатор жизни".
-                        | Стараюсь автоматизировать всё, что того требует, а в качестве средства автоматизции
+                        | Стараюсь автоматизировать всё, что того требует, а в качестве средства автоматизации
                         | стараюсь использовать Ansible.
                         | В идеальном мире хочу получить production-опыт с GitHub и GitHub Actions.
                     p.lead.mb-3
@@ -90,21 +90,15 @@ html(lang='en')
                         a.social-icon(href='https://twitter.com/jtprogru', target="_blank").mb-2
                             i(data-icon="cib:twitter", data-inline="false").iconify
                         a.social-icon(href='https://www.linkedin.com/in/jtprogru', target="_blank").mb-2
-                            i(data-icon="entypo-social:linkedin-with-circle", data-inline="false").iconify
+                            i(data-icon="cib:linkedin", data-inline="false").iconify
                         a.social-icon(href='https://jtprog.ru', target="_blank").mb-2
-                            i(data-icon="fa-solid:blog", data-inline="false").iconify
+                            i(data-icon="carbon:blog", data-inline="false").iconify
                         a.social-icon(href='https://www.codewars.com/users/jtprogru/', target="_blank").mb-2
                             i(data-icon="cib:codewars", data-inline="false").iconify
+                        a.social-icon(href='https://leetcode.com/jtprogru/', target="_blank").mb-2
+                            i(data-icon="cib:leetcode", data-inline="false").iconify
                         a.social-icon(href='https://unsplash.com/@jtprogru', target="_blank").mb-2
                             i(data-icon="cib:unsplash", data-inline="false").iconify
-                        //- a.social-icon(href='#podcast').mb-2
-                        //-     i(data-icon="fa-solid:podcast", data-inline="false").iconify
-                        //- a.social-icon(href='mailto:mail@jtprog.ru').mb-2
-                        //-     i(data-icon="entypo:email", data-inline="false").iconify
-                        //- a.social-icon(href='tel:+79060272719').mb-2
-                        //-     i(data-icon="entypo:phone", data-inline="false").iconify
-                        a.social-icon(onclick="printer();", target="_blank").mb-2
-                            i(data-icon="carbon:generate-pdf", data-inline="false").iconify
 
             hr.m-0
 
@@ -211,7 +205,7 @@ html(lang='en')
                             .subheading.mb-3
                                 a(href='https://bank.yandex.ru', target="_blank").mb-2 "Яндекс.Банк"
                             p.lead
-                                | Строю финтех-инфраструктуру в Яндекс.Банке.
+                                | В настоящее время я помогаю создавать с нуля инфраструктуру для нового банка в рамках экосистемы Яндекс. Задачи, которые я решаю имеют самое разнообразное направление: от настройки нового сервера в staging-окружение и написания скриптов автоматизации на Python, до деплоя нового сервиса в Production кластер Kubernetes и написания собственных микросервисов решающих проблемы инфраструктуры и ИБ.
                             p
                                 | Ansible, Terraform, Yandex.Cloud, Python, Go
                         .flex-shrink-0
@@ -400,7 +394,7 @@ html(lang='en')
                         | Уже давно увлекаюсь мобильной фотографией, но только недавно решился выкладывать это
                         | на общее обозрение в Telegram–канал
                         | <a href="https://t.me/michael_behind_lens", target="_blank"><b>Michael behind lens</b></a>
-                        | и в свой <a href="https://www.instagram.com/jtprogru/", target="_blank">Instagram</a>.
+                        | и на свою страничку в <a href="https://unsplash.com/@jtprogru", target="_blank">Unsplash</a>.
 
             hr.m-0
 
@@ -411,6 +405,10 @@ html(lang='en')
                     p.lead.mb-3
                         | Иногда я что-то прохожу - какой-то курс, который мне бывает интересен. Тут список тех курсов и сертификаций, которые я прошел.
                     ul.fa-ul.mb-0
+                        li
+                            span.fa-li
+                                i.fas.fa-trophy.text
+                            a(href="https://stepik.org/cert/1516950", target="_blank").lead Программирование на Golang
                         li
                             span.fa-li
                                 i.fas.fa-trophy.text
@@ -479,3 +477,4 @@ html(lang='en')
         script(src='js/printer.js')
         script(src='js/scripts.js')
         script(src='js/twitter.js')
+
