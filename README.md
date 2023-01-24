@@ -3,7 +3,6 @@
 [![CodeQL](https://github.com/jtprogru/savinmi.ru/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/jtprogru/savinmi.ru/actions/workflows/codeql-analysis.yml)
 ![Vercel](https://badgen.net/badge/icon/vercel?icon=vercel&label)
 [![Website](https://img.shields.io/website?label=My%20CV&url=https%3A%2F%2Fsavinmi.ru)](https://savinmi.ru)
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/jtprogru/savinmi.ru/CI?label=CI)
 ![GitHub](https://img.shields.io/github/license/jtprogru/savinmi.ru)
 
 My personal CV builded with:
@@ -69,4 +68,4 @@ The deployment occurs automatically by commit to the main branch due to the fact
 This repo has been created by:
 
 - [@jtprogru](https://github.com/jtprogru)
-- [@gaskob](https://github.com/gaskob)
+- [@toadirog](https://github.com/toadirog)
