@@ -50,7 +50,6 @@ html(lang='ru')
 
         // Page Content
         .container-fluid.p-0#content
-
             // About
             section#about.resume-section
                 .resume-section-content.pdf-break-after
@@ -133,13 +132,14 @@ html(lang='ru')
                                 i.fas.fa-check
                             b Configuration managment:
                             | <span class="iconify" data-icon="cib:ansible" data-inline="false"></span> Ansible,
+                            | <span class="iconify" data-icon="cib:terraform" data-inline="false"></span> Terraform,
                             | <span class="iconify" data-icon="cib:saltstack" data-inline="false"></span> SaltStack
                         li
                             span.fa-li
                                 i.fas.fa-check
                             b Version control:
-                            | <span class="iconify" data-icon="cib:gitlab" data-inline="false"></span> GitLab,
                             | <span class="iconify" data-icon="akar-icons:github-fill" data-inline="false"></span> GitHub,
+                            | <span class="iconify" data-icon="cib:gitlab" data-inline="false"></span> GitLab,
                             | <span class="iconify" data-icon="fa:bitbucket" data-inline="false"></span> Bitbucket
                         li
                             span.fa-li
@@ -174,15 +174,14 @@ html(lang='ru')
                             span.fa-li
                                 i.fas.fa-check
                             b Programming:
-                            | <span class="iconify" data-icon="bx:bxl-python" data-inline="false"></span> Python,
+                            | <span class="iconify" data-icon="cib:python" data-inline="false"></span> Python,
                             | <span class="iconify" data-icon="cib:go" data-inline="false"></span> Go
                             | <span class="iconify" data-icon="mdi:bash" data-inline="false"></span> Bash,
-                            | <span class="iconify" data-icon="cib:php" data-inline="false"></span> PHP
                         li
                             span.fa-li
                                 i.fas.fa-check
                             b Practice:
-                            | DevOps/DevSecOps, DocOps, IaC, ChatOps
+                            | SRE, DevOps/DevSecOps, DocOps, IaC, ChatOps, Agile/Scrum
 
                     .subheading.mb-2 Знание языков
                     ul.fa-ul.mb-5
@@ -208,7 +207,11 @@ html(lang='ru')
                             .subheading.mb-3
                                 a(href='https://ptsecurity.com', target="_blank").mb-2 Positive Technologies
                             p.lead
-                                | Помогаю чистить трафик с помощью PTAF. Отвечаю за работу PTAF в облаке.
+                                | Формирование команды SRE и внедрение процессов выпуска релизов таким образом,
+                                | чтобы приложение могло жить по модели SaaS. Улучшение процессов кросс-командной
+                                | коммуникации, а так же выстраивание процессов внутри команды SRE и инфраструктуры.
+                                | Активное участие в перестроении процессов разработки с модели Waterfall на Agile/Scrum.
+                                | Внедрение практики управления инцидентами.
                             p
                                 | Ansible, Terraform, Yandex.Cloud, Python, Go
                         .flex-shrink-0
@@ -220,7 +223,11 @@ html(lang='ru')
                             .subheading.mb-3
                                 a(href='https://kekscredit.ru', target="_blank").mb-2 МКК "Варенье Кредит"
                             p.lead
-                                | Консультация по вопросам построения отказоустойчивой инфраструктуры. Проектирование инфраструктуры в рамках Yandex.Cloud с последущим переносом инфраструктуры. Формирование кодовой базы для управления инфраструктурой. Проведение собеседований на позицию DevOps.
+                                | Консультация по вопросам построения отказоустойчивой инфраструктуры.
+                                | Проектирование инфраструктуры на мощностях Yandex.Cloud с последущим переносом
+                                | инфраструктуры. Формирование кодовой базы для управления инфраструктурой.
+                                | Проведение собеседований на позицию DevOps. Сопровождение legacy-инфраструктуры.
+                                | Реагирование на проблемы с инфраструктурой в облаке.
                             p
                                 | Ansible, Terraform, Yandex.Cloud, Python, PHP
                         .flex-shrink-0
@@ -232,7 +239,11 @@ html(lang='ru')
                             .subheading.mb-3
                                 a(href='https://bank.yandex.ru', target="_blank").mb-2 "Яндекс.Банк"
                             p.lead
-                                | Управление инфраструктурой для нового банка в рамках экосистемы Яндекс. Задачи, которые я решал имели самое разнообразное направление: от настройки нового сервера в staging-окружение и написания скриптов автоматизации на Python, до деплоя нового сервиса в Production кластер Kubernetes и написания собственных микросервисов решающих проблемы инфраструктуры и ИБ.
+                                | Управление инфраструктурой для нового банка в рамках экосистемы Яндекс.
+                                | Задачи, которые я решал имели самое разнообразное направление: от настройки
+                                | нового сервера в staging-окружение и написания скриптов автоматизации
+                                | на Python, до деплоя нового сервиса в Production кластер Kubernetes и написания
+                                | собственных микросервисов решающих проблемы инфраструктуры и ИБ.
                             p
                                 | Ansible, Terraform, Yandex.Cloud, Python, Go
                         .flex-shrink-0
@@ -318,16 +329,7 @@ html(lang='ru')
                             .subheading.mb-3
                                 a(href='http://webkontrol.com', target="_blank").mb-2 ООО "ВебКонтроль"
                             p.lead
-                                | Поддержание работоспособности инфраструктуры компании. Прямое взаимодействие
-                                | с командой разработчиков. Внедрение почтового сервиса Gmail по подписке G Suite Enterprise.
-                                | Настройка системы мониторинга на базе Zabbix 3.4. Обслуживание 62 серверов
-                                | из которых 54 расположены в Hetzner (весь production плюс тестовые стенды).
-                                | Обслуживание и мониторинг файлового хранилища на базе GlusterFS общим объёмом 30 ТБ.
-                                | Конфигурирование/обслуживание/мониторинг нескольких хостов использующих DRBD.
-                                | Ведение документации в Wiki (Gitlab). Хранение конфигураций серверов в Gitlab.
-                                | Минимальное обслуживание СУБД MySQL/PostgreSQL/MS SQL/Redis. Поиск узких мест
-                                | в инфраструктуре и постоянная модернизация.
-                        .flex-shrink-0
+                                | Поддержание работоспособности инфраструктуры компании. Прямое взаимодействие с командой разработчиков.                        .flex-shrink-0
                             span.text-primary Январь 2018 - Июнь 2018
 
                     .d-flex.flex-column.flex-md-row.justify-content-between.mb-5.pdf-break-after
@@ -336,13 +338,7 @@ html(lang='ru')
                             .subheading.mb-3
                                 a(href='https://www.moireis.ru/', target="_blank").mb-2 ЗАО "АЛЬЯНС-ТРЕВЭЛ"
                             p.lead
-                                | Парк – более 100 машин. Основная деятельность – поддержание работоспособности
-                                | инфраструктуры компании. Резервное копирование данных (Bacula). Обслуживание кластера
-                                | виртуализации VMWare ESXi. Обслуживание серверов Active Directory (Windows Server 2003-2012).
-                                | Обслуживание серверов на базе CentOS 5/6/7 (примерный список сервисов:
-                                | прокси, реверспрокси, внутренние и внешние веб-сервисы, сервер резервного копирования).
-                                | Базы данный MySQL, PostgreSQL, Oracle, MSSQL. Обслуживание активного сетевого
-                                | оборудования Cisco/Mikrotik.
+                                | Парк – более 100 машин. Основная деятельность – поддержание работоспособности инфраструктуры компании.
                         .flex-shrink-0
                             span.text-primary Август 2017 - Январь 2018
 
@@ -352,8 +348,6 @@ html(lang='ru')
                             .subheading.mb-3 ООО "И-групп"
                             p.lead
                                 | Проектная работа. Полностью спроектировал всю офисную инфраструктуру компании.
-                                | Предоставил полный комплект документации: регламенты, должностные инструкции,
-                                | пользовательские и администраторские мануалы.
                         .flex-shrink-0
                             span.text-primary Апрель 2017 - Июнь 2017
 
@@ -363,11 +357,6 @@ html(lang='ru')
                             .subheading.mb-3.mb-2 ООО "Аргоси Аналитика"
                             p.lead
                                 | Прошел путь от помощника системного администратора, до руководителя отдела ИТ.
-                                | Парк — более 400 машин. Основная деятельность — поддержание работоспособности рабочих
-                                | мест сотрудников. Резервное копирование данных. Развертывание серверов виртуализации (VMWare).
-                                | Развертывание почтовых серверов (Ubuntu Server 14.04+Postfix+iRedMail). Создание файловых
-                                | хранилищ (Ubuntu Server 14.04; Windows Server 2012). Обслуживание серверов Active
-                                | Directory (Windows Server 2003-2012).
                         .flex-shrink-0
                             span.text-primary Май 2014 - Март 2017
 
@@ -377,6 +366,14 @@ html(lang='ru')
             section#education.resume-section.pdf-break-after
                 .resume-section-content
                     h2.mb-3.mt-0 Образование
+
+                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
+                        .flex-grow-1
+                            h3.mb-0 МТИ
+                            .subheading.mb-3 Инженер-программист
+                            div.mb-4 СПО - Информационные системы и программирование
+                        .flex-shrink-0
+                            span.text-primary Август 2022 - Июль 2025
 
                     .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
                         .flex-grow-1
@@ -432,6 +429,10 @@ html(lang='ru')
                     p.lead.mb-3
                         | Иногда я что-то прохожу - какой-то курс, который мне бывает интересен. Тут список тех курсов и сертификаций, которые я прошел.
                     ul.fa-ul.mb-0
+                        li
+                            span.fa-li
+                                i.fas.fa-trophy.text
+                            a(href="assets/pdf/tabia.pdf", target="_blank").lead Медиа-тренинг по работе со СМИ
                         li
                             span.fa-li
                                 i.fas.fa-trophy.text
