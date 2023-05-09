@@ -69,3 +69,9 @@ This repo has been created by:
 
 - [@jtprogru](https://github.com/jtprogru)
 - [@toadirog](https://github.com/toadirog)
+
+
+## Project Status
+
+![Alt](https://repobeats.axiom.co/api/embed/756a29300a8e26177ac33e822231f633f2efebca.svg "Repobeats analytics image")
+
