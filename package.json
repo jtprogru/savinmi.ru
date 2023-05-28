@@ -4,13 +4,11 @@
     "version": "1.2.0",
     "private": true,
     "scripts": {
-        "build": "npm run clean && npm run build:pug && npm run build:scss && npm run build:scripts && npm run build:assets",
+        "build": "npm run build:pug && npm run build:scss && npm run build:scripts && npm run build:assets",
         "build:assets": "node scripts/build-assets.js",
         "build:pug": "node scripts/build-pug.js",
         "build:scripts": "node scripts/build-scripts.js",
         "build:scss": "node scripts/build-scss.js",
-        "clean": "node scripts/clean.js",
-        "pdf": "node scripts/render-pdf.js",
         "start": "npm run build && node scripts/start.js",
         "start:debug": "npm run build && node scripts/start-debug.js"
     },
@@ -47,12 +45,12 @@
         "browser-sync": "^2.29.1",
         "chokidar": "3.5.3",
         "concurrently": "8.0.1",
-        "engine.io": "6.4.1",
+        "engine.io": "^6.4.2",
         "postcss": "8.4.23",
         "prettier": "2.8.7",
         "pug": "3.0.2",
         "sass": "1.62.0",
         "shelljs": "0.8.5",
-        "upath": "2.0.1"
+        "upath": "^2.0.1"
     }
 }

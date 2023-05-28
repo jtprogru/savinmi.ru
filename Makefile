@@ -10,9 +10,24 @@ SYS_NODE=$(shell which node)
 install-deps: package.json
 	$(SYS_NPM) install
 
+.PHONY: fund
+## Run npm fund
+fund:
+	$(SYS_NPM) fund
+
+.PHONY: audit
+## Run npm audit
+audit:
+	$(SYS_NPM) audit
+
+.PHONY: audit-fix
+## Run npm audti fix
+audit-fix:
+	$(SYS_NPM) audit fix
+
 .PHONY: build
 ## Build project
-build: clean pug scss scripts assets
+build: pug scss scripts assets
 
 .PHONY: assets
 ## Build assets
@@ -36,29 +51,17 @@ scss:
 
 .PHONY: start
 ## Run project in PRODUCTION mode
-start:
-	make build
+start: build
 	$(SYS_NODE) scripts/start.js
 
 .PHONY: start-debug
 ## Run project in DEBUG mode
-start-debug:
-	make build
+start-debug: build
 	$(SYS_NODE) scripts/start-debug.js
-
-.PHONY: pdf
-## Render PDF
-pdf:
-	$(SYS_NODE) scripts/render-pdf.js
 
 .PHONY: clean
 ## Clean all artifacts
 clean:
-	$(SYS_NODE) scripts/clean.js
-
-.PHONY: del-mod
-## Delete node_modules and dist dirs
-del-mod:
 	rm -rf node_modules/ dist/
 
 .PHONY: help
