@@ -44,6 +44,12 @@ tasks:
       - test -f scripts/build-pug.js
     cmds:
       - node scripts/build-pug.js
+  pdf:
+    desc: Build pdf
+    preconditions:
+      - test -f scripts/build-pdf.js
+    cmds:
+      - node scripts/build-pdf.js
   scripts:
     desc: Build scripts
     preconditions:
