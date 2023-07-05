@@ -1,20 +1,23 @@
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
 ---
 version: "3"
 
-set: [pipefail]
-
-output:
-  group:
-    begin: '::group::{{.TASK}}'
-    end: '::group::{{.TASK}}'
+set:
+  - pipefail
 
 silent: false
+
+env:
+  ENV: development
+
+dotenv: [".env", "{{.ENV}}/.env.", "{{.HOME}}/.env"]
 
 tasks:
   install:
     desc: Install all dependencies
     preconditions:
       - test -f package.json
+      - test -f $(which npm)
     cmds:
       - npm install
   fund:
