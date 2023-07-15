@@ -13,6 +13,9 @@ env:
 dotenv: [".env", "{{.ENV}}/.env.", "{{.HOME}}/.env"]
 
 tasks:
+  default:
+    cmd: task -l
+    silent: true
   install:
     desc: Install all dependencies
     preconditions:
