@@ -1,0 +1,80 @@
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+---
+version: "3"
+
+set:
+  - pipefail
+
+silent: false
+
+env:
+  ENV: development
+
+dotenv: [".env", "{{.ENV}}/.env.", "{{.HOME}}/.env"]
+
+tasks:
+  default:
+    cmd: task -l
+    silent: true
+  install:
+    desc: Install all dependencies
+    preconditions:
+      - test -f package.json
+      - test -f $(which npm)
+    cmds:
+      - npm install
+  fund:
+    desc: Run npm fund
+    cmds:
+      - npm fund
+  audit:
+    desc: Run npm audit
+    cmds:
+      - npm audit
+  fix:
+    desc: Run npm audit fix
+    cmds:
+      - npm audit fix
+  assets:
+    desc: Build assets
+    preconditions:
+      - test -f scripts/build-assets.js
+    cmds:
+      - node scripts/build-assets.js
+  pug:
+    desc: Build pug
+    preconditions:
+      - test -f scripts/build-pug.js
+    cmds:
+      - node scripts/build-pug.js
+  pdf:
+    desc: Build pdf
+    preconditions:
+      - test -f scripts/build-pdf.js
+    cmds:
+      - node scripts/build-pdf.js
+  scripts:
+    desc: Build scripts
+    preconditions:
+      - test -f scripts/build-scripts.js
+    cmds:
+      - node scripts/build-scripts.js
+  scss:
+    desc: Build SCSS
+    preconditions:
+      - test -f scripts/build-scss.js
+    cmds:
+      - node scripts/build-scss.js
+  serve:
+    desc: Serve in DEBUG mode
+    preconditions:
+      - test -f scripts/start-debug.js
+    cmds:
+      - node scripts/start-debug.js
+  build:
+    desc: Build project
+    deps:
+      - assets
+      - pug
+      - scss
+      - scripts

@@ -21,7 +21,7 @@ audit:
 	$(SYS_NPM) audit
 
 .PHONY: audit-fix
-## Run npm audti fix
+## Run npm audit fix
 audit-fix:
 	$(SYS_NPM) audit fix
 
@@ -34,8 +34,8 @@ build: pug scss scripts assets
 assets:
 	$(SYS_NODE) scripts/build-assets.js
 
-.PHONY: assets
-## Build assets
+.PHONY: pug
+## Build pug
 pug:
 	$(SYS_NODE) scripts/build-pug.js
 

@@ -19,31 +19,29 @@ My personal CV builded with:
 > cd savinmi.ru
 
 # Install NPM packages
-> make install-deps
+> task install
 
 # Run project in DEBUG mode
-> make start-debug
+> task serve
 
 # Open src/pug/index.pug in any editor
 > vim src/pug/index.pug
 # And have a fun!
 
-# For more info about command run make
-> make
-Available rules:
-
-assets              Build assets
-build               Build project
-clean               Clean all artifacts
-del-mod             Delete node_modules and dist dirs
-help                Show this help message
-install-deps        Install all dependencies
-pdf                 Render PDF
-pug                 Build assets
-scripts             Build scripts
-scss                Build scss
-start               Run project in PRODUCTION mode
-start-debug         Run project in DEBUG mode
+# For more info about command run `task`:
+> task
+task: Available tasks for this project:
+* assets:        Build assets
+* audit:         Run npm audit
+* build:         Build project
+* fix:           Run npm audit fix
+* fund:          Run npm fund
+* install:       Install all dependencies
+* pdf:           Build pdf
+* pug:           Build pug
+* scripts:       Build scripts
+* scss:          Build SCSS
+* serve:         Serve in DEBUG mode
 ```
 
 ### npm Scripts
