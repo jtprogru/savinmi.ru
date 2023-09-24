@@ -39,7 +39,7 @@
     "dependencies": {
         "bootstrap": "5.2.3",
         "bootstrap-icons": "1.10.4",
-        "puppeteer": "^20.7.4"
+        "puppeteer": ">=20.7.4"
     },
     "devDependencies": {
         "@iconify-icons/cib": "1.2.4",
