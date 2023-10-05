@@ -48,7 +48,7 @@
         "chokidar": "3.5.3",
         "concurrently": "8.0.1",
         "engine.io": "^6.4.2",
-        "postcss": "8.4.23",
+        "postcss": "8.4.31",
         "prettier": "2.8.7",
         "pug": "3.0.2",
         "sass": "1.62.0",
