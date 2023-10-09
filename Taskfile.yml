@@ -1,0 +1,24 @@
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+---
+version: "3"
+
+set:
+  - pipefail
+
+silent: false
+
+env:
+  ENV: development
+
+dotenv: [".env", "{{.ENV}}/.env.", "{{.HOME}}/.env"]
+
+tasks:
+  default:
+    cmd: task -l
+    silent: true
+
+  serve:
+    desc: Run development
+    cmds:
+      - echo "Make some shit manualy =)"
+    silent: true

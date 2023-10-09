@@ -1,0 +1,28 @@
+# Сертификаты
+
+Иногда я что-то прохожу - какой-то курс, который мне бывает интересен. Тут список тех курсов и сертификаций, которые я прошел.
+
+- [Медиа-тренинг по работе со СМИ](assets/pdf/tabia.pd)
+- ["Поколение Python": курс для начинающих](https://stepik.org/cert/1788601)
+- [Основы операционных систем](https://intuit.ru/verifydiplomas/101557605)
+- [Цифровая трансформация. Быстрый старт](https://stepik.org/cert/1741179)
+- [Эпоха цифрового развития: основы цифровой трансформации](https://stepik.org/cert/1740964)
+- [Fullstack Educator](https://otus.ru/certificate/deebadb7239d4b7d97461b595b1a167b/)
+- [Программирование на Python](https://stepik.org/cert/1550979)
+- [Введение в БД](https://stepik.org/cert/1542111)
+- [Программирование на Golang](https://stepik.org/cert/1516950)
+- [Go (Golang) - первое знакомство](https://stepik.org/cert/1521422)
+- [Статьи для IT: как объяснять и распространять значимые идеи](https://stepik.org/cert/1506330)
+- [Администрирование ОС Linux](https://intuit.ru/verifydiplomas/101471364)
+- [Version Control with Git](https://learn.epam.com/detailsPage?id=601f195a-d408-4439-a16d-0630ed2a412e)
+- [Операционная система Linux](http://www.intuit.ru/verifydiplomas/100880600)
+- [Введение в Linux](https://stepik.org/cert/1498725)
+- [Основы локальных сетей](http://www.intuit.ru/verifydiplomas/00215146)
+- [Анализ и управление рисками в ИС на базе ОС Microsoft Windows](http://www.intuit.ru/verifydiplomas/100880577)
+- [Основы JavaScript](http://www.intuit.ru/verifydiplomas/00178706)
+- [Основы CSS](http://www.intuit.ru/verifydiplomas/00181746)
+- [Информационные технологии в управлении (Сертификация)](http://www.intuit.ru/verifydiplomas/100880561)
+- [Introduction to R](https://www.datacamp.com/courses/free-introduction-to-r)
+- [Информационная безопасность](https://www.intuit.ru/verifydiplomas/101068636)
+- [Безопасность сетей](https://www.intuit.ru/verifydiplomas/100907833)
+- ["Slurm-2": Интенсив по администрированию Kubernetes](https://slurm.io/kubernetes-baza)
