@@ -12,37 +12,5 @@ jobs:
       - name: Checkout main
         uses: actions/checkout@v2
 
-      - name: Install Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.11'
-      - name: Install python dependencies
-        run: pip install -r requirements.txt
-      - name: Build static with MkDocs
-        run: mkdocs build --config-file "${CONFIG_FILE}"
-        env:
-          CONFIG_FILE: mkdocs.yml
-      - name: Publish
-        run: |+
-          git config --global --add safe.directory "$GITHUB_WORKSPACE" && \
-          remote_repo="https://x-access-token:${GITHUB_TOKEN}@${GITHUB_DOMAIN:-"github.com"}/${GITHUB_REPOSITORY}.git" \
-          if ! git config --get user.name; then \
-            git config --global user.name "${GITHUB_ACTOR}" \
-          fi \
-            
-          if ! git config --get user.email; then \
-              git config --global user.email "${GITHUB_ACTOR}@users.noreply.${GITHUB_DOMAIN:-"github.com"}" \
-          fi \
-            
-          git remote rm origin \
-          git remote add origin "${remote_repo}" \
-          mkdocs gh-deploy --config-file "${CONFIG_FILE}" --force \
-          
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          CONFIG_FILE: mkdocs.yml
-          # CUSTOM_DOMAIN: savinmi.ru
-          # CONFIG_FILE: mkdocs.yml
-          # EXTRA_PACKAGES: build-base
-          # GITHUB_DOMAIN: github.myenterprise.com
-          # REQUIREMENTS: requirements.txt
+      - name: Deploy docs
+        uses: mhausenblas/mkdocs-deploy-gh-pages@master
