@@ -1,0 +1,9 @@
+allowHTML: true
+lang: ru
+storageEndpoint: https://storage.yandexcloud.net
+connector:
+    type: github
+    github:
+        endpoint: https://api.github.com
+        owner: jtprogru
+        repo: savinmi.ru

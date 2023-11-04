@@ -17,8 +17,30 @@ tasks:
     cmd: task -l
     silent: true
 
+  build:
+    desc: Build static site
+    deps:
+      - clean
+    cmds:
+      - yfm -i ./docs -o ./site
+
   serve:
     desc: Run development
     cmds:
-      - echo "Make some shit manualy =)"
-    silent: true
+      - docker compose up --build -d
+      - "echo 'Follow: http://127.0.0.1:8080'"
+
+  logs:
+    desc: Tail logs
+    cmds:
+      - docker compose logs --tail=1 -f
+
+  down:
+    desc: Down all
+    cmds:
+      - docker compose down -v
+
+  clean:
+    desc: Clean all artifacts
+    cmds:
+      - rm -rf ./site/*

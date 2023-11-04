@@ -4,26 +4,26 @@
 
 Здесь собраны все технологии с которыми я работал и которые я могу уверенно использовать в своей работе.
 
-- **Cloud providers:** :fontawesome-brands-yandex-international: Yandex.Cloud, :fontawesome-brands-digital-ocean: DigitalOcean
-- **OS:** :fontawesome-brands-ubuntu: Ubuntu, :fontawesome-brands-debian: Debian, :fontawesome-brands-centos: CentOS, :fontawesome-brands-redhat: RHEL
-- **Configuration managment:** :simple-ansible: Ansible, :simple-terraform: Terraform
-- **Version control:** :fontawesome-brands-github: GitHub, :fontawesome-brands-gitlab: GitLab, :fontawesome-brands-bitbucket: Bitbucket
-- **Task management:** :fontawesome-brands-github: GitHub Projects, :fontawesome-brands-jira: Jira, :fontawesome-brands-trello: Trello
-- **Monitoring:** :simple-prometheus: Prometheus, :simple-grafana: Grafana
-- **Documentation:** :fontawesome-brands-confluence: Confluence, :fontawesome-brands-gitlab: GitLab / :fontawesome-brands-github: GitHub Wiki, :simple-notion: Notion
-- **Virtualisation:** :simple-proxmox: Proxmox, :simple-vmware: VMware
-- **Programming:** :fontawesome-brands-python: Python, :fontawesome-brands-golang: Go, :material-bash: Bash, :material-language-javascript: JS
+* **Cloud providers:** Yandex.Cloud, DigitalOcean
+* **OS:** Ubuntu, Debian, CentOS, RHEL
+* **Configuration managment:** Ansible, Terraform
+* **Version control:** GitHub, GitLab, Bitbucket
+* **Task management:** GitHub Projects, Jira, Trello
+* **Monitoring:** Prometheus, Grafana
+* **Documentation:** Confluence, GitLab / GitHub Wiki, Notion
+* **Virtualisation:** Proxmox, VMware
+* **Programming:** Python, Go, Bash, JS
 
 ## Практики
 
-- **IaC** – Инфраструктура как код;
-- **SRE** – Классический упор на доступность продукта;
-- **DevOps** – Автоматизация и интеграция;
-- **DocOps** – Документация тоже код;
-- **GitOps** – Git-репозиторий основной источник правды;
-- **Agile/Scrum** – Управление и взаимодействие с командами по гибким методологиям;
+* **IaC** – Инфраструктура как код;
+* **SRE** – Классический упор на доступность продукта;
+* **DevOps** – Автоматизация и интеграция;
+* **DocOps** – Документация тоже код;
+* **GitOps** – Git-репозиторий основной источник правды;
+* **Agile/Scrum** – Управление и взаимодействие с командами по гибким методологиям;
 
 ## Знание языков
 
-- **Русский** — Родной
-- **Английский** — Pre-Intermediate
+* **Русский** — Родной
+* **Английский** — Pre-Intermediate

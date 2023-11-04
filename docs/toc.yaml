@@ -1,0 +1,19 @@
+---
+title: Савин Михаил
+href: index.yaml
+items:
+  - name: Обо мне
+    href: aboutme.md
+  - name: Навыки
+    href: skills.md
+  - name: Опыт работы
+    href: experience.md
+  - name: Образование
+    href: education.md
+  - name: Интересы
+    href: interests.md
+  - name: Сертификаты
+    href: awards.md
+
+base: docs
+
