@@ -1,2 +1,2 @@
-mkdocs-material==9.4.4
-mkdocs-dracula-theme==1.0.5
+mkdocs-material==9.4.8
+mkdocs-with-pdf==0.9.3

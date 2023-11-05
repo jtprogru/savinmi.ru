@@ -7,6 +7,9 @@ set:
 
 silent: false
 
+vars:
+  PORT: 8000
+
 env:
   ENV: development
 
@@ -17,28 +20,35 @@ tasks:
     cmd: task -l
     silent: true
 
+  venv:
+    desc: Init Python venv
+    preconditions:
+      - test -f $(which python3)
+    cmds:
+      - python3 -m venv venv
+
+  install:
+    desc: Install dependencies
+    preconditions:
+      - test -f requirements.txt
+    deps:
+      - venv
+    cmds:
+      - ./venv/bin/pip install -r requirements.txt
+
   build:
     desc: Build static site
     deps:
+      - install
       - clean
     cmds:
-      - yfm -i ./docs -o ./site
+      - ./venv/bin/mkdocs build
 
   serve:
     desc: Run development
     cmds:
-      - docker compose up --build -d
-      - "echo 'Follow: http://127.0.0.1:8080'"
-
-  logs:
-    desc: Tail logs
-    cmds:
-      - docker compose logs --tail=1 -f
-
-  down:
-    desc: Down all
-    cmds:
-      - docker compose down -v
+      - "echo 'Follow: http://127.0.0.1:{{ .PORT }}'"
+      - "python3 -m http.server --bind 127.0.0.1 --directory ./site/ {{ .PORT }}"
 
   clean:
     desc: Clean all artifacts

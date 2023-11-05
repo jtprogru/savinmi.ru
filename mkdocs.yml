@@ -1,6 +1,6 @@
 # Project information
 site_name: Савин Михаил
-site_url: https://savinmi.ru/
+site_url: https://savinmi.ru
 site_author: Michael Savin
 site_description: >-
   Резюме Савин Михаил
@@ -18,11 +18,11 @@ copyright: Copyright &copy; 1990 - 2023 Michael Savin
 # Configuration
 theme:
   name: material
-  logo: /assets/img/fav-light.svg
-  favicon: /assets/img/fav-light.svg
+  logo: assets/img/fav-light.svg
+  favicon: assets/img/fav-light.svg
   icon:
     repo: fontawesome/brands/github
-  # features:
+  features:
     # - announce.dismiss
     # - content.action.edit
     # - content.action.view
@@ -38,7 +38,7 @@ theme:
     # - navigation.instant
     # - navigation.instant.prefetch
     # - navigation.instant.progress
-    # - navigation.prune
+    - navigation.prune
     # - navigation.sections
     # - navigation.tabs
     # - navigation.tabs.sticky
@@ -63,10 +63,26 @@ theme:
         icon: material/weather-sunny
         name: Switch to light mode
 
-plugins: []
+plugins:
+  - with-pdf:
+      cover: true
+      cover_title: Савин Михаил
+      cover_subtitle: версия для PDF
+      copyright: (C) 2023 Савин Михаил
+      toc_title: Оглавление
+      toc_level: 1
+      output_path: assets/pdf/cv.pdf
+
+nav:
+    - Обо мне: index.md
+    - Навыки: skills.md
+    - Опыт работы: experience.md
+    - Образование: education.md
+    - Интересы: interests.md
+    - Сертификаты: awards.md
 
 extra:
-  homepage: https://savinmi.ru
+  homepage: /
   social:
     - icon: fontawesome/brands/telegram
       link: https://t.me/jtprogru
@@ -87,10 +103,15 @@ extra:
     - icon: fontawesome/brands/mastodon
       link: https://mas.to/@jtprogru
     - icon: fontawesome/solid/file-pdf
-      link: assets/pdf/CV-SavinMI-SRE.pdf
+      link: assets/pdf/cv.pdf
 
 markdown_extensions:
+  - toc:
+      permalink: 
+  - admonition
+  - def_list
   - attr_list
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
