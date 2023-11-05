@@ -44,6 +44,12 @@ tasks:
     cmds:
       - ./venv/bin/mkdocs build
 
+  ghdeploy:
+    deps:
+      - build
+    cmds:
+      - ./venv/bin/mkdocs gh-deploy --force
+
   serve:
     desc: Run development
     cmds:
