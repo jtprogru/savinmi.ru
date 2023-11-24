@@ -1,3 +1,0 @@
-mkdocs-material==9.4.8
-mkdocs-with-pdf==0.9.3
-pillow>=10.0.1 # not directly required, pinned by Snyk to avoid a vulnerability
