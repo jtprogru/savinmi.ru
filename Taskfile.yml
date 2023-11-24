@@ -20,21 +20,13 @@ tasks:
     cmd: task -l
     silent: true
 
-  venv:
-    desc: Init Python venv
-    preconditions:
-      - test -f $(which python3)
-    cmds:
-      - python3 -m venv venv
-
   install:
     desc: Install dependencies
     preconditions:
-      - test -f requirements.txt
-    deps:
-      - venv
+      - test -f $(which poetry)
     cmds:
-      - ./venv/bin/pip install -r requirements.txt
+      - poetry run pip install -U pip
+      - poetry install --no-interaction --no-ansi --sync --no-root
 
   build:
     desc: Build static site
@@ -42,13 +34,14 @@ tasks:
       - install
       - clean
     cmds:
-      - ./venv/bin/mkdocs build
+      - poetry run mkdocs build
 
   ghdeploy:
+    desc: Deploy Github Pages
     deps:
       - build
     cmds:
-      - ./venv/bin/mkdocs gh-deploy --force
+      - poetry run mkdocs gh-deploy --force
 
   serve:
     desc: Run development

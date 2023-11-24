@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "savinmi.ru"
+version = "1.0.1"
+description = "My resume."
+authors = [
+    "Mikhail Savin <jtprogru@gmail.com>",
+]
+maintainers = [
+    "Mikhail Savin <jtprogru@gmail.com>",
+]
+
+readme = "README.md"
+license = "WTFPL"
+
+repository = "https://github.com/jtprogru/savinmi.ru.git"
+
+[tool.poetry.dependencies]
+python = "~3.12"
+
+[tool.poetry.group.dev.dependencies]
+mkdocs-material = "9.4.8"
+mkdocs-with-pdf = "0.9.3"
+pillow = ">10.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
