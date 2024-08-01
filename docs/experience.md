@@ -2,7 +2,7 @@
 
 ## CTO *[DeusOps](https://deusops.com/b2b)*
 
-Строю лучший DevOps мире.
+Строю лучший DevOps в мире.
 
 Стэк: *Agile/Scrum, GitLab, Kubernetes, Yandex Cloud*
 
