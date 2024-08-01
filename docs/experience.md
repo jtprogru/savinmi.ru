@@ -1,6 +1,14 @@
 # Опыт работы
 
-## Tech Lead SRE *[Positive Technologies](https://ptsecurity.com)*
+## CTO *[DeusOps](https://deusops.com/b2b)*
+
+Строю лучший DevOps мире.
+
+Стэк: *Agile/Scrum, GitLab, Kubernetes, Yandex Cloud*
+
+Период: *Август 2024 - настоящее время*
+
+## Tech Lead SRE in AppSec *[Positive Technologies](https://ptsecurity.com)*
 
 Запустил Web Application Firewall (WAF) в облаке и собрал команду SRE, которая владеет облачной платформой AppSec.
 Улучшил процессы кросс-командной коммуникации, а так же выстроил процессы внутри команды SRE и инфраструктуры.
