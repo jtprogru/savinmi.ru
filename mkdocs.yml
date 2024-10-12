@@ -43,7 +43,7 @@ theme:
     # - navigation.tabs
     # - navigation.tabs.sticky
     # - navigation.top
-    # - navigation.tracking
+    - navigation.tracking
     # - search.highlight
     # - search.share
     # - search.suggest
@@ -84,6 +84,8 @@ nav:
 extra:
   homepage: /
   social:
+    - icon: fontawesome/solid/ruble-sign
+      link: https://sponsr.ru/jtprogru_channel/
     - icon: fontawesome/brands/telegram
       link: https://t.me/jtprogru_channel
     - icon: fontawesome/brands/github
@@ -104,6 +106,9 @@ extra:
       link: https://mas.to/@jtprogru
     - icon: fontawesome/solid/file-pdf
       link: assets/pdf/cv.pdf
+
+extra_javascript:
+  - assets/js/yandex.metrika.js
 
 markdown_extensions:
   - toc:
