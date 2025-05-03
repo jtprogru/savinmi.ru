@@ -3,19 +3,25 @@
 # Project information
 site_name: Савин Михаил
 site_url: https://savinmi.ru
-site_author: Michael Savin
+site_author: Mikhail Savin
 site_description: >-
   Резюме Савин Михаил
-  CV Savin Michael
+  Савин Михаил
+  Михаил Савин
+  CV Savin Mikhail
+  Savin Mikhail
+  Mikhail Savin
   DevOps
   SRE
+  jtprog
+  jtprogru
 
 # Repository
 repo_name: jtprogru/savinmi.ru
 repo_url: https://github.com/jtprogru/savinmi.ru
 
 # Copyright
-copyright: Copyright &copy; 1990 - 2024 Michael Savin
+copyright: Copyright &copy; 1990 - 2025 Mikhail Savin
 
 # Configuration
 theme:
@@ -70,7 +76,7 @@ plugins:
       cover: true
       cover_title: Савин Михаил
       cover_subtitle: версия для PDF
-      copyright: (C) 2023 Савин Михаил
+      copyright: (C) 2025 Савин Михаил
       toc_title: Оглавление
       toc_level: 1
       output_path: assets/pdf/cv.pdf
