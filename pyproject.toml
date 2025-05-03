@@ -1,13 +1,10 @@
 [tool.poetry]
 name = "savinmi.ru"
-version = "1.0.1"
+version = "1.0.2"
 description = "My resume."
-authors = [
-    "Mikhail Savin <jtprogru@gmail.com>",
-]
-maintainers = [
-    "Mikhail Savin <jtprogru@gmail.com>",
-]
+authors = ["Mikhail Savin <jtprogru@gmail.com>"]
+maintainers = ["Mikhail Savin <jtprogru@gmail.com>"]
+package-mode = false
 
 readme = "README.md"
 license = "WTFPL"
@@ -15,7 +12,7 @@ license = "WTFPL"
 repository = "https://github.com/jtprogru/savinmi.ru.git"
 
 [tool.poetry.dependencies]
-python = "~3.12"
+python = "~3.13"
 
 [tool.poetry.group.dev.dependencies]
 mkdocs-material = "9.4.8"
