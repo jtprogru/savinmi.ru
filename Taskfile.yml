@@ -26,7 +26,8 @@ tasks:
       - test -f $(which poetry)
     cmds:
       - poetry run pip install -U pip
-      - poetry install --no-interaction --no-ansi --sync --no-root
+      - poetry install --no-interaction --no-ansi --no-root
+      - poetry sync
 
   build:
     desc: Build static site
@@ -53,3 +54,4 @@ tasks:
     desc: Clean all artifacts
     cmds:
       - rm -rf ./site/*
+
