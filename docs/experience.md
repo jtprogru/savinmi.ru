@@ -2,19 +2,11 @@
 
 ## Lead Analyst SRE _[Avito](https://avito.tech)_
 
-Строю комьюнити SRE в крупнейшем классифайде страны.
+Строю комьюнити SRE в крупнейшем классифайде страны. Запускаю внутренний продукт, который будет сам чинить всё.
 
 Стэк: _самый разнообразный_
 
 Период: _Мая 2025 - настоящее время_
-
-## CTO _[DeusOps](https://deusops.com/b2b)_
-
-Строю лучший DevOps в мире.
-
-Стэк: _Agile/Scrum, GitLab, Kubernetes, Yandex Cloud_
-
-Период: _Август 2024 - настоящее время_
 
 ## Tech Lead SRE in AppSec _[Positive Technologies](https://ptsecurity.com)_
 
