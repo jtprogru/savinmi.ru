@@ -45,6 +45,7 @@ description = "Python bindings for the Brotli compression library"
 optional = false
 python-versions = "*"
 groups = ["dev"]
+markers = "platform_python_implementation == \"CPython\""
 files = [
     {file = "brotli-1.2.0-cp27-cp27m-macosx_10_9_x86_64.whl", hash = "sha256:99cfa69813d79492f0e5d52a20fd18395bc82e671d5d40bd5a91d13e75e468e8"},
     {file = "brotli-1.2.0-cp27-cp27m-manylinux1_i686.whl", hash = "sha256:3ebe801e0f4e56d17cd386ca6600573e3706ce1845376307f5d2cbd32149b69a"},
@@ -1287,21 +1288,21 @@ files = [
 
 [[package]]
 name = "tinycss2"
-version = "1.4.0"
+version = "1.5.1"
 description = "A tiny CSS parser"
 optional = false
-python-versions = ">=3.8"
+python-versions = ">=3.10"
 groups = ["dev"]
 files = [
-    {file = "tinycss2-1.4.0-py3-none-any.whl", hash = "sha256:3a49cf47b7675da0b15d0c6e1df8df4ebd96e9394bb905a5775adb0d884c5289"},
-    {file = "tinycss2-1.4.0.tar.gz", hash = "sha256:10c0972f6fc0fbee87c3edb76549357415e94548c1ae10ebccdea16fb404a9b7"},
+    {file = "tinycss2-1.5.1-py3-none-any.whl", hash = "sha256:3415ba0f5839c062696996998176c4a3751d18b7edaaeeb658c9ce21ec150661"},
+    {file = "tinycss2-1.5.1.tar.gz", hash = "sha256:d339d2b616ba90ccce58da8495a78f46e55d4d25f9fd71dfd526f07e7d53f957"},
 ]
 
 [package.dependencies]
 webencodings = ">=0.4"
 
 [package.extras]
-doc = ["sphinx", "sphinx_rtd_theme"]
+doc = ["furo", "sphinx"]
 test = ["pytest", "ruff"]
 
 [[package]]
@@ -1398,29 +1399,29 @@ watchmedo = ["PyYAML (>=3.10)"]
 
 [[package]]
 name = "weasyprint"
-version = "65.1"
+version = "68.0"
 description = "The Awesome Document Factory"
 optional = false
-python-versions = ">=3.9"
+python-versions = ">=3.10"
 groups = ["dev"]
 files = [
-    {file = "weasyprint-65.1-py3-none-any.whl", hash = "sha256:9baa54282dc86929f6b877034d06b0416e2a7cacb1af3f73d80960592fd0af89"},
-    {file = "weasyprint-65.1.tar.gz", hash = "sha256:120281bdbd42ffaa7d7e5cedbe3182a2cef36ea5ad97fe9f357e43be6a1e58ea"},
+    {file = "weasyprint-68.0-py3-none-any.whl", hash = "sha256:c2cb40c71b50837c5971f00171c9e4078e8c9912dd7c217f3e90e068f11e8aa1"},
+    {file = "weasyprint-68.0.tar.gz", hash = "sha256:447f40898b747cb44ac31a5d493d512e7441fd56e13f63744c099383bbf9cda9"},
 ]
 
 [package.dependencies]
 cffi = ">=0.6"
 cssselect2 = ">=0.8.0"
-fonttools = {version = ">=4.0.0", extras = ["woff"]}
+fonttools = {version = ">=4.59.2", extras = ["woff"]}
 Pillow = ">=9.1.0"
 pydyf = ">=0.11.0"
 Pyphen = ">=0.9.1"
-tinycss2 = ">=1.4.0"
+tinycss2 = ">=1.5.0"
 tinyhtml5 = ">=2.0.0b1"
 
 [package.extras]
 doc = ["furo", "sphinx"]
-test = ["pytest", "ruff"]
+test = ["Pillow (>=12.1.0)", "pytest", "ruff"]
 
 [[package]]
 name = "webencodings"
