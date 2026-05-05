@@ -71,16 +71,6 @@ theme:
         icon: material/weather-sunny
         name: Switch to light mode
 
-plugins:
-  - with-pdf:
-      cover: true
-      cover_title: Савин Михаил
-      cover_subtitle: версия для PDF
-      copyright: (C) 2025 Савин Михаил
-      toc_title: Оглавление
-      toc_level: 1
-      output_path: assets/pdf/cv.pdf
-
 nav:
   - Обо мне: index.md
   - Навыки: skills.md
@@ -111,7 +101,7 @@ extra:
     - icon: fontawesome/brands/mastodon
       link: https://mas.to/@jtprogru
     - icon: fontawesome/solid/file-pdf
-      link: assets/pdf/cv.pdf
+      link: assets/pdf/jtprogru-cv.pdf
 
 extra_javascript:
   - assets/js/yandex.metrika.js
