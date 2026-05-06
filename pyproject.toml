@@ -12,12 +12,12 @@ license = "WTFPL"
 repository = "https://github.com/jtprogru/savinmi.ru.git"
 
 [tool.poetry.dependencies]
-python = "~3.13"
+python = ">=3.13,<4.0"
 
 [tool.poetry.group.dev.dependencies]
-mkdocs-material = "9.4.8"
-mkdocs-with-pdf = "0.9.3"
-pillow = ">10.0.1"
+mkdocs-material = "~9.6.23"
+mkdocs-with-pdf = "^0.9.3"
+pillow = "^11.0"
 
 [build-system]
 requires = ["poetry-core"]
