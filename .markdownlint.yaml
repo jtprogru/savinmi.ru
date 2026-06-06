@@ -5,7 +5,6 @@ MD007:
   indent: 4
 no-hard-tabs: false
 whitespace: false
-MD013:
-  line_length: 360
+MD013: false
 MD025:
   front_matter_title: ""
