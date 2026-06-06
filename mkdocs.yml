@@ -57,16 +57,21 @@ theme:
     # - search.suggest
     # - toc.follow
     # - toc.integrate
+  font:
+    text: PT Sans
+    code: JetBrains Mono
   palette:
     # Palette toggle for light mode
     - scheme: default
-      accent: indigo
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
     # Palette toggle for dark mode
     - scheme: slate
-      accent: indigo
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
@@ -103,6 +108,10 @@ extra:
       link: https://mas.to/@jtprogru
     - icon: fontawesome/solid/file-pdf
       link: assets/pdf/jtprogru-cv.pdf
+
+extra_css:
+  - assets/stylesheets/extra.css
+  - assets/stylesheets/code-gruvbox.css
 
 extra_javascript:
   - assets/js/yandex.metrika.js
