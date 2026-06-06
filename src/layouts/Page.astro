@@ -6,12 +6,15 @@ import "../styles/global.css";
 interface Props {
   title?: string;
   description?: string;
+  frontmatter?: { title?: string; description?: string };
 }
 
-const {
-  title,
-  description = "Резюме Михаила Савина — Lead SRE, Head of Reliability. Опыт, навыки, проекты.",
-} = Astro.props;
+const { frontmatter } = Astro.props;
+const title = Astro.props.title ?? frontmatter?.title;
+const description =
+  Astro.props.description ??
+  frontmatter?.description ??
+  "Резюме Михаила Савина — Lead SRE, Head of Reliability. Опыт, навыки, проекты.";
 
 const siteName = "Михаил Савин";
 const fullTitle = title ? `${title} · ${siteName}` : siteName;

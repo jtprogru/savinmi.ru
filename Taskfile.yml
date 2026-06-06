@@ -13,7 +13,7 @@ vars:
 env:
   ENV: development
 
-dotenv: [".env", "{{.ENV}}/.env.", "{{.HOME}}/.env"]
+dotenv: [".env", ".env.{{.ENV}}", "{{.HOME}}/.env"]
 
 tasks:
   default:
