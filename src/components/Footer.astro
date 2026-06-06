@@ -6,7 +6,7 @@ const socials = [
   { href: "https://github.com/jtprogru", label: "GitHub", icon: "github" },
   { href: "https://twitter.com/jtprogru", label: "X / Twitter", icon: "x" },
   { href: "https://linkedin.com/in/jtprogru", label: "LinkedIn", icon: "linkedin" },
-  { href: "https://mas.to/@jtprogru", label: "Mastodon", icon: "mastodon" },
+  { href: "https://mas.to/@jtprogru", label: "Mastodon", icon: "mastodon", me: true },
   { href: "https://leetcode.com/jtprogru/", label: "LeetCode", icon: "leetcode" },
   { href: "https://unsplash.com/@jtprogru", label: "Unsplash", icon: "unsplash" },
   { href: "https://jtprog.ru", label: "Блог jtprog.ru (RSS)", icon: "rss" },
@@ -18,7 +18,13 @@ const socials = [
   <div class="site-footer__inner">
     <nav class="social" aria-label="Социальные сети">
       {socials.map((s) => (
-        <a href={s.href} aria-label={s.label} title={s.label} rel="me noopener" target="_blank">
+        <a
+          href={s.href}
+          aria-label={s.label}
+          title={s.label}
+          rel={s.me ? "me noopener noreferrer" : "noopener noreferrer"}
+          target="_blank"
+        >
           {s.icon === "telegram" && (
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>
           )}
