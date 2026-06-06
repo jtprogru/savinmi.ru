@@ -1,4 +1,5 @@
 import { defineConfig } from 'astro/config';
+import sitemap from '@astrojs/sitemap';
 import remarkDeflist from 'remark-deflist';
 
 export default defineConfig({
@@ -7,6 +8,7 @@ export default defineConfig({
   build: {
     format: 'directory',
   },
+  integrations: [sitemap()],
   markdown: {
     remarkPlugins: [remarkDeflist],
   },

@@ -1,6 +1,7 @@
 ---
 layout: ../layouts/Page.astro
 title: Навыки
+description: Технологии и практики Михаила Савина — Kubernetes, Terraform, Ansible, Yandex Cloud, Go, Python; IaC, SRE, DevOps, GitOps.
 ---
 
 # Навыки

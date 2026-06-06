@@ -19,6 +19,27 @@ const description =
 const siteName = "Михаил Савин";
 const fullTitle = title ? `${title} · ${siteName}` : siteName;
 const canonical = new URL(Astro.url.pathname, Astro.site).toString();
+const ogImage = new URL("/img/profile.jpg", Astro.site).toString();
+
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Михаил Савин",
+  alternateName: "jtprogru",
+  jobTitle: "Lead SRE / Head of Reliability",
+  url: Astro.site?.toString(),
+  image: ogImage,
+  sameAs: [
+    "https://t.me/jtprogru_channel",
+    "https://github.com/jtprogru",
+    "https://twitter.com/jtprogru",
+    "https://linkedin.com/in/jtprogru",
+    "https://mas.to/@jtprogru",
+    "https://leetcode.com/jtprogru/",
+    "https://unsplash.com/@jtprogru",
+    "https://jtprog.ru",
+  ],
+};
 ---
 
 <!doctype html>
@@ -36,6 +57,16 @@ const canonical = new URL(Astro.url.pathname, Astro.site).toString();
     <meta property="og:url" content={canonical} />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="ru_RU" />
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:alt" content="Михаил Савин" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <script type="application/ld+json" set:html={JSON.stringify(personJsonLd)} />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

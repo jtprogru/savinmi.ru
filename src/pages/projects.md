@@ -1,6 +1,7 @@
 ---
 layout: ../layouts/Page.astro
 title: Проекты
+description: Pet-проекты Михаила Савина — open-source утилиты на Go и Rust для SRE, продуктивности и контент-пайплайна.
 ---
 
 # Проекты

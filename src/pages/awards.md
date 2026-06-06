@@ -1,6 +1,7 @@
 ---
 layout: ../layouts/Page.astro
 title: Сертификаты
+description: Сертификаты и пройденные курсы Михаила Савина — Python, Go, Linux, Kubernetes, информационная безопасность.
 ---
 
 # Сертификаты

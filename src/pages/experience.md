@@ -1,6 +1,7 @@
 ---
 layout: ../layouts/Page.astro
 title: Опыт работы
+description: Опыт работы Михаила Савина — Lead SRE, Head of Reliability, Tech Lead, DevOps-консультант. От системного администрирования до руководства SRE-командами.
 ---
 
 # Опыт работы

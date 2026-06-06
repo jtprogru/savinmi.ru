@@ -1,6 +1,7 @@
 ---
 layout: ../layouts/Page.astro
 title: Обо мне
+description: Михаил Савин — Lead SRE, член ПК DevOpsConf, преподаватель РТУ МИРЭА. Обо мне, контакты и сферы интересов.
 ---
 
 # Обо мне

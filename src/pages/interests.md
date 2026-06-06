@@ -1,6 +1,7 @@
 ---
 layout: ../layouts/Page.astro
 title: Интересы
+description: Интересы Михаила Савина — блог jtprog.ru, Telegram-канал «Мишка на сервере», pet-проекты на Go и Python, мобильная фотография.
 ---
 
 # Интересы
