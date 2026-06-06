@@ -1,13 +1,18 @@
+---
+layout: ../layouts/Page.astro
+title: Сертификаты
+---
+
 # Сертификаты
 
 Иногда я что-то прохожу - какой-то курс, который мне бывает интересен. Тут список тех курсов и сертификаций, которые я прошел.
 
 - [Операционные системы](https://stepik.org/cert/2479651)
-- [Программист Python](assets/pdf/Python-University-2035.pdf)
+- [Программист Python](/pdf/Python-University-2035.pdf)
 - [Разработка веб-сервисов на Golang (Go)](https://stepik.org/course/187490)
 - [Аудит ИТ-инфраструктуры (сертификация)](https://intuit.ru/verifydiplomas/101644682)
 - [Основы информационных систем (сертификация)](https://intuit.ru/verifydiplomas/101644449)
-- [Медиа-тренинг по работе со СМИ](assets/pdf/tabia.pdf)
+- [Медиа-тренинг по работе со СМИ](/pdf/tabia.pdf)
 - ["Поколение Python": курс для начинающих](https://stepik.org/cert/1788601)
 - [Основы операционных систем](https://intuit.ru/verifydiplomas/101557605)
 - [Цифровая трансформация. Быстрый старт](https://stepik.org/cert/1741179)

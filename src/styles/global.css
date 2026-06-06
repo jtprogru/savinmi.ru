@@ -1,0 +1,319 @@
+/* ============================================================
+   «Мишка на сервере» brand tokens · Astro
+   Источник: BRANDING.md темы hugo-mishka.
+   Принцип: технический скелет + тёплая подача.
+   ============================================================ */
+
+:root {
+  --accent-300: #fdba74;
+  --accent-400: #fb923c;
+  --accent-600: #ea580c;
+  --accent-700: #c2410c;
+
+  --callout-note:      #3b82f6;
+  --callout-tip:       #22c55e;
+  --callout-important: #a855f7;
+  --callout-warn:      #f59e0b;
+  --callout-danger:    #ef4444;
+
+  --font-text: "PT Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-code: "JetBrains Mono", "PT Mono", SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+}
+
+[data-theme="light"] {
+  --bg:         #faf8f5;
+  --fg:         #1f2428;
+  --fg-muted:   #5c6266;
+  --fg-faint:   #9aa0a4;
+  --rule:       #e7e2da;
+  --link:       var(--accent-700);
+  --link-hover: var(--accent-600);
+  --code-bg:    #fbf1c7;
+  --code-fg:    #3c3836;
+  --primary:    var(--accent-700);
+  --header-bg:  #faf8f5;
+  --footer-bg:  #1e2327;
+  --footer-fg:  #e6e1d9;
+}
+
+[data-theme="dark"] {
+  --bg:         #1e2327;
+  --fg:         #e6e1d9;
+  --fg-muted:   #9aa0a4;
+  --fg-faint:   #6b7176;
+  --rule:       #333b41;
+  --link:       var(--accent-300);
+  --link-hover: var(--accent-400);
+  --code-bg:    #282828;
+  --code-fg:    #ebdbb2;
+  --primary:    var(--accent-400);
+  --header-bg:  #1e2327;
+  --footer-bg:  #16191c;
+  --footer-fg:  #e6e1d9;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-text);
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1 0 auto;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+}
+
+/* === Typography === */
+
+h1, h2, h3, h4 {
+  font-family: var(--font-text);
+  line-height: 1.25;
+  color: var(--fg);
+}
+
+h1 { font-size: 1.85rem; font-weight: 700; letter-spacing: -0.01em; margin: 0 0 1rem; }
+h2 { font-size: 1.4rem; margin: 2.4em 0 0.8em; }
+h3 { font-size: 1.15rem; margin: 1.8em 0 0.6em; }
+h4 { font-size: 1rem; margin: 1.4em 0 0.4em; }
+
+p { margin: 0 0 1em; }
+
+ul, ol { padding-left: 1.5em; margin: 0 0 1em; }
+li { margin: 0.25em 0; }
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  transition: color 0.15s ease;
+}
+a:hover { color: var(--link-hover); }
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--rule);
+  margin: 2em 0;
+}
+
+blockquote {
+  margin: 1em 0;
+  padding: 0.4em 1em;
+  border-left: 4px solid var(--primary);
+  background: color-mix(in srgb, var(--primary) 6%, transparent);
+  color: var(--fg-muted);
+}
+
+/* === Code === */
+
+code, pre {
+  font-family: var(--font-code);
+  font-size: 0.9em;
+}
+
+code {
+  background: var(--code-bg);
+  color: var(--code-fg);
+  padding: 0.1em 0.35em;
+  border-radius: 0.2rem;
+}
+
+pre {
+  background: var(--code-bg);
+  color: var(--code-fg);
+  padding: 0.9em 1em;
+  border-radius: 0.3rem;
+  overflow-x: auto;
+  margin: 1em 0;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+}
+
+/* === Tables === */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+}
+th, td {
+  padding: 0.5em 0.75em;
+  border-bottom: 1px solid var(--rule);
+  text-align: left;
+}
+th {
+  background: var(--rule);
+  font-weight: 600;
+}
+
+/* === Header === */
+
+.site-header {
+  background: var(--header-bg);
+  border-bottom: 1px solid var(--rule);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(6px);
+  background: color-mix(in srgb, var(--header-bg) 88%, transparent);
+}
+
+.site-header__inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.site-title {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--fg);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1rem;
+  flex: 1;
+}
+
+.site-nav a {
+  color: var(--fg-muted);
+  text-decoration: none;
+  font-size: 0.95rem;
+  padding: 0.25rem 0;
+  border-bottom: 2px solid transparent;
+}
+.site-nav a:hover { color: var(--primary); }
+.site-nav a[aria-current="page"] {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+}
+
+.theme-toggle {
+  display: inline-flex;
+  border: 1px solid var(--rule);
+  border-radius: 0.3rem;
+  overflow: hidden;
+}
+.theme-toggle button {
+  background: none;
+  border: 0;
+  color: var(--fg-muted);
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+.theme-toggle button + button {
+  border-left: 1px solid var(--rule);
+}
+.theme-toggle button:hover {
+  color: var(--primary);
+}
+.theme-toggle button[aria-pressed="true"] {
+  color: var(--primary);
+  background: color-mix(in srgb, var(--primary) 12%, transparent);
+}
+.theme-toggle svg { width: 16px; height: 16px; }
+
+/* === Footer === */
+
+.site-footer {
+  background: var(--footer-bg);
+  color: var(--footer-fg);
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
+.site-footer__inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+.site-footer a { color: var(--footer-fg); }
+.site-footer a:hover { color: var(--accent-300); }
+
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+.social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 0.3rem;
+  color: var(--footer-fg);
+  text-decoration: none;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+.social a:hover {
+  color: var(--accent-300);
+  background: color-mix(in srgb, var(--accent-300) 10%, transparent);
+}
+.social svg { width: 20px; height: 20px; }
+
+.copyright {
+  color: color-mix(in srgb, var(--footer-fg) 60%, transparent);
+  font-size: 0.85rem;
+}
+
+/* === Definition lists (используются в projects.md, awards.md) === */
+
+dl { margin: 1em 0; }
+dt {
+  font-weight: 600;
+  margin-top: 0.8em;
+}
+dd {
+  margin-left: 1.25em;
+  color: var(--fg-muted);
+}
+
+/* === Mobile === */
+
+@media (max-width: 640px) {
+  main { padding: 1.5rem 1rem 2rem; }
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.25rem; }
+  .site-header__inner { padding: 0.6rem 1rem; }
+  .site-nav { font-size: 0.9rem; }
+}

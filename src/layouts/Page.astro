@@ -1,0 +1,96 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title,
+  description = "Резюме Михаила Савина — Lead SRE, Head of Reliability. Опыт, навыки, проекты.",
+} = Astro.props;
+
+const siteName = "Михаил Савин";
+const fullTitle = title ? `${title} · ${siteName}` : siteName;
+const canonical = new URL(Astro.url.pathname, Astro.site).toString();
+---
+
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href="/img/fav-light.svg" />
+
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ru_RU" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    />
+
+    <script is:inline>
+      (function () {
+        const root = document.documentElement;
+        let mode = "system";
+        try {
+          const stored = localStorage.getItem("theme");
+          if (stored === "light" || stored === "dark") mode = stored;
+        } catch (_) {}
+        root.dataset.themeMode = mode;
+
+        const mq = window.matchMedia("(prefers-color-scheme: dark)");
+        const apply = () => {
+          if (root.dataset.themeMode === "system") {
+            root.dataset.theme = mq.matches ? "dark" : "light";
+          } else {
+            root.dataset.theme = root.dataset.themeMode;
+          }
+        };
+        apply();
+        mq.addEventListener("change", apply);
+      })();
+    </script>
+  </head>
+  <body>
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+
+    <script is:inline>
+      (function (m, e, t, r, i, k, a) {
+        m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments); };
+        m[i].l = 1 * new Date();
+        for (var j = 0; j < document.scripts.length; j++) {
+          if (document.scripts[j].src === r) return;
+        }
+        k = e.createElement(t); a = e.getElementsByTagName(t)[0];
+        k.async = 1; k.src = r; a.parentNode.insertBefore(k, a);
+      })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+      ym(98611647, "init", {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+        webvisor: true,
+      });
+    </script>
+    <noscript>
+      <div><img src="https://mc.yandex.ru/watch/98611647" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+  </body>
+</html>
