@@ -1,3 +1,8 @@
+---
+layout: ../layouts/Page.astro
+title: Опыт работы
+---
+
 # Опыт работы
 
 ## Руководитель отдела SRE *[h3llo.cloud](https://h3llo.cloud)*

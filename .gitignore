@@ -1,4 +1,7 @@
-site/
-venv/
-.venv/
+node_modules/
+dist/
+.astro/
 .cache/
+.env
+.env.*
+.DS_Store
