@@ -2,6 +2,7 @@ node_modules/
 dist/
 .astro/
 .cache/
+.venv/
 .env
 .env.*
 .DS_Store

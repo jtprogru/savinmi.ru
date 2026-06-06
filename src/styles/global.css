@@ -24,7 +24,6 @@
   --bg:         #faf8f5;
   --fg:         #1f2428;
   --fg-muted:   #5c6266;
-  --fg-faint:   #9aa0a4;
   --rule:       #e7e2da;
   --link:       var(--accent-700);
   --link-hover: var(--accent-600);
@@ -40,7 +39,6 @@
   --bg:         #1e2327;
   --fg:         #e6e1d9;
   --fg-muted:   #9aa0a4;
-  --fg-faint:   #6b7176;
   --rule:       #333b41;
   --link:       var(--accent-300);
   --link-hover: var(--accent-400);
@@ -170,13 +168,12 @@ th {
 /* === Header === */
 
 .site-header {
-  background: var(--header-bg);
+  background: color-mix(in srgb, var(--header-bg) 88%, transparent);
   border-bottom: 1px solid var(--rule);
   position: sticky;
   top: 0;
   z-index: 10;
   backdrop-filter: blur(6px);
-  background: color-mix(in srgb, var(--header-bg) 88%, transparent);
 }
 
 .site-header__inner {
