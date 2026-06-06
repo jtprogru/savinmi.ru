@@ -43,13 +43,24 @@ const canonical = new URL(Astro.url.pathname, Astro.site).toString();
 
     <script is:inline>
       (function () {
+        const root = document.documentElement;
+        let mode = "system";
         try {
           const stored = localStorage.getItem("theme");
-          const prefers = window.matchMedia("(prefers-color-scheme: dark)").matches;
-          document.documentElement.dataset.theme = stored || (prefers ? "dark" : "light");
-        } catch (_) {
-          document.documentElement.dataset.theme = "light";
-        }
+          if (stored === "light" || stored === "dark") mode = stored;
+        } catch (_) {}
+        root.dataset.themeMode = mode;
+
+        const mq = window.matchMedia("(prefers-color-scheme: dark)");
+        const apply = () => {
+          if (root.dataset.themeMode === "system") {
+            root.dataset.theme = mq.matches ? "dark" : "light";
+          } else {
+            root.dataset.theme = root.dataset.themeMode;
+          }
+        };
+        apply();
+        mq.addEventListener("change", apply);
       })();
     </script>
   </head>

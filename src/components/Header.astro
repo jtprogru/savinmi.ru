@@ -22,29 +22,56 @@ const nav = [
         </a>
       ))}
     </nav>
-    <button
-      class="theme-toggle"
-      type="button"
-      aria-label="Переключить тему"
-      data-theme-toggle
-    >
-      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <circle cx="12" cy="12" r="4"/>
-        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
-      </svg>
-      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/>
-      </svg>
-    </button>
+    <div class="theme-toggle" role="group" aria-label="Тема оформления">
+      <button data-theme-set="light" type="button" aria-label="Светлая тема" title="Светлая">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+        </svg>
+      </button>
+      <button data-theme-set="system" type="button" aria-label="Тема системы" title="Системная">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="2.5" y="4" width="19" height="13" rx="1.5"/>
+          <path d="M8 21h8M12 17v4"/>
+        </svg>
+      </button>
+      <button data-theme-set="dark" type="button" aria-label="Тёмная тема" title="Тёмная">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/>
+        </svg>
+      </button>
+    </div>
   </div>
 </header>
 
 <script>
   const root = document.documentElement;
-  const btn = document.querySelector<HTMLButtonElement>("[data-theme-toggle]");
-  btn?.addEventListener("click", () => {
-    const next = root.dataset.theme === "dark" ? "light" : "dark";
-    root.dataset.theme = next;
-    try { localStorage.setItem("theme", next); } catch {}
+  const buttons = document.querySelectorAll<HTMLButtonElement>("[data-theme-set]");
+
+  const sync = () => {
+    const mode = root.dataset.themeMode || "system";
+    buttons.forEach((b) =>
+      b.setAttribute("aria-pressed", String(b.dataset.themeSet === mode))
+    );
+  };
+
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const mode = btn.dataset.themeSet!;
+      root.dataset.themeMode = mode;
+      try {
+        if (mode === "system") localStorage.removeItem("theme");
+        else localStorage.setItem("theme", mode);
+      } catch {}
+      if (mode === "system") {
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        root.dataset.theme = prefersDark ? "dark" : "light";
+      } else {
+        root.dataset.theme = mode;
+      }
+      sync();
+    });
   });
+
+  sync();
 </script>
