@@ -7,3 +7,5 @@ no-hard-tabs: false
 whitespace: false
 MD013:
   line_length: 360
+MD025:
+  front_matter_title: ""
