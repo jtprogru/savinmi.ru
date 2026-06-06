@@ -1,24 +1,19 @@
-[tool.poetry]
-name = "savinmi.ru"
+[project]
+name = "savinmi-ru"
 version = "1.0.2"
 description = "My resume."
-authors = ["Mikhail Savin <jtprogru@gmail.com>"]
-maintainers = ["Mikhail Savin <jtprogru@gmail.com>"]
-package-mode = false
-
 readme = "README.md"
-license = "WTFPL"
+license = { text = "WTFPL" }
+requires-python = ">=3.13,<4.0"
+authors = [{ name = "Mikhail Savin", email = "jtprogru@gmail.com" }]
+maintainers = [{ name = "Mikhail Savin", email = "jtprogru@gmail.com" }]
 
-repository = "https://github.com/jtprogru/savinmi.ru.git"
+[project.urls]
+Repository = "https://github.com/jtprogru/savinmi.ru.git"
 
-[tool.poetry.dependencies]
-python = ">=3.13,<4.0"
-
-[tool.poetry.group.dev.dependencies]
-mkdocs-material = "~9.6.23"
-mkdocs-with-pdf = "^0.9.3"
-pillow = "^11.0"
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+[dependency-groups]
+dev = [
+    "mkdocs-material>=9.7.6,<10",
+    "mkdocs-with-pdf>=0.9.3,<1",
+    "pillow>=12.2.0,<13",
+]

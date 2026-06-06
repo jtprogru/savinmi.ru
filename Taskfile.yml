@@ -23,11 +23,9 @@ tasks:
   install:
     desc: Install dependencies
     preconditions:
-      - test -f $(which poetry)
+      - test -f $(which uv)
     cmds:
-      - poetry run pip install -U pip
-      - poetry install --no-interaction --no-ansi --no-root
-      - poetry sync
+      - uv sync
 
   build:
     desc: Build static site
@@ -35,14 +33,14 @@ tasks:
       - install
       - clean
     cmds:
-      - poetry run mkdocs build
+      - uv run mkdocs build
 
   ghdeploy:
     desc: Deploy Github Pages
     deps:
       - build
     cmds:
-      - poetry run mkdocs gh-deploy --force
+      - uv run mkdocs gh-deploy --force
 
   serve:
     desc: Run development

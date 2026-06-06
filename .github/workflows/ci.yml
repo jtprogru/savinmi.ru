@@ -11,17 +11,16 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v4
+      - uses: actions/checkout@v6
+      - uses: astral-sh/setup-uv@v8
         with:
-          python-version: 3.x
+          enable-cache: true
       - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
-      - uses: actions/cache@v3
+      - uses: actions/cache@v5
         with:
           key: mkdocs-material-${{ env.cache_id }}
           path: .cache
           restore-keys: |
             mkdocs-material-
-      - run: pip install mkdocs-material mkdocs-with-pdf
-      - run: mkdocs gh-deploy --force
-
+      - run: uv sync --frozen
+      - run: uv run mkdocs gh-deploy --force
