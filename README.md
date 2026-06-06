@@ -47,7 +47,7 @@ Push в `main` запускает workflow `.github/workflows/ci.yml`: сбор�
 
 ## История
 
-Сайт изначально собирался на [MkDocs Material](https://squidfunk.github.io/mkdocs-material/); в ноябре 2025 мигрирован на Astro (PR #194).
+Сайт изначально собирался на [MkDocs Material](https://squidfunk.github.io/mkdocs-material/); в июне 2026 мигрирован на Astro (PR #194).
 
 ## License
 
