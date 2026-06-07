@@ -6,30 +6,54 @@ description: Технологии и практики Михаила Савин�
 
 # Навыки
 
-## Языки программирования & Туллинг
+Здесь — технологии, с которыми работал на боевых задачах и которые могу уверенно применять.
 
-Здесь собраны все технологии с которыми я работал и которые я могу уверенно использовать в своей работе.
+## Языки программирования
 
-* **Cloud providers:** Yandex.Cloud, DigitalOcean
-* **OS:** Ubuntu, Debian, CentOS, RHEL
-* **Configuration managment:** Ansible, Terraform
-* **Version control:** GitHub, GitLab, Bitbucket
-* **Task management:** GitHub Projects, Jira, Trello
-* **Monitoring:** Prometheus, Grafana
-* **Documentation:** Confluence, GitLab / GitHub Wiki, Notion
-* **Virtualisation:** Proxmox, VMware
-* **Programming:** Python, Go, Bash, JS
+- **Go** — основной рабочий язык для CLI, утилит, микросервисов и GitHub Actions
+- **Python** — автоматизация, скрипты, обвязка инфраструктуры
+- **Bash** / **JS** — по необходимости
+
+## Облака и виртуализация
+
+- **Облака:** h3llo.cloud, Yandex Cloud, DigitalOcean
+- **Виртуализация:** Proxmox, VMware, KubeVirt
+- **OS:** Ubuntu, Debian, CentOS, RHEL
+
+## Kubernetes и оркестрация
+
+- Kubernetes (managed и on-prem), Helm
+- Kube-OVN, Linstor, KubeVirt
+- LXC, Docker, Docker Compose
+
+## IaC и конфигурация
+
+- Terraform
+- Ansible (роли, Galaxy, шаблонные репозитории)
+- SaltStack
+
+## Observability и эксплуатация
+
+- Prometheus, Grafana
+- Zabbix
+- Управление инцидентами, постмортемы, RFC, runbook'и
+
+## CI/CD и VCS
+
+- GitHub Actions, GitLab CI
+- GitHub, GitLab, Bitbucket
+
+## Документация и таскинг
+
+- Confluence, Notion, GitHub/GitLab Wiki
+- GitHub Projects, Jira, Trello
 
 ## Практики
 
-* **IaC** – Инфраструктура как код;
-* **SRE** – Классический упор на доступность продукта;
-* **DevOps** – Автоматизация и интеграция;
-* **DocOps** – Документация тоже код;
-* **GitOps** – Git-репозиторий основной источник правды;
-* **Agile/Scrum** – Управление и взаимодействие с командами по гибким методологиям;
-
-## Знание языков
-
-* **Русский** — Родной
-* **Английский** — Pre-Intermediate
+- **SRE** — SLO/SLI, error budgets, постмортемы, on-call
+- **IaC** — инфраструктура как код
+- **GitOps** — git-репозиторий как источник правды
+- **DevOps** — автоматизация и интеграция
+- **DocOps** — документация в репозитории, ревью наравне с кодом
+- **Agile/Scrum** — гибкие методологии управления командой
+- **ChatOps** — эксплуатация через чат с использованием ИИ

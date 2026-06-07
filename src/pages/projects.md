@@ -21,6 +21,14 @@ description: Pet-проекты Михаила Савина — open-source ут
 
 ## Активные
 
+Развиваю и регулярно использую сам.
+
+[**jtgpwgen**](https://github.com/jtprogru/jtgpwgen) — *Go*
+:   Генератор паролей с настраиваемыми классами символов.
+
+[**repo-opener**](https://github.com/jtprogru/repo-opener) — *Go*
+:   Открывает remote-репозиторий из локального клона прямо в браузере.
+
 [**notiflow**](https://github.com/jtprogru/notiflow) — *Go*
 :   GitHub Action для отправки уведомлений в Telegram.
 
@@ -33,22 +41,18 @@ description: Pet-проекты Михаила Савина — open-source ут
 [**thingscli**](https://github.com/jtprogru/thingscli) — *Go*
 :   Тонкая Go-обёртка над AppleScript для Things 3: чтение и запись задач из терминала и пайплайнов.
 
+[**rspassimpt**](https://github.com/jtprogru/rspassimpt) — *Rust*
+:   Быстрый импортёр CSV-экспорта из macOS Passwords прямо в локальный pass-store (passwordstore.org).
+
+## Maintenance
+
+Не развиваю активно, но поддерживаю в рабочем состоянии.
+
+[**cubic-root**](https://github.com/jtprogru/cubic-root) — *Go*
+:   Учебное Go-приложение с Docker multi-stage сборкой и Helm-чартом для Kubernetes.
+
 [**jtsekret**](https://github.com/jtprogru/jtsekret) — *Go*
 :   CLI для централизованного и безопасного управления личными секретами: пароли, OAuth-токены, API-ключи.
 
 [**jtpost**](https://github.com/jtprogru/jtpost) — *Go*
 :   CLI-редактор постов для управления контент-пайплайном Telegram-канала.
-
-[**jtgpwgen**](https://github.com/jtprogru/jtgpwgen) — *Go*
-:   Генератор паролей с настраиваемыми классами символов.
-
-[**rspassimpt**](https://github.com/jtprogru/rspassimpt) — *Rust*
-:   Быстрый импортёр CSV-экспорта из macOS Passwords прямо в локальный pass-store (passwordstore.org).
-
-[**repo-opener**](https://github.com/jtprogru/repo-opener) — *Go*
-:   Открывает remote-репозиторий из локального клона прямо в браузере.
-
-## Maintenance
-
-[**cubic-root**](https://github.com/jtprogru/cubic-root) — *Go*
-:   Учебное Go-приложение с Docker multi-stage сборкой и Helm-чартом для Kubernetes.
