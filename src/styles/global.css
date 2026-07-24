@@ -1,53 +1,63 @@
 /* ============================================================
    «Мишка на сервере» brand tokens · Astro
-   Источник: BRANDING.md темы hugo-mishka.
-   Принцип: технический скелет + тёплая подача.
+   Источник: BRANDING.md темы hugo-mishka (v0.2).
+   Принцип: холодный инженерный цвет (catppuccin Latte/Macchiato,
+   акцент Sapphire), тёплая подача через голос и маскота.
    ============================================================ */
 
 :root {
-  --accent-300: #fdba74;
-  --accent-400: #fb923c;
-  --accent-600: #ea580c;
-  --accent-700: #c2410c;
-
-  --callout-note:      #3b82f6;
-  --callout-tip:       #22c55e;
-  --callout-important: #a855f7;
-  --callout-warn:      #f59e0b;
-  --callout-danger:    #ef4444;
+  /* Акцентная шкала — Sapphire (§2 BRANDING.md) */
+  --accent-300: #7dc4e4; /* Macchiato Sapphire — ссылки на тёмной теме */
+  --accent-400: #209fb5; /* брендовый/декоративный акцент */
+  --accent-600: #209fb5; /* Latte Sapphire — акцент на светлом */
+  --accent-700: #0b7285; /* затемнён вручную — ссылки-текст на светлом, AA */
 
   --font-text: "PT Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-code: "JetBrains Mono", "PT Mono", SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
 }
 
 [data-theme="light"] {
-  --bg:         #faf8f5;
-  --fg:         #1f2428;
-  --fg-muted:   #5c6266;
-  --rule:       #e7e2da;
+  --bg:         #eff1f5; /* Latte base */
+  --fg:         #4c4f69; /* Latte text */
+  --fg-muted:   #5c5f77; /* Latte subtext1 — AA для body-текста (dd, цитаты) */
+  --rule:       #ccd0da; /* Latte surface0 */
   --link:       var(--accent-700);
   --link-hover: var(--accent-600);
-  --code-bg:    #fbf1c7;
-  --code-fg:    #3c3836;
+  --code-bg:    #e6e9ef; /* Latte mantle */
+  --code-fg:    #4c4f69; /* Latte text */
   --primary:    var(--accent-700);
-  --header-bg:  #faf8f5;
-  --footer-bg:  #1e2327;
-  --footer-fg:  #e6e1d9;
+  --header-bg:  #eff1f5;
+  --footer-bg:  #1e2030; /* Macchiato mantle — тёмный подвал на светлой странице */
+  --footer-fg:  #cad3f5;
+
+  /* Callouts — катпуччиновские тона Latte (§2) */
+  --callout-note:      #7287fd; /* Lavender — не Blue, чтобы не путать со ссылкой */
+  --callout-tip:       #40a02b; /* Green */
+  --callout-important: #8839ef; /* Mauve */
+  --callout-warn:      #fe640b; /* Peach */
+  --callout-danger:    #d20f39; /* Red */
 }
 
 [data-theme="dark"] {
-  --bg:         #1e2327;
-  --fg:         #e6e1d9;
-  --fg-muted:   #9aa0a4;
-  --rule:       #333b41;
+  --bg:         #24273a; /* Macchiato base */
+  --fg:         #cad3f5; /* Macchiato text */
+  --fg-muted:   #a5adcb; /* Macchiato subtext0 */
+  --rule:       #363a4f; /* Macchiato surface0 */
   --link:       var(--accent-300);
   --link-hover: var(--accent-400);
-  --code-bg:    #282828;
-  --code-fg:    #ebdbb2;
-  --primary:    var(--accent-400);
-  --header-bg:  #1e2327;
-  --footer-bg:  #16191c;
-  --footer-fg:  #e6e1d9;
+  --code-bg:    #1e2030; /* Macchiato mantle */
+  --code-fg:    #cad3f5; /* Macchiato text */
+  --primary:    var(--accent-300);
+  --header-bg:  #24273a;
+  --footer-bg:  #181926; /* Macchiato crust */
+  --footer-fg:  #cad3f5;
+
+  /* Callouts — катпуччиновские тона Macchiato (§2) */
+  --callout-note:      #b7bdf8; /* Lavender */
+  --callout-tip:       #a6da95; /* Green */
+  --callout-important: #c6a0f6; /* Mauve */
+  --callout-warn:      #f5a97f; /* Peach */
+  --callout-danger:    #ed8796; /* Red */
 }
 
 * { box-sizing: border-box; }
