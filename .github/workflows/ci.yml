@@ -89,7 +89,8 @@ jobs:
     if: always()
     runs-on: ubuntu-latest
     steps:
-      - uses: jtprogru/notiflow@v1.6.1
+      - id: telegram
+        uses: jtprogru/notiflow@v1.6.1
         with:
           bot_token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           chat_id: ${{ secrets.TELEGRAM_USER_ID }}
@@ -102,3 +103,19 @@ jobs:
             *Project*: `{{.Repo}}`
             *Runs on*: {{.ServerUrl}}/{{.Repo}}/tree/{{.Sha}}
             *Branch*: `{{.Ref}}`
+
+      # notiflow по умолчанию не роняет job при отказе доставки, а в лог
+      # на успехе ничего не пишет. Без этого шага неверный chat_id или
+      # отсутствие прав у бота выглядят как зелёный прогон без сообщения.
+      - name: Check delivery
+        if: always()
+        env:
+          OK: ${{ steps.telegram.outputs.ok }}
+          HTTP: ${{ steps.telegram.outputs.http_status }}
+          ERR: ${{ steps.telegram.outputs.error }}
+        run: |
+          if [ "$OK" = "true" ]; then
+            echo "Telegram: доставлено, message_id=${{ steps.telegram.outputs.message_id }}"
+          else
+            echo "::warning title=Telegram::не доставлено (HTTP ${HTTP:-?}): ${ERR:-причина не указана}"
+          fi
