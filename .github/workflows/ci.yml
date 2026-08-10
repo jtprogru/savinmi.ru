@@ -76,7 +76,7 @@ jobs:
     needs: deploy
     runs-on: ubuntu-latest
     steps:
-      - uses: jtprogru/indexnow@v0.7.1
+      - uses: jtprogru/indexnow@v0.7.2
         with:
           key: 33c7060bc5ff8fd6fc60d681b6a38d2c
           host: savinmi.ru
