@@ -98,7 +98,7 @@ jobs:
             || contains(needs.*.result, 'cancelled') && 'cancelled'
             || 'success' }}
           message_template: |
-            *Deploy*: {{.StatusEmoji}} `{{.Repo}}`
-            *Branch*: `{{.RefName}}` — `{{.ShortSha}}`
-            *Author*: {{.Actor}}
-            *Run*: {{.RunUrl}}
+            *Deploy status*: {{.StatusEmoji}}
+            *Project*: `{{.Repo}}`
+            *Runs on*: {{.ServerUrl}}/{{.Repo}}/tree/{{.Sha}}
+            *Branch*: `{{.Ref}}`
