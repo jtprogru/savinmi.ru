@@ -81,3 +81,24 @@ jobs:
           key: 33c7060bc5ff8fd6fc60d681b6a38d2c
           host: savinmi.ru
           sitemap: https://savinmi.ru/sitemap-index.xml
+
+  # Итог пайплайна в Telegram. Отдельным job, а не шагом: жобов пять,
+  # и job.status внутри любого из них не отражает общий результат.
+  notify:
+    needs: [lint, dependency-graph, build, deploy, indexnow]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: jtprogru/notiflow@v1.6.1
+        with:
+          bot_token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          chat_id: ${{ secrets.TELEGRAM_USER_ID }}
+          status: >-
+            ${{ contains(needs.*.result, 'failure') && 'failure'
+            || contains(needs.*.result, 'cancelled') && 'cancelled'
+            || 'success' }}
+          message_template: |
+            *Deploy*: {{.StatusEmoji}} `{{.Repo}}`
+            *Branch*: `{{.RefName}}` — `{{.ShortSha}}`
+            *Author*: {{.Actor}}
+            *Run*: {{.RunUrl}}
