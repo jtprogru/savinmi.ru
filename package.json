@@ -22,6 +22,7 @@
     "astro": "^7.2.0"
   },
   "devDependencies": {
+    "markdownlint-cli2": "^0.23.2",
     "remark-deflist": "^1.0.0"
   }
 }
