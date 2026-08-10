@@ -51,3 +51,16 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+
+  # Пингуем IndexNow после деплоя: Яндекс и Bing переобходят быстрее,
+  # чем по расписанию sitemap. Ключ публичный по протоколу — лежит в
+  # public/<key>.txt и отдаётся с https://savinmi.ru/<key>.txt
+  indexnow:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: jtprogru/indexnow@v0.7.0
+        with:
+          key: 33c7060bc5ff8fd6fc60d681b6a38d2c
+          host: savinmi.ru
+          sitemap: https://savinmi.ru/sitemap-index.xml
