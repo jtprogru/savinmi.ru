@@ -10,7 +10,8 @@
 - [Astro](https://astro.build) 7 — статический сайтогенератор
 - [Markdown](https://daringfireball.net/projects/markdown/) — контент страниц (`src/pages/*.md`)
 - Чистый CSS, без JS-фреймворков
-- [Task](https://taskfile.dev) — раннер локальных команд
+- [bun](https://bun.sh) — зависимости, запуск и сборка
+- `make` — раннер локальных команд
 - GitHub Actions + GitHub Pages — сборка и деплой
 
 ## Структура
@@ -22,29 +23,28 @@
 - `src/styles/` — стили
 - `public/` — статические ассеты
 - `astro.config.mjs` — конфиг Astro
+- `Makefile` — локальные команды, они же используются в CI
 
 ## Локальная разработка
 
-Требуется Node.js 22+ и `npm`. Опционально — [Task](https://taskfile.dev).
+Требуется [bun](https://bun.sh) 1.3+ и `make`.
 
 ```sh
-# через Task
-task install
-task dev       # dev-сервер на :4321
-task build     # сборка в ./dist
-task preview   # предпросмотр прод-сборки
-task clean
-
-# либо напрямую через npm
-npm install
-npm run dev
-npm run build
-npm run preview
+make            # список целей
+make install    # зависимости
+make dev        # dev-сервер на :4321
+make build      # сборка в ./dist
+make preview    # предпросмотр прод-сборки
+make lint       # markdownlint
+make check      # линт и сборка
+make clean      # удалить ./dist и ./.astro
 ```
+
+Порт переопределяется переменной: `make dev PORT=3000`.
 
 ## Деплой
 
-Push в `main` запускает workflow `.github/workflows/ci.yml`: сборка `npm run build` и публикация `./dist` на GitHub Pages.
+Push в `main` запускает workflow `.github/workflows/ci.yml`: `make lint`, `make build`, публикация `./dist` на GitHub Pages и пинг IndexNow.
 
 ## История
 
