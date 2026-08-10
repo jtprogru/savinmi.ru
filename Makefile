@@ -6,6 +6,9 @@ BUN ?= bun
 PORT ?= 4321
 LINT_GLOBS := 'src/pages/*.md' 'README.md'
 
+## В CI ставим строго по локу, локально — даём подтянуть свежедобавленное.
+INSTALL_FLAGS := $(if $(CI),--frozen-lockfile,)
+
 .PHONY: help install dev build preview lint check clean distclean
 
 help: ## Показать список целей
@@ -14,7 +17,7 @@ help: ## Показать список целей
 
 ## Зависимости ставятся только когда package.json или bun.lock новее node_modules.
 node_modules: package.json bun.lock
-	$(BUN) install --frozen-lockfile
+	$(BUN) install $(INSTALL_FLAGS)
 	@touch node_modules
 
 install: node_modules ## Установить зависимости
