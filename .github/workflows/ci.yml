@@ -26,6 +26,26 @@ jobs:
           bun-version-file: package.json
       - run: make lint
 
+  # Граф зависимостей GitHub не умеет читать bun.lock: без этого шага в нём
+  # видны только прямые зависимости из package.json, а алерты по транзитивным
+  # CVE не приходят. Отдаём полное дерево через Dependency Submission API.
+  dependency-graph:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v6
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version-file: package.json
+      - run: make dependency-snapshot
+      - env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh api -X POST \
+            "repos/${GITHUB_REPOSITORY}/dependency-graph/snapshots" \
+            --input dependency-snapshot.json
+
   build:
     needs: lint
     runs-on: ubuntu-latest
