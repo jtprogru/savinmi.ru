@@ -1,49 +1,33 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import Seo from "../components/Seo.astro";
+import { NAME } from "../data/person";
 import "@fontsource/pt-sans/400.css";
 import "@fontsource/pt-sans/700.css";
 import "@fontsource/jetbrains-mono/400.css";
 import "@fontsource/jetbrains-mono/500.css";
 import "../styles/global.css";
 
-interface Props {
+interface PageMeta {
   title?: string;
   description?: string;
-  frontmatter?: { title?: string; description?: string };
+  pageType?: "profile" | "page";
+  noindex?: boolean;
+}
+
+interface Props extends PageMeta {
+  frontmatter?: PageMeta;
 }
 
 const { frontmatter } = Astro.props;
-const title = Astro.props.title ?? frontmatter?.title;
+const title = Astro.props.title ?? frontmatter?.title ?? NAME;
 const description =
   Astro.props.description ??
   frontmatter?.description ??
   "Резюме Михаила Савина — Lead SRE, Head of Reliability. Опыт, навыки, проекты.";
-
-const siteName = "Михаил Савин";
-const fullTitle = title ? `${title} · ${siteName}` : siteName;
-const canonical = new URL(Astro.url.pathname, Astro.site).toString();
-const ogImage = new URL("/img/profile.jpg", Astro.site).toString();
-
-const personJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  name: "Михаил Савин",
-  alternateName: "jtprogru",
-  jobTitle: "Lead SRE / Head of Reliability",
-  url: Astro.site?.toString(),
-  image: ogImage,
-  sameAs: [
-    "https://t.me/jtprogru_channel",
-    "https://github.com/jtprogru",
-    "https://twitter.com/jtprogru",
-    "https://linkedin.com/in/jtprogru",
-    "https://mas.to/@jtprogru",
-    "https://leetcode.com/jtprogru/",
-    "https://unsplash.com/@jtprogru",
-    "https://jtprog.ru",
-  ],
-};
+const pageType = Astro.props.pageType ?? frontmatter?.pageType ?? "page";
+const noindex = Astro.props.noindex ?? frontmatter?.noindex ?? false;
 ---
 
 <!doctype html>
@@ -51,26 +35,9 @@ const personJsonLd = {
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{fullTitle}</title>
-    <meta name="description" content={description} />
-    <link rel="canonical" href={canonical} />
     <link rel="icon" type="image/svg+xml" href="/img/fav-light.svg" />
 
-    <meta property="og:title" content={fullTitle} />
-    <meta property="og:description" content={description} />
-    <meta property="og:url" content={canonical} />
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="ru_RU" />
-    <meta property="og:site_name" content={siteName} />
-    <meta property="og:image" content={ogImage} />
-    <meta property="og:image:alt" content="Михаил Савин" />
-
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content={fullTitle} />
-    <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={ogImage} />
-
-    <script type="application/ld+json" set:html={JSON.stringify(personJsonLd)} />
+    <Seo {title} {description} {pageType} {noindex} />
 
     <script is:inline>
       (function () {

@@ -1,0 +1,193 @@
+---
+import { SITE, NAME, NAME_LATIN, ID, SAME_AS, KNOWS_ABOUT } from "../data/person";
+
+interface Props {
+  /** Заголовок страницы без суффикса с именем. */
+  title: string;
+  description: string;
+  /** profile — главная (ProfilePage, title без суффикса); page — все остальные. */
+  pageType?: "profile" | "page";
+  noindex?: boolean;
+}
+
+const { title, description, pageType = "page", noindex = false } = Astro.props;
+
+const isProfile = pageType === "profile";
+const fullTitle = isProfile ? title : `${title} — ${NAME}`;
+const canonical = new URL(Astro.url.pathname, Astro.site).toString();
+const portrait = new URL("/img/profile.jpg", Astro.site).toString();
+const ogImage = new URL("/img/og-mikhail-savin.jpg", Astro.site).toString();
+
+const graph: Record<string, unknown>[] = [
+  {
+    "@type": "Person",
+    "@id": ID.person,
+    name: NAME,
+    givenName: "Михаил",
+    familyName: "Савин",
+    alternateName: [
+      "Савин Михаил",
+      NAME_LATIN,
+      "Savin Mikhail",
+      "jtprogru",
+    ],
+    disambiguatingDescription:
+      "Lead SRE, руководитель отдела SRE в публичном облаке h3llo.cloud; " +
+      "ранее Avito, Positive Technologies, VK, Яндекс.Банк. Член программного " +
+      "комитета DevOpsConf, ведёт блог jtprog.ru и Telegram-канал «Мишка на " +
+      "сервере» под ником jtprogru. Не следует путать с однофамильцами — " +
+      "советским фотокорреспондентом Михаилом Ивановичем Савиным (1915–2006) " +
+      "и поэтом Михаилом Ксенофонтовичем Савиным (1876–1947).",
+    description:
+      "Михаил Савин — Lead SRE и руководитель отдела SRE. В эксплуатации " +
+      "с 2014 года, в ИТ с 2003-го. Член программного комитета DevOpsConf, " +
+      "автор открытого проекта The Way of SRE, ментор GetMentor, " +
+      "преподаватель РТУ МИРЭА.",
+    jobTitle: ["Lead SRE", "Руководитель отдела SRE", "Head of Reliability"],
+    hasOccupation: {
+      "@type": "Occupation",
+      name: "Site Reliability Engineer",
+      occupationalCategory: "Site Reliability Engineering / DevOps",
+    },
+    worksFor: { "@id": ID.h3llo },
+    memberOf: [
+      {
+        "@type": "Organization",
+        name: "Программный комитет DevOpsConf",
+        url: "https://devopsconf.io/",
+      },
+    ],
+    alumniOf: [
+      {
+        "@type": "CollegeOrUniversity",
+        name: "Московский технологический институт",
+        url: "https://mti.edu.ru/",
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        name: "СГТУ имени Гагарина Ю. А.",
+        url: "https://www.sstu.ru/",
+      },
+    ],
+    knowsAbout: KNOWS_ABOUT,
+    knowsLanguage: [
+      { "@type": "Language", name: "Russian", alternateName: "ru" },
+      { "@type": "Language", name: "English", alternateName: "en" },
+    ],
+    nationality: { "@type": "Country", name: "Россия" },
+    url: `${SITE}/`,
+    mainEntityOfPage: { "@id": ID.profile },
+    image: { "@id": ID.image },
+    subjectOf: {
+      "@type": "DigitalDocument",
+      name: "Резюме Михаила Савина, Lead SRE (PDF)",
+      url: `${SITE}/pdf/mikhail-savin-cv-sre.pdf`,
+      encodingFormat: "application/pdf",
+      inLanguage: "ru",
+    },
+    sameAs: SAME_AS,
+  },
+  {
+    "@type": "Organization",
+    "@id": ID.h3llo,
+    name: "h3llo.cloud",
+    url: "https://h3llo.cloud",
+  },
+  {
+    "@type": "ImageObject",
+    "@id": ID.image,
+    url: portrait,
+    contentUrl: portrait,
+    width: 1024,
+    height: 1024,
+    caption: "Михаил Савин, Lead SRE",
+  },
+  {
+    "@type": "WebSite",
+    "@id": ID.website,
+    url: `${SITE}/`,
+    name: "Михаил Савин — резюме",
+    alternateName: ["savinmi.ru", "Савин Михаил — резюме", "Mikhail Savin CV"],
+    inLanguage: "ru-RU",
+    publisher: { "@id": ID.person },
+    author: { "@id": ID.person },
+    copyrightHolder: { "@id": ID.person },
+  },
+];
+
+if (isProfile) {
+  graph.push({
+    "@type": "ProfilePage",
+    "@id": ID.profile,
+    url: canonical,
+    name: fullTitle,
+    description,
+    inLanguage: "ru-RU",
+    isPartOf: { "@id": ID.website },
+    mainEntity: { "@id": ID.person },
+    about: { "@id": ID.person },
+    primaryImageOfPage: { "@id": ID.image },
+  });
+} else {
+  graph.push({
+    "@type": "WebPage",
+    "@id": `${canonical}#webpage`,
+    url: canonical,
+    name: fullTitle,
+    description,
+    inLanguage: "ru-RU",
+    isPartOf: { "@id": ID.website },
+    about: { "@id": ID.person },
+    primaryImageOfPage: { "@id": ID.image },
+  });
+  graph.push({
+    "@type": "BreadcrumbList",
+    "@id": `${canonical}#breadcrumb`,
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: NAME, item: `${SITE}/` },
+      { "@type": "ListItem", position: 2, name: title, item: canonical },
+    ],
+  });
+}
+
+const jsonLd = { "@context": "https://schema.org", "@graph": graph };
+---
+
+<title>{fullTitle}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonical} />
+<meta
+  name="robots"
+  content={noindex
+    ? "noindex, follow"
+    : "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"}
+/>
+<meta name="author" content={NAME} />
+
+<link rel="me" href="https://github.com/jtprogru" />
+<link rel="me" href="https://mas.to/@jtprogru" />
+<link rel="me" href="https://t.me/jtprogru" />
+
+<meta property="og:title" content={fullTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonical} />
+<meta property="og:type" content="profile" />
+<meta property="profile:first_name" content="Михаил" />
+<meta property="profile:last_name" content="Савин" />
+<meta property="profile:username" content="jtprogru" />
+<meta property="og:locale" content="ru_RU" />
+<meta property="og:site_name" content={NAME} />
+<meta property="og:image" content={ogImage} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:alt" content="Михаил Савин — Lead SRE" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@jtprogru" />
+<meta name="twitter:creator" content="@jtprogru" />
+<meta name="twitter:title" content={fullTitle} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogImage} />
+
+<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
