@@ -2,7 +2,7 @@
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Seo from "../components/Seo.astro";
-import { NAME } from "../data/person";
+import { NAME, ROLE_LINE } from "../data/person";
 import "@fontsource/pt-sans/400.css";
 import "@fontsource/pt-sans/700.css";
 import "@fontsource/jetbrains-mono/400.css";
@@ -65,6 +65,31 @@ const noindex = Astro.props.noindex ?? frontmatter?.noindex ?? false;
   <body>
     <Header />
     <main>
+      {
+        pageType === "profile" && (
+          <div class="hero">
+            <picture>
+              <source srcset="/img/avatar-300.webp" type="image/webp" />
+              <img
+                src="/img/avatar-300.jpg"
+                alt={`${NAME} — Lead SRE, Head of Reliability`}
+                width="300"
+                height="300"
+                loading="eager"
+                fetchpriority="high"
+                decoding="async"
+                class="avatar"
+              />
+            </picture>
+            <div class="hero__text">
+              <h1>{NAME}</h1>
+              <p class="hero__role">
+                {ROLE_LINE} · <code>jtprogru</code>
+              </p>
+            </div>
+          </div>
+        )
+      }
       <slot />
     </main>
     <Footer />

@@ -1,18 +1,13 @@
 ---
 layout: ../layouts/Page.astro
-title: Обо мне
-description: Михаил Савин — Lead SRE, член ПК DevOpsConf, автор проекта The Way of SRE. Обо мне, контакты и сферы интересов.
+title: Михаил Савин — Lead SRE и Head of Reliability
+description: Михаил Савин (Савин Михаил) — Lead SRE, руководитель отдела SRE в h3llo.cloud, член ПК DevOpsConf, автор проекта The Way of SRE. Опыт, навыки, проекты, контакты.
+pageType: profile
 ---
 
-# Обо мне
+Михаил Савин — **Lead SRE**, в эксплуатации с 2014 (а в целом в ИТ с 2003). Сейчас отвечаю за надёжность облака в [h3llo.cloud](https://h3llo.cloud), состою в программном комитете [DevOpsConf](https://devopsconf.io/) и развиваю открытый проект [**The Way of SRE**](https://jtprogru.github.io/The-Way-of-SRE/).
 
-Михаил Савин — **Lead SRE**, в эксплуатации с 2014 (а в целом в ИТ с 2003). Сейчас отвечаю за надёжность облака в [h3llo.cloud](https://h3llo.cloud).
-
-Член программного комитета [DevOpsConf](https://devopsconf.io/). Развиваю открытый проект [**The Way of SRE**](https://jtprogru.github.io/The-Way-of-SRE/).
-
-Родом из небольшой [деревушки](https://yandex.ru/maps/-/CCURQ0UwdD); сейчас то, что я делаю, помогает миллионам пользователей.
-
-В общении — **на ты**: проще обсуждать дело, когда все на одном уровне.
+Родом из небольшой [деревушки](https://yandex.ru/maps/-/CCURQ0UwdD); сейчас то, что я делаю, помогает миллионам пользователей. В общении — **на ты**: проще обсуждать дело, когда все на одном уровне.
 
 ## Что мне интересно
 
@@ -20,7 +15,10 @@ description: Михаил Савин — Lead SRE, член ПК DevOpsConf, а�
 
 Отдельно — менторство через [GetMentor](https://getmentor.dev/mentor/michael-savin-1427): помогает менти двигаться по своим задачам, а мне — прокачивать навыки коммуникации и формулирования.
 
+Подробнее — [опыт работы](/experience/), [навыки](/skills/) и [проекты](/projects/).
+
 ## Связаться
 
 - **Работа, консультация, вопрос по [опыту](/experience/) или [интересам](/interests/)** — Telegram: [@jtprogru](https://t.me/jtprogru).
 - **Созвон** — бронируй слот в [календаре](https://calendlab.ru/c/jtprogru-getmentor).
+- **Резюме одним файлом** — [PDF: Савин Михаил, Lead SRE](/pdf/mikhail-savin-cv-sre.pdf).
