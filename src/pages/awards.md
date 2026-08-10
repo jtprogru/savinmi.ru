@@ -37,3 +37,7 @@ description: Сертификаты и пройденные курсы Миха�
 - [Информационная безопасность](https://www.intuit.ru/verifydiplomas/101068636)
 - [Безопасность сетей](https://www.intuit.ru/verifydiplomas/100907833)
 - ["Slurm-2": Интенсив по администрированию Kubernetes](https://slurm.io/kubernetes-baza)
+
+---
+
+Формальное образование — на странице [образование](/education/). Как эти навыки применялись в работе — [опыт работы](/experience/).
