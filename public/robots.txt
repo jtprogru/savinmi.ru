@@ -1,4 +1,24 @@
 User-agent: *
 Allow: /
 
+# Явно разрешаем AI-поисковики: брендовый запрос «кто такой Михаил Савин»
+# всё чаще уходит к ним, а не в классическую выдачу.
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: YandexAdditional
+Allow: /
+
 Sitemap: https://savinmi.ru/sitemap-index.xml
