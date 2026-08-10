@@ -7,7 +7,7 @@
 
 ## Стек
 
-- [Astro](https://astro.build) 5 — статический сайтогенератор
+- [Astro](https://astro.build) 7 — статический сайтогенератор
 - [Markdown](https://daringfireball.net/projects/markdown/) — контент страниц (`src/pages/*.md`)
 - Чистый CSS, без JS-фреймворков
 - [Task](https://taskfile.dev) — раннер локальных команд
@@ -17,7 +17,8 @@
 
 - `src/pages/` — страницы резюме (опыт, образование, проекты, скиллы и т.д.)
 - `src/layouts/Page.astro` — общий layout
-- `src/components/` — `Header.astro`, `Footer.astro`
+- `src/components/` — `Header.astro`, `Footer.astro`, `Seo.astro`
+- `src/data/person.ts` — единый источник профилей и данных о сущности (footer + JSON-LD)
 - `src/styles/` — стили
 - `public/` — статические ассеты
 - `astro.config.mjs` — конфиг Astro
