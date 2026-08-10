@@ -6,3 +6,6 @@ dist/
 .env
 .env.*
 .DS_Store
+
+# Артефакт make dependency-snapshot
+dependency-snapshot.json

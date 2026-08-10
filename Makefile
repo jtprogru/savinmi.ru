@@ -9,7 +9,7 @@ LINT_GLOBS := 'src/pages/*.md' 'README.md'
 ## В CI ставим строго по локу, локально — даём подтянуть свежедобавленное.
 INSTALL_FLAGS := $(if $(CI),--frozen-lockfile,)
 
-.PHONY: help install dev build preview lint check clean distclean
+.PHONY: help install dev build preview lint check dependency-snapshot clean distclean
 
 help: ## Показать список целей
 	@grep -hE '^[a-zA-Z_-]+:.*?## ' $(MAKEFILE_LIST) \
@@ -36,8 +36,11 @@ lint: node_modules ## Проверить markdown
 
 check: lint build ## Полная проверка: линт и сборка
 
+dependency-snapshot: node_modules ## Собрать снапшот дерева зависимостей для GitHub
+	$(BUN) scripts/bun-dependency-snapshot.mjs > dependency-snapshot.json
+
 clean: ## Удалить артефакты сборки
-	rm -rf ./dist ./.astro
+	rm -rf ./dist ./.astro ./dependency-snapshot.json
 
 distclean: clean ## Удалить артефакты и зависимости
 	rm -rf ./node_modules
