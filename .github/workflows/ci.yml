@@ -55,7 +55,7 @@ jobs:
         with:
           bun-version-file: package.json
       - run: make build
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: ./dist
 
@@ -67,7 +67,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
 
   # Пингуем IndexNow после деплоя: Яндекс и Bing переобходят быстрее,
   # чем по расписанию sitemap. Ключ публичный по протоколу — лежит в
@@ -76,7 +76,7 @@ jobs:
     needs: deploy
     runs-on: ubuntu-latest
     steps:
-      - uses: jtprogru/indexnow@v0.7.0
+      - uses: jtprogru/indexnow@v0.7.1
         with:
           key: 33c7060bc5ff8fd6fc60d681b6a38d2c
           host: savinmi.ru
