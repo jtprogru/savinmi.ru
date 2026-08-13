@@ -3,10 +3,9 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Seo from "../components/Seo.astro";
 import { NAME, ROLE_LINE } from "../data/person";
-import "@fontsource/pt-sans/400.css";
-import "@fontsource/pt-sans/700.css";
-import "@fontsource/jetbrains-mono/400.css";
-import "@fontsource/jetbrains-mono/500.css";
+// Цвет, шрифты, шкала и печать — из дизайн-системы. Локальный global.css
+// только доверстывает то, чего в ней нет: шапку, подвал и профиль резюме.
+import "@jtprogru/mishka-ds/styles.css";
 import "../styles/global.css";
 
 interface PageMeta {

@@ -17,8 +17,6 @@
   "dependencies": {
     "@astrojs/markdown-remark": "^7.2.2",
     "@astrojs/sitemap": "^3.7.3",
-    "@fontsource/jetbrains-mono": "^5.3.0",
-    "@fontsource/pt-sans": "^5.3.0",
     "astro": "^7.2.0"
   },
   "devDependencies": {

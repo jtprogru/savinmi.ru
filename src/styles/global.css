@@ -1,116 +1,63 @@
 /* ============================================================
-   «Мишка на сервере» brand tokens · Astro
-   Источник: BRANDING.md темы hugo-mishka (v0.2).
-   Принцип: холодный инженерный цвет (catppuccin Latte/Macchiato,
-   акцент Sapphire), тёплая подача через голос и маскота.
+   savinmi.ru · локальный слой поверх дизайн-системы «Мишка на сервере».
+
+   Цвет, шрифты, шкала кегля, ритм, печать и базовый reset приезжают из
+   пакета: vendor/mishka-ds, импортируется в Page.astro до этого файла.
+   Здесь остаётся только то, чего в системе нет, — резюмешный профиль,
+   шапка, подвал и разметка контентных страниц, которые Astro отдаёт
+   голым markdown, без обёртки .md-content.
+
+   Своих цветов, шрифтов и кеглей тут не объявляется: любое значение —
+   var() на токен. Единственное исключение — ширина полосы, см. ниже.
+   Имена --rule, --link, --primary, --font-text приходят из compat.css
+   пакета; переезд на канонические (--border, --accent, --font-sans) —
+   отдельный шаг, когда будет удобно.
    ============================================================ */
 
 :root {
-  /* Акцентная шкала — Sapphire (§2 BRANDING.md) */
-  --accent-300: #7dc4e4; /* Macchiato Sapphire — ссылки на тёмной теме */
-  --accent-400: #209fb5; /* брендовый/декоративный акцент */
-  --accent-600: #209fb5; /* Latte Sapphire — акцент на светлом */
-  --accent-700: #0b7285; /* затемнён вручную — ссылки-текст на светлом, AA */
-
-  --font-text: "PT Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --font-code: "JetBrains Mono", "PT Mono", SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
-
-  /* Общая ширина колонки: шапка, контент и подвал выравниваются по ней.
-     Нижняя граница — 734px, ниже меню переносится на вторую строку. */
-  --content-width: 740px;
+  /* Полоса резюме. Токен системы --content-width (720px) рассчитан на длинную
+     прозу блога; резюме — это списки, определения и таблицы, им тесно в
+     блоговой колонке. Отсюда своя ширина: заметно шире 720, но далеко от
+     блогового --container-width (1200px), чтобы строка не становилась
+     полотном. Единственное локальное значение размера на весь файл;
+     шапка, контент и подвал выравниваются по нему. */
+  --page-width: 880px;
 }
 
-[data-theme="light"] {
-  --bg:         #eff1f5; /* Latte base */
-  --fg:         #4c4f69; /* Latte text */
-  --fg-muted:   #5c5f77; /* Latte subtext1 — AA для body-текста (dd, цитаты) */
-  --rule:       #ccd0da; /* Latte surface0 */
-  --link:       var(--accent-700);
-  --link-hover: var(--accent-600);
-  --code-bg:    #e6e9ef; /* Latte mantle */
-  --code-fg:    #4c4f69; /* Latte text */
-  --primary:    var(--accent-700);
-  --header-bg:  #eff1f5;
-  --footer-bg:  #1e2030; /* Macchiato mantle — тёмный подвал на светлой странице */
-  --footer-fg:  #cad3f5;
+/* Фон за пределами документа — иначе overscroll на iOS показывает белое. */
+html { background: var(--bg); }
 
-  /* Callouts — катпуччиновские тона Latte (§2) */
-  --callout-note:      #7287fd; /* Lavender — не Blue, чтобы не путать со ссылкой */
-  --callout-tip:       #40a02b; /* Green */
-  --callout-important: #8839ef; /* Mauve */
-  --callout-warn:      #fe640b; /* Peach */
-  --callout-danger:    #d20f39; /* Red */
-}
-
-[data-theme="dark"] {
-  --bg:         #24273a; /* Macchiato base */
-  --fg:         #cad3f5; /* Macchiato text */
-  --fg-muted:   #a5adcb; /* Macchiato subtext0 */
-  --rule:       #363a4f; /* Macchiato surface0 */
-  --link:       var(--accent-300);
-  --link-hover: var(--accent-400);
-  --code-bg:    #1e2030; /* Macchiato mantle */
-  --code-fg:    #cad3f5; /* Macchiato text */
-  --primary:    var(--accent-300);
-  --header-bg:  #24273a;
-  --footer-bg:  #181926; /* Macchiato crust */
-  --footer-fg:  #cad3f5;
-
-  /* Callouts — катпуччиновские тона Macchiato (§2) */
-  --callout-note:      #b7bdf8; /* Lavender */
-  --callout-tip:       #a6da95; /* Green */
-  --callout-important: #c6a0f6; /* Mauve */
-  --callout-warn:      #f5a97f; /* Peach */
-  --callout-danger:    #ed8796; /* Red */
-}
-
-* { box-sizing: border-box; }
-
-html, body {
-  margin: 0;
-  padding: 0;
-  background: var(--bg);
-  color: var(--fg);
-  font-family: var(--font-text);
-  font-size: 16px;
-  line-height: 1.65;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-}
-
+/* Подвал прижат к низу короткой страницы. */
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
 }
 
 main {
   flex: 1 0 auto;
   width: 100%;
-  max-width: var(--content-width);
+  max-width: var(--page-width);
   margin: 0 auto;
   padding: 2rem 1rem 3rem;
 }
 
-/* === Typography === */
+/* === Typography ===
+   Reset системы обнуляет отступы блоков — ритм страницы задаётся здесь.
+   Кегль берётся со шкалы Major Third: резюме читают быстро, поэтому
+   заголовки на ступень ниже блоговых. */
 
-h1, h2, h3, h4 {
-  font-family: var(--font-text);
-  line-height: 1.25;
-  color: var(--fg);
-}
-
-h1 { font-size: 1.85rem; font-weight: 700; letter-spacing: -0.01em; margin: 0 0 1rem; }
-
-h2 { font-size: 1.4rem; margin: 2.4em 0 0.8em; }
-h3 { font-size: 1.15rem; margin: 1.8em 0 0.6em; }
-h4 { font-size: 1rem; margin: 1.4em 0 0.4em; }
+h1 { font-size: var(--fs-2xl); margin: 0 0 1rem; }
+h2 { font-size: var(--fs-xl);  margin: 2.4em 0 0.8em; }
+h3 { font-size: var(--fs-md);  margin: 1.8em 0 0.6em; }
+h4 { font-size: var(--fs-base); margin: 1.4em 0 0.4em; }
 
 p { margin: 0 0 1em; }
 
 ul, ol { padding-left: 1.5em; margin: 0 0 1em; }
 li { margin: 0.25em 0; }
 
+/* В прозе ссылка подчёркнута всегда: на странице резюме их много и они
+   должны читаться как ссылки без наведения. */
 a {
   color: var(--link);
   text-decoration: underline;
@@ -119,12 +66,6 @@ a {
   transition: color 0.15s ease;
 }
 a:hover { color: var(--link-hover); }
-
-hr {
-  border: 0;
-  border-top: 1px solid var(--rule);
-  margin: 2em 0;
-}
 
 blockquote {
   margin: 1em 0;
@@ -145,14 +86,14 @@ code {
   background: var(--code-bg);
   color: var(--code-fg);
   padding: 0.1em 0.35em;
-  border-radius: 0.2rem;
+  border-radius: var(--radius-sm);
 }
 
 pre {
   background: var(--code-bg);
   color: var(--code-fg);
   padding: 0.9em 1em;
-  border-radius: 0.3rem;
+  border-radius: var(--radius-sm);
   overflow-x: auto;
   margin: 1em 0;
 }
@@ -198,7 +139,7 @@ th {
 .hero__role {
   margin: 0;
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: var(--fs-sm);
   color: var(--fg-muted);
 }
 
@@ -237,7 +178,7 @@ th {
 }
 
 .site-header__inner {
-  max-width: var(--content-width);
+  max-width: var(--page-width);
   margin: 0 auto;
   padding: 0.75rem 1rem;
   display: flex;
@@ -246,11 +187,19 @@ th {
   flex-wrap: wrap;
 }
 
+/* Обвязка не подчёркивается ни в покое, ни под курсором: в базе системы
+   у ссылки underline появляется на :hover, а имя, меню и иконки — не проза. */
+.site-title,
+.site-title:hover,
+.site-nav a:hover,
+.social a:hover {
+  text-decoration: none;
+}
+
 .site-title {
   font-weight: 700;
-  font-size: 1.05rem;
+  font-size: var(--fs-base);
   color: var(--fg);
-  text-decoration: none;
   white-space: nowrap;
 }
 
@@ -264,7 +213,7 @@ th {
 .site-nav a {
   color: var(--fg-muted);
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: var(--fs-sm);
   padding: 0.25rem 0;
   border-bottom: 2px solid transparent;
 }
@@ -274,48 +223,48 @@ th {
   border-bottom-color: var(--primary);
 }
 
-.theme-toggle {
+/* Переключатель тем — три состояния в одной обойме, поэтому класс свой:
+   .theme-toggle в системе занят одиночной кнопкой-циклом. */
+.theme-switch {
   display: inline-flex;
   border: 1px solid var(--rule);
-  border-radius: 0.3rem;
+  border-radius: var(--radius-sm);
   overflow: hidden;
 }
-.theme-toggle button {
-  background: none;
-  border: 0;
+.theme-switch button {
   color: var(--fg-muted);
-  cursor: pointer;
   width: 32px;
   height: 32px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0;
   transition: color 0.15s ease, background 0.15s ease;
 }
-.theme-toggle button + button {
+.theme-switch button + button {
   border-left: 1px solid var(--rule);
 }
-.theme-toggle button:hover {
+.theme-switch button:hover {
   color: var(--primary);
 }
-.theme-toggle button[aria-pressed="true"] {
+.theme-switch button[aria-pressed="true"] {
   color: var(--primary);
   background: color-mix(in srgb, var(--primary) 12%, transparent);
 }
-.theme-toggle svg { width: 16px; height: 16px; }
+.theme-switch svg { width: 16px; height: 16px; }
 
-/* === Footer === */
+/* === Footer ===
+   Тёмный подвал на светлой странице — намеренное отступление (BRAND §2):
+   он отделяет контакты от содержания резюме. */
 
 .site-footer {
   background: var(--footer-bg);
   color: var(--footer-fg);
   padding: 2rem 1rem;
   margin-top: 3rem;
-  font-size: 0.9rem;
+  font-size: var(--fs-sm);
 }
 .site-footer__inner {
-  max-width: var(--content-width);
+  max-width: var(--page-width);
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -337,7 +286,7 @@ th {
   justify-content: center;
   width: 36px;
   height: 36px;
-  border-radius: 0.3rem;
+  border-radius: var(--radius-sm);
   color: var(--footer-fg);
   text-decoration: none;
   transition: color 0.15s ease, background 0.15s ease;
@@ -350,7 +299,7 @@ th {
 
 .copyright {
   color: color-mix(in srgb, var(--footer-fg) 60%, transparent);
-  font-size: 0.85rem;
+  font-size: var(--fs-xs);
 }
 
 /* === Definition lists (используются в projects.md, awards.md) === */
@@ -365,12 +314,31 @@ dd {
   color: var(--fg-muted);
 }
 
+/* === Печать ===
+   Общий печатный слой (белый фон, чёрный текст, раскрытые адреса ссылок,
+   поля 18 мм, A4) приходит из print-web.css пакета. Он прячет обвязку по
+   именам системы — .header, .footer, .theme-toggle; у резюме имена свои,
+   поэтому шапка и подвал убираются здесь. */
+
+@media print {
+  .site-header,
+  .site-footer,
+  .theme-switch {
+    display: none !important;
+  }
+
+  main {
+    max-width: 100% !important;
+    padding: 0;
+  }
+}
+
 /* === Mobile === */
 
 @media (max-width: 640px) {
   main { padding: 1.5rem 1rem 2rem; }
-  h1 { font-size: 1.6rem; }
-  h2 { font-size: 1.25rem; }
+  h1 { font-size: var(--fs-xl); }
+  h2 { font-size: var(--fs-lg); }
   .site-header__inner { padding: 0.6rem 1rem; }
-  .site-nav { font-size: 0.9rem; }
+  .site-nav { font-size: var(--fs-sm); }
 }
