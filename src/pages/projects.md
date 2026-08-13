@@ -1,12 +1,12 @@
 ---
 layout: ../layouts/Page.astro
 title: Проекты
-description: Pet-проекты Михаила Савина — open-source утилиты на Go и Rust для SRE, продуктивности и контент-пайплайна.
+description: Pet-проекты Михаила Савина — open-source утилиты на Go и Rust, плагин для Neovim и материалы по SRE.
 ---
 
 # Проекты
 
-Подборка моих pet-проектов — небольшие утилиты и материалы, которые я пишу для себя и которыми пользуюсь сам. Все они с открытым исходным кодом, в основном на Go, собираются и публикуются через GitHub Actions.
+Подборка моих pet-проектов — небольшие утилиты и материалы, которые я пишу для себя и которыми пользуюсь сам. Все они с открытым исходным кодом: в основном Go, часть переписана на Rust, собираются и публикуются через GitHub Actions.
 
 ## Избранное
 
@@ -16,18 +16,12 @@ description: Pet-проекты Михаила Савина — open-source ут
 [**srekit**](https://github.com/jtprogru/srekit) — *Go*
 :   Генератор текстовых SRE-артефактов: задачи, постмортемы, RFC, runbook'и, changelog'и.
 
-[**todushka**](https://github.com/jtprogru/todushka) — *Go*
-:   Терминальный аналог Things 3 с аналогичным функционалом.
+[**pack-ui.nvim**](https://github.com/jtprogru/pack-ui.nvim) — *Lua*
+:   Плавающее окно для встроенного менеджера плагинов `vim.pack`: смотреть статусы и обновлять плагины (Neovim 0.12+).
 
 ## Активные
 
 Развиваю и регулярно использую сам.
-
-[**jtgpwgen**](https://github.com/jtprogru/jtgpwgen) — *Go*
-:   Генератор паролей с настраиваемыми классами символов.
-
-[**repo-opener**](https://github.com/jtprogru/repo-opener) — *Go*
-:   Открывает remote-репозиторий из локального клона прямо в браузере.
 
 [**notiflow**](https://github.com/jtprogru/notiflow) — *Go*
 :   GitHub Action для отправки уведомлений в Telegram.
@@ -35,27 +29,45 @@ description: Pet-проекты Михаила Савина — open-source ут
 [**indexnow**](https://github.com/jtprogru/indexnow) — *Go*
 :   CLI и composite GitHub Action для уведомления IndexNow (Bing, Yandex и др.) об изменившихся страницах.
 
+[**jtgpwgen**](https://github.com/jtprogru/jtgpwgen) — *Go*
+:   Генератор паролей с настраиваемыми классами символов.
+
+[**rspassimpt**](https://github.com/jtprogru/rspassimpt) — *Rust*
+:   Быстрый импортёр CSV-экспорта из macOS Passwords прямо в локальный pass-store (passwordstore.org).
+
+[**jlic**](https://github.com/jtprogru/jlic) — *Rust*
+:   Генератор LICENSE-файлов: семь популярных лицензий зашиты в бинарь, правообладатель и год подставляются из `git config`.
+
+[**hostsctl**](https://github.com/jtprogru/hostsctl) — *Rust*
+:   Управление `/etc/hosts` из YAML-конфига: группы, zone-файлы, удалённые blocklist'ы и бэкапы.
+
+[**repo-opener**](https://github.com/jtprogru/repo-opener) — *Go*
+:   Открывает remote-репозиторий из локального клона прямо в браузере.
+
+[**dsa-for-ops**](https://jtprogru.github.io/dsa-for-ops/) — *Docs*
+:   Лабораторные и конспект по алгоритмам и структурам данных (Python) на MkDocs Material.
+
+## Maintenance
+
+Не развиваю активно, но поддерживаю в рабочем состоянии.
+
 [**thingsexporter**](https://github.com/jtprogru/thingsexporter) — *Go*
 :   Экспорт задач из Things 3 в разные форматы.
 
 [**thingscli**](https://github.com/jtprogru/thingscli) — *Go*
 :   Тонкая Go-обёртка над AppleScript для Things 3: чтение и запись задач из терминала и пайплайнов.
 
-[**rspassimpt**](https://github.com/jtprogru/rspassimpt) — *Rust*
-:   Быстрый импортёр CSV-экспорта из macOS Passwords прямо в локальный pass-store (passwordstore.org).
-
-## Maintenance
-
-Не развиваю активно, но поддерживаю в рабочем состоянии.
-
-[**cubic-root**](https://github.com/jtprogru/cubic-root) — *Go*
-:   Учебное Go-приложение с Docker multi-stage сборкой и Helm-чартом для Kubernetes.
-
 [**jtsekret**](https://github.com/jtprogru/jtsekret) — *Go*
 :   CLI для централизованного и безопасного управления личными секретами: пароли, OAuth-токены, API-ключи.
 
 [**jtpost**](https://github.com/jtprogru/jtpost) — *Go*
 :   CLI-редактор постов для управления контент-пайплайном Telegram-канала.
+
+[**todushka**](https://github.com/jtprogru/todushka) — *Go*
+:   Терминальный аналог Things 3 с аналогичным функционалом.
+
+[**cubic-root**](https://github.com/jtprogru/cubic-root) — *Go*
+:   Учебное Go-приложение с Docker multi-stage сборкой и Helm-чартом для Kubernetes.
 
 ---
 
