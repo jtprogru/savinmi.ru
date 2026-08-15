@@ -61,6 +61,7 @@ export const SOCIALS: Social[] = [
   { href: "https://setka.ru/users/717ccc6c-e042-45df-a94f-824e85e57926", label: "Сетка", icon: "", hidden: true },
   { href: "https://www.instagram.com/jtprogru", label: "Instagram", icon: "", hidden: true },
   { href: "https://me.jtprog.ru/", label: "Все ссылки", icon: "", hidden: true },
+  { href: "https://max.ru/channel_jtprogru", label: "MAX", icon: "", hidden: true },
 
   // TODO добавить после того, как профили станут публичными / подтвердятся:
   //   https://career.habr.com/jtprogru  — сейчас закрыт настройками приватности
