@@ -18,7 +18,7 @@
 
 ## Структура
 
-- `src/pages/` — страницы резюме (`index`, `experience`, `skills`, `projects`, `education`, `awards`, `interests`, `privacy`) и кастомная `404.astro`
+- `src/pages/` — страницы резюме (`index`, `experience`, `skills`, `projects`, `publications`, `education`, `awards`, `interests`, `privacy`) и кастомная `404.astro`
 - `src/layouts/Page.astro` — общий layout: head/meta, шрифты, переключатель темы (light/system/dark), Яндекс.Метрика
 - `src/components/` — `Header.astro`, `Footer.astro`, `Seo.astro`
 - `src/data/person.ts` — единый источник профилей и данных о сущности (футер + JSON-LD)
