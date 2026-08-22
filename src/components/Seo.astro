@@ -1,5 +1,6 @@
 ---
 import { SITE, NAME, NAME_LATIN, ID, SAME_AS, KNOWS_ABOUT } from "../data/person";
+import type { Work } from "../data/works";
 
 interface Props {
   /** Заголовок страницы без суффикса с именем. */
@@ -8,9 +9,17 @@ interface Props {
   /** profile — главная (ProfilePage, title без суффикса); page — все остальные. */
   pageType?: "profile" | "page";
   noindex?: boolean;
+  /** Работы, перечисленные на странице: уходят в ItemList и привязываются к ID.person. */
+  works?: Work[];
 }
 
-const { title, description, pageType = "page", noindex = false } = Astro.props;
+const {
+  title,
+  description,
+  pageType = "page",
+  noindex = false,
+  works = [],
+} = Astro.props;
 
 const isProfile = pageType === "profile";
 const fullTitle = isProfile ? title : `${title} — ${NAME}`;
@@ -78,13 +87,16 @@ const graph: Record<string, unknown>[] = [
     url: `${SITE}/`,
     mainEntityOfPage: { "@id": ID.profile },
     image: { "@id": ID.image },
-    subjectOf: {
-      "@type": "DigitalDocument",
-      name: "Резюме Михаила Савина, Lead SRE (PDF)",
-      url: `${SITE}/pdf/mikhail-savin-cv-sre.pdf`,
-      encodingFormat: "application/pdf",
-      inLanguage: "ru",
-    },
+    subjectOf: [
+      {
+        "@type": "DigitalDocument",
+        name: "Резюме Михаила Савина, Lead SRE (PDF)",
+        url: `${SITE}/pdf/mikhail-savin-cv-sre.pdf`,
+        encodingFormat: "application/pdf",
+        inLanguage: "ru",
+      },
+      { "@id": ID.publications },
+    ],
     sameAs: SAME_AS,
   },
   {
@@ -130,7 +142,7 @@ if (isProfile) {
   });
 } else {
   graph.push({
-    "@type": "WebPage",
+    "@type": works.length ? "CollectionPage" : "WebPage",
     "@id": `${canonical}#webpage`,
     url: canonical,
     name: fullTitle,
@@ -139,6 +151,7 @@ if (isProfile) {
     isPartOf: { "@id": ID.website },
     about: { "@id": ID.person },
     primaryImageOfPage: { "@id": ID.image },
+    ...(works.length ? { mainEntity: { "@id": `${canonical}#works` } } : {}),
   });
   graph.push({
     "@type": "BreadcrumbList",
@@ -147,6 +160,31 @@ if (isProfile) {
       { "@type": "ListItem", position: 1, name: NAME, item: `${SITE}/` },
       { "@type": "ListItem", position: 2, name: title, item: canonical },
     ],
+  });
+}
+
+if (works.length) {
+  graph.push({
+    "@type": "ItemList",
+    "@id": `${canonical}#works`,
+    name: fullTitle,
+    numberOfItems: works.length,
+    itemListOrder: "https://schema.org/ItemListUnordered",
+    itemListElement: works.map((work, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      item: {
+        "@type": work.type ?? "CreativeWork",
+        name: work.name,
+        url: work.url,
+        inLanguage: "ru-RU",
+        // Гость подкаста — contributor, не author.
+        [work.role ?? "author"]: { "@id": ID.person },
+        ...(work.publisher
+          ? { publisher: { "@type": "Organization", name: work.publisher } }
+          : {}),
+      },
+    })),
   });
 }
 

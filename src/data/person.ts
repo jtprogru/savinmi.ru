@@ -20,6 +20,7 @@ export const ID = {
     profile: `${SITE}/#profilepage`,
     image: `${SITE}/#primaryimage`,
     h3llo: `${SITE}/#org-h3llo`,
+    publications: `${SITE}/publications/#webpage`,
 } as const;
 
 export type Social = {

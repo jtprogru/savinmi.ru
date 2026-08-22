@@ -2,6 +2,41 @@
 layout: ../layouts/Page.astro
 title: Доклады и публикации
 description: Доклады, статьи и подкасты Михаила Савина — цикл про SLO и бюджет ошибок, статьи на Habr о личной базе знаний, лекции в РТУ МИРЭА и семь выпусков подкаста «В SREду на кухне».
+# Машиночитаемый срез списка ниже: уходит в JSON-LD как ItemList,
+# каждый элемент привязывается к сущности автора. Правишь список
+# в тексте — поправь и здесь.
+works:
+    - name: "SLO как чертёж архитектуры"
+      url: https://jtprog.ru/posts/slo-as-architecture-blueprint/
+      type: BlogPosting
+    - name: "Скорость сгорания бюджета ошибок — что тут не так?"
+      url: https://jtprog.ru/posts/burn-rate-is-not-speed/
+      type: BlogPosting
+    - name: "Надёжность строится в диалоге с бизнесом"
+      url: https://jtprog.ru/posts/reliability-is-a-conversation/
+      type: BlogPosting
+    - name: "Digital Immune System: инженерия устойчивости как продукт"
+      url: https://jtprog.ru/posts/digital-immune-system-maturity/
+      type: BlogPosting
+    - name: "Что происходит, когда ты открываешь сайт"
+      url: https://jtprog.ru/posts/what-happens-when-you-open-website/
+      type: BlogPosting
+    - name: "Зачем вести базу знаний, если ты не блогер и не спикер"
+      url: https://habr.com/ru/articles/1070224/
+      type: Article
+      publisher: Habr
+    - name: "Содержимое моей персональной базы знаний"
+      url: https://habr.com/ru/articles/1033090/
+      type: Article
+      publisher: Habr
+    - name: "Личная база знаний. Что это за зверь такой…"
+      url: https://jtprogru.github.io/pkbd/
+      type: PresentationDigitalDocument
+    - name: "В SREду на кухне"
+      url: https://www.youtube.com/playlist?list=PLknJ4Vr6efQGz5LIO9taObaoNK_Mld6F4
+      type: PodcastSeries
+      publisher: Avito
+      role: contributor
 ---
 
 # Доклады и публикации
