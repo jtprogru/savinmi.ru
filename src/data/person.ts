@@ -24,6 +24,8 @@ export const ID = {
 
 export type Social = {
     href: string;
+    /** канонический URL для sameAs, если href — трекинговая ссылка */
+    graphHref?: string;
     label: string;
     icon: string;
     /** rel="me" — двусторонняя верификация личности */
@@ -39,7 +41,7 @@ export type Social = {
  * Профили с hidden: true в футер не попадают, но идут в sameAs.
  */
 export const SOCIALS: Social[] = [
-    { href: "https://t.me/jtprogru_channel", label: "Telegram-канал «Мишка на сервере»", icon: "telegram" },
+    { href: "https://t.me/+15SbUb5yCRw4NzVi", graphHref: "https://t.me/jtprogru_channel", label: "Telegram-канал «Мишка на сервере»", icon: "telegram" },
     { href: "https://github.com/jtprogru", label: "GitHub — jtprogru", icon: "github", me: true },
     { href: "https://habr.com/ru/users/jtprogru/", label: "Habr — публикации", icon: "habr" },
     { href: "https://twitter.com/jtprogru", label: "X / Twitter", icon: "x" },
@@ -72,10 +74,11 @@ export const SOCIALS: Social[] = [
 /** Иконки для футера. */
 export const FOOTER_SOCIALS = SOCIALS.filter((s) => !s.hidden);
 
-/** sameAs: только абсолютные внешние URL, без PDF. */
+/** sameAs: только абсолютные внешние URL, без PDF и без трекинговых ссылок. */
 export const SAME_AS = SOCIALS
-    .filter((s) => !s.offGraph && s.href.startsWith("http"))
-    .map((s) => s.href);
+    .filter((s) => !s.offGraph)
+    .map((s) => s.graphHref ?? s.href)
+    .filter((href) => href.startsWith("http"));
 
 export const KNOWS_ABOUT = [
     "Site Reliability Engineering",
