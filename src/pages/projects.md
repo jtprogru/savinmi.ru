@@ -1,7 +1,7 @@
 ---
 layout: ../layouts/Page.astro
 title: Проекты
-description: Pet-проекты Михаила Савина — open-source утилиты на Go и Rust, плагин для Neovim и материалы по SRE.
+description: Pet-проекты Михаила Савина — open-source утилиты на Go и Rust, плагины для Obsidian и Neovim, материалы по SRE.
 ---
 
 # Проекты
@@ -10,18 +10,21 @@ description: Pet-проекты Михаила Савина — open-source ут
 
 ## Избранное
 
-[**The-Way-of-SRE**](https://github.com/jtprogru/The-Way-of-SRE) — *Docs*
+[**The Way of SRE**](https://github.com/jtprogru/The-Way-of-SRE) — *Docs*
 :   Подборка материалов и заметок для тех, кто развивается в SRE-направлении.
 
 [**srekit**](https://github.com/jtprogru/srekit) — *Go*
 :   Генератор текстовых SRE-артефактов: задачи, постмортемы, RFC, runbook'и, changelog'и.
 
-[**pack-ui.nvim**](https://github.com/jtprogru/pack-ui.nvim) — *Lua*
-:   Плавающее окно для встроенного менеджера плагинов `vim.pack`: смотреть статусы и обновлять плагины (Neovim 0.12+).
+[**Vault Full Statistics**](https://github.com/jtprogru/obsidian-vault-full-statistics-plugin) — *TypeScript*
+:   Плагин для Obsidian: статистика хранилища в статус-баре и боковой панели — заметки, ссылки, теги, соотношение своего и источников, история за 30 дней.
 
 ## Активные
 
 Развиваю и регулярно использую сам.
+
+[**pack-ui.nvim**](https://github.com/jtprogru/pack-ui.nvim) — *Lua*
+:   Плавающее окно для встроенного менеджера плагинов `vim.pack`: смотреть статусы и обновлять плагины (Neovim 0.12+).
 
 [**notiflow**](https://github.com/jtprogru/notiflow) — *Go*
 :   GitHub Action для отправки уведомлений в Telegram.
