@@ -59,7 +59,7 @@ export const SOCIALS: Social[] = [
     { href: "https://t.me/michael_behind_lens", label: "Telegram — Michael behind lens", icon: "", hidden: true },
     { href: "https://qna.habr.com/user/jtprogru", label: "Хабр Q&A", icon: "", hidden: true },
     { href: "https://jtprogru.github.io/The-Way-of-SRE/", label: "The Way of SRE", icon: "", hidden: true },
-    { href: "https://getmentor.dev/mentor/michael-savin-1427", label: "GetMentor", icon: "", hidden: true },
+    { href: "https://getmentor.dev/mentor/jtprogru", label: "GetMentor", icon: "", hidden: true },
     { href: "https://proitfest.ru/spikery-network-fest/mihailsavin/", label: "ProIT Fest — спикер", icon: "", hidden: true },
     { href: "https://setka.ru/users/717ccc6c-e042-45df-a94f-824e85e57926", label: "Сетка", icon: "", hidden: true },
     { href: "https://www.instagram.com/jtprogru", label: "Instagram", icon: "", hidden: true },

@@ -22,7 +22,7 @@ description: Интересы Михаила Савина — блог jtprog.ru
 
 ## Преподавание и менторство
 
-Иногда преподаю в [РТУ МИРЭА](https://www.mirea.ru) и делюсь опытом со студентами, которые только заходят в инфраструктуру и SRE. Менторю через [GetMentor](https://getmentor.dev/mentor/michael-savin-1427)
+Иногда преподаю в [РТУ МИРЭА](https://www.mirea.ru) и делюсь опытом со студентами, которые только заходят в инфраструктуру и SRE. Менторю через [GetMentor](https://getmentor.dev/mentor/jtprogru)
 
 ## Фотография
 
