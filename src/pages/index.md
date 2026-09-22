@@ -20,5 +20,4 @@ pageType: profile
 ## Связаться
 
 - **Работа, консультация, вопрос по [опыту](/experience/) или [интересам](/interests/)** — Telegram: [@jtprogru](https://t.me/jtprogru).
-- **Созвон** — бронируй слот в [календаре](https://calendlab.ru/c/jtprogru-getmentor).
 - **Резюме одним файлом** — [PDF: Савин Михаил, Lead SRE](/pdf/mikhail-savin-cv-sre.pdf).
