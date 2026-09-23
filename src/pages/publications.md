@@ -1,7 +1,7 @@
 ---
 layout: ../layouts/Page.astro
 title: Доклады и публикации
-description: Доклады, статьи и подкасты Михаила Савина — цикл про SLO и бюджет ошибок, статьи на Habr о личной базе знаний, лекции в РТУ МИРЭА и семь выпусков подкаста «В SREду на кухне».
+description: Доклады, статьи и подкасты Михаила Савина — цикл про SLO и бюджет ошибок, статьи на Habr о личной базе знаний, лекции в РТУ МИРЭА и восемь выпусков подкаста «В SREду на кухне».
 # Машиночитаемый срез списка ниже: уходит в JSON-LD как ItemList,
 # каждый элемент привязывается к сущности автора. Правишь список
 # в тексте — поправь и здесь.
@@ -70,7 +70,7 @@ works:
 
 ## Подкаст «В SREду на кухне»
 
-Подкаст Avito, семь выпусков с моим участием. Целиком плейлистом — на [YouTube](https://www.youtube.com/playlist?list=PLknJ4Vr6efQGz5LIO9taObaoNK_Mld6F4) и во [VK Видео](https://vkvideo.ru/playlist/-152990965_43).
+Подкаст Avito, восемь выпусков с моим участием. Целиком плейлистом — на [YouTube](https://www.youtube.com/playlist?list=PLknJ4Vr6efQGz5LIO9taObaoNK_Mld6F4) и во [VK Видео](https://vkvideo.ru/playlist/-152990965_43).
 
 - #1 SLO, инциденты и прод: где заканчивается DevOps и начинается SRE — [YouTube](https://youtu.be/OOWxI_dKTWI), [VK Видео](https://vkvideo.ru/video-152990965_456240023)
 - #2 Почему ваш мониторинг врет? SRE об алертах и наблюдаемости — [YouTube](https://youtu.be/WyT9ni4mGtU), [VK Видео](https://vkvideo.ru/video-152990965_456240051)
@@ -79,6 +79,7 @@ works:
 - #5 Внутренняя кухня SRE и информационной безопасности — [YouTube](https://youtu.be/w2O5jzAO8BU), [VK Видео](https://vkvideo.ru/video-152990965_456240132)
 - #6 Chaos Engineering: роняем прод, чтобы стать сильнее — [YouTube](https://youtu.be/UeZtZMeonnY), [VK Видео](https://vkvideo.ru/video-152990965_456240194)
 - #7 Error Budget: зачем продукту бюджет ошибок? — [YouTube](https://youtu.be/pz0QkReLxMY), [VK Видео](https://vkvideo.ru/video-152990965_456240226)
+- #14 Digital Immune System: мониторинга, SRE и автотестов уже недостаточно — [YouTube](https://youtu.be/rT3ua0w_CCw), [VK Видео](https://vkvideo.ru/video-152990965_456240458)
 
 ## Ещё публичное
 
